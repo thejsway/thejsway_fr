@@ -2,7 +2,7 @@
 
 ## TL;DR
 
-* Historiquement créé pour animer les pages web, le langage JavaScript peut maintenant être utilisé pour créer des applications web ou mobiles, ou encore des objets connectés.
+* Historiquement créé pour animer les pages web, le langage JavaScript peut maintenant être utilisé pour créer dans de très nombreux environnements : serveurs, applications mobiles, objets connectés...
 * Il a été standardisé sous le nom d'**ECMAScript** et subit des améliorations régulières.
 * La version de JavaScript utilisée dans ce livre est **ES2015**, anciennement appelée **ES6**. Bien que récente, elle est maintenant bien supportée.
 
@@ -22,10 +22,10 @@ L'explosion du Web puis l'avènement du Web 2.0, basé sur des pages riches et i
 
 Enfin, l'arrivée des smartphones et autres tablettes dotés de systèmes différents et incompatibles (iOS, Android ou Windows Phone) a conduit à l'apparition d'outils de développement dits multi-plateformes. Ils permettent d'écrire en une seule fois des applications mobiles compatibles avec l'ensemble des terminaux du marché. Ces outils sont presque toujours basés sur... JavaScript !
 
-Bref, JavaScript est partout. Sa connaissance vous ouvrira les portes de la programmation côté navigateur Web (on parle de développement front-end), côté serveur (back-end) ou côté mobile. Plutôt pas mal pour un langage qui se veut malgré tout simple et facile d'accès.
+Bref, JavaScript est partout. Sa connaissance vous ouvrira les portes de la programmation côté navigateur Web (on parle de développement *front-end*), côté serveur (*back-end*) ou côté mobile. Plutôt pas mal pour un langage qui se veut malgré tout simple et facile d'accès.
 
 ## Version utilisée dans ce livre
 
 JavaScript a été standardisé en 1997 sous le nom d'[ECMAScript](https://fr.wikipedia.org/wiki/ECMAScript). Depuis, le langage a subi plusieurs séries d'améliorations pour corriger certaines maladresses initiales et supporter de nouvelles fonctionnalités. Ce processus se poursuit à l'heure actuelle.
 
-Ce livre utilise une version récente de JavaScript appelée ES2015 (anciennement ES6). Elle apporte des évolutions très intéressantes et est maintenant bien supportée par les principaux navigateurs Web du marché, comme le montre cette [table de compatibilité](http://kangax.github.io/compat-table/es6/).
+Ce livre utilise une version récente du langage appelée ES2015 (anciennement ES6). Elle apporte des évolutions très intéressantes et est maintenant bien supportée par les principaux environnements JavaScript du marché, comme le montre cette [table de compatibilité](http://kangax.github.io/compat-table/es6/).
