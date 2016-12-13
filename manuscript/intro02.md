@@ -2,10 +2,10 @@
 
 ## TL;DR
 
-* Un **ordinateur** n'est qu'une machine qui se contente d'exécuter automatiquement, très vite et sans erreur, des opérations.
+* Un **ordinateur** n'est qu'une machine qui se contente d'exécuter automatiquement, très vite et sans erreur, les opérations qu'on lui demande d'effectuer.
 * Un **programme** est une liste d'ordres indiquant à un ordinateur ce qu'il doit faire. Il se présente sous la forme d'un ensemble de commandes textuelles appelées des **instructions**.
 * Le rôle du **programmeur** est de créer ces programmes. Pour cela, il peut utiliser différents langages de programmation.
-* Avant d'écrire un programme, il faut réfléchir pour décomposer le problème à résoudre en opérations élémentaires, autrement dit concevoir un algorithme.
+* Avant d'écrire un programme, il faut réfléchir et décomposer le problème à résoudre en opérations élémentaires afin d'aboutir à un **algorithme**.
 
 ## Un programme, c'est quoi ?
 
