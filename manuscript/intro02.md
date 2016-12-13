@@ -1,4 +1,4 @@
-# Initiation à la programmation
+# Introduction à la programmation
 
 ## TL;DR
 
