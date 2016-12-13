@@ -1,5 +1,7 @@
 frontmatter.txt
-introduction.md
+introduction.txt
+intro01.md
+intro02.md
 mainmatter.txt
 part1.txt
 chapter01.md
