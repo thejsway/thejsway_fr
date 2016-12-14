@@ -9,6 +9,8 @@
 
 ## Un programme, c'est quoi ?
 
+![L'Evolution (?)](images/intro02-01.jpg)
+
 Depuis son invention dans les années 1950, l'informatique a révolutionné bien des domaines de notre vie quotidienne. Le calcul d'un itinéraire depuis un site Internet ou un GPS, la réservation à distance d'un billet de train ou d'avion ou encore la possibilité de voir et de parler avec des amis à l'autre bout du monde : tous ces actes courants sont possibles grâce aux **ordinateurs**.
 
 I> Le terme "ordinateur" est à prendre dans son sens le plus général, celui d'une "machine électronique capable d'exécuter des opérations arithmétiques et logiques" ([Wikipedia](https://fr.wikipedia.org/wiki/Ordinateur)). Il peut désigner aussi bien un ordinateur de bureau ou portable (PC, Mac), un serveur de calcul ou encore un terminal mobile de type tablette ou smartphone. 
@@ -17,7 +19,7 @@ Cependant un ordinateur, même très performant, n'est qu'une **machine** capabl
 
 Une intervention humaine est nécessaire pour qu'un ordinateur puisse accomplir des tâches utiles. C'est le rôle du **programmeur** (appelé également développeur). Il va fournir les ordres que la machine doit exécuter en écrivant des **programmes**.
 
-Un programme informatique (également appelé application ou logiciel) est **une liste d'ordres indiquant à un ordinateur ce qu'il doit faire** ([Wikipedia](https://fr.wikipedia.org/wiki/Programme_informatique)). Il se présente concrètement sous la forme d'un ou (le plus souvent) plusieurs fichiers contenant des commandes textuelles : ce sont les ordres données à la machine, qu'on appelle également des **instructions**. L'ensemble des fichiers contenant les instructions du programme constitue son code source. Programmer, c'est donc écrire le code source d'un programme, d'où l'emploi du terme synonyme de **coder**.
+Un programme informatique (également appelé application ou logiciel) est "**une liste d'ordres indiquant à un ordinateur ce qu'il doit faire**" ([Wikipedia](https://fr.wikipedia.org/wiki/Programme_informatique)). Il se présente concrètement sous la forme d'un ou (le plus souvent) plusieurs fichiers contenant des commandes textuelles : ce sont les ordres données à la machine, qu'on appelle également des **instructions**. L'ensemble des fichiers contenant les instructions du programme constitue son code source. Programmer, c'est donc écrire le code source d'un programme, d'où l'emploi du terme synonyme de **coder**.
 
 Cependant, on ne peut pas écrire tout et n'importe quoi dans le code source d'un programme. Imaginons que vous souhaitiez dialoguer avec une personne anglophone. Vous ne vous ferez pas comprendre si vous utilisez des mots qui ne sont pas anglais, ou bien si vous les placez n'importe où dans vos phrases. C'est la même chose lorsqu'on écrit des programmes : pour être compris par un ordinateur, un programme doit respecter les règles du langage de programmation utilisé.
 
@@ -27,7 +29,7 @@ Un **langage de programmation** définit une manière de donner des ordres à un
 
 ### Au plus près de la machine : l'assembleur
 
-Le seul langage de programmation directement compréhensible par un ordinateur est le langage machine, également appelé **assembleur** ([Wikipedia](https://fr.wikipedia.org/wiki/Assembleur)). Il s'agit d'instructions élémentaires liées à un type de processeur (le "cerveau" de l'ordinateur) et qui permettent de manipuler directement la mémoire de la machine.
+Le seul langage de programmation directement compréhensible par un ordinateur est le langage machine, également appelé [assembleur](https://fr.wikipedia.org/wiki/Assembleur). Il s'agit d'instructions élémentaires liées à un type de processeur (le "cerveau" de l'ordinateur) et qui permettent de manipuler directement la mémoire de la machine.
 
 Voici un exemple de programme écrit en assembleur. Son rôle est d'afficher le message "Bonjour" à l'utilisateur.
 
@@ -45,9 +47,7 @@ Voici un exemple de programme écrit en assembleur. Son rôle est d'afficher le 
     movl $0, %ebx
     int $0x80
 
-Vous êtes toujours là ? :p
-
-Rassurez-vous, il est heureusement possible de coder de manière bien plus simple et conviviale en utilisant d'autres langages que l'assembleur. 
+Plutôt intimidant, non ? Rassurez-vous, il est heureusement possible de coder de manière bien plus simple et conviviale en utilisant d'autres langages que l'assembleur. 
 
 ### La grande famille des langages de programmation
 
@@ -83,11 +83,11 @@ Tous ces programmes affichent le message "Bonjour", mais chacun d'eux le fait à
 
 ### L'exécution d'un programme
 
-On nomme exécution le fait de demander à un ordinateur de réaliser les ordres contenus dans un programme. Quel que soit le langage avec lequel il est écrit, un programme doit être traduit en assembleur pour pouvoir être exécuté. Ce processus de traduction dépend du langage choisi.
+On nomme **exécution** le fait de demander à un ordinateur de réaliser les ordres contenus dans un programme. Quel que soit le langage avec lequel il est écrit, un programme doit être traduit en assembleur pour pouvoir être exécuté. Ce processus de traduction dépend du langage choisi.
 
-Avec certains langages, les lignes du code source sont traduites en assembleur puis exécutées ligne après ligne par un programme spécifique appelé interpréteur. On dit alors que le langage est interprété. Python et PHP sont des exemples de langages interprétés.
+Avec certains langages, les lignes du code source sont traduites en assembleur puis exécutées ligne après ligne par un programme spécifique appelé interpréteur. On dit alors que le langage est **interprété**. Python et PHP sont des exemples de langages interprétés.
 
-Une autre possibilité consiste à créer à partir de l'ensemble du code source un fichier directement exécutable (sous Windows, il portera l'extension .exe) en utilisant un programme intermédiaire appelé compilateur. On parle alors de langage compilé. Les langages C sont C++ sont des exemples de langages compilés.
+Une autre possibilité consiste à créer à partir de l'ensemble du code source un fichier directement exécutable (sous Windows, il portera l'extension `.exe`) en utilisant un programme intermédiaire appelé compilateur. On parle alors de langage **compilé**. Les langages C sont C++ sont des exemples de langages compilés.
 
 Enfin, une troisième option consiste à utiliser un pseudo-compilateur pour générer à partir du code source un ensemble de fichiers pouvant être exécutés sur n'importe quelle plate-forme supportant
 l'environnement. C'est le cas du langage Java et des langages de la plate-forme Microsoft .NET (VB.NET, C#, etc).
