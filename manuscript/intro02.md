@@ -31,8 +31,9 @@ Un **langage de programmation** définit une manière de donner des ordres à un
 
 Le seul langage de programmation directement compréhensible par un ordinateur est le langage machine, également appelé [assembleur](https://fr.wikipedia.org/wiki/Assembleur). Il s'agit d'instructions élémentaires liées à un type de processeur (le "cerveau" de l'ordinateur) et qui permettent de manipuler directement la mémoire de la machine.
 
-Voici un exemple de programme écrit en assembleur. Son rôle est d'afficher le message "Bonjour" à l'utilisateur.
+Voici un exemple de programme écrit en assembleur, tiré de [Wikipedia](https://fr.wikipedia.org/wiki/Assembleur#Afficher_Bonjour). Son rôle est d'afficher le message "Bonjour" à l'utilisateur.
 
+{lang="assembly"}
     str:
      .ascii "Bonjour\n"
      .global _start
@@ -73,6 +74,7 @@ Même exemple avec le langage C#.
 
 Et voici le même programme, écrit cette fois en langage Java.
 
+{lang="java"}
     public class Program {
         public static void main(String[] args) {
             System.out.println("Bonjour");
