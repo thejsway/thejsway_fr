@@ -4,7 +4,8 @@
 
 * L'instruction JavaScript `console.log()` permet d'afficher une information.
 * Une **valeur** est un morceau d'information. Le **type** d'une valeur détermine son rôle et les opérations qui lui sont applicables. 
-* Le langage JavaScript dispose (entre autres) des types **nombre** (*number*) pour représenter une valeur numérique entière ou réelle, et **chaîne de caractères** (*string*) pour représenter un texte.
+* Le langage JavaScript dispose du type **nombre** (*number*) pour représenter une valeur numérique entière ou réelle, et du type **chaîne de caractères** (*string*) pour représenter un texte.
+* Une valeur de type texte est délimitée par une paire de guillemets simples (`'...'`) ou doubles (`"..."`).
 * Un programme informatique se compose de plusieurs **lignes de code** qui s'exécutent successivement.
 * Les **commentaires** (`// ...` ou `/* ... */`) sont des portions de code non exécutées. Ils permettent de documenter le fonctionnement d'un programme.
 
@@ -33,22 +34,22 @@ W> La virgule s'exprime en informatique sous la forme d'un point : `3.14` et non
 Les nombres servent essentiellement à compter. Nous pouvons appliquer à des valeurs de type nombre les mêmes opérations qu'en mathématiques. Ces opérations produisent un résultat lui aussi de type nombre. Les principales opérations applicables sont rassemblées dans le tableau suivant.
 
 |Opérateur|Rôle|
-|+|Addition|
-|-|Soustraction|
-|*|Multiplication|
-|/|Division|
+|`+`|Addition|
+|`-`|Soustraction|
+|`*`|Multiplication|
+|`/`|Division|
 
 ### Le type chaîne
 
-Une valeur de type **chaîne de caractères** (en abrégé chaîne, ou *string*) représente un texte. Ces valeurs sont délimitées par une paire de guillemets simples : 'Ceci est une chaîne'.
+Une valeur de type **chaîne de caractères** (en abrégé chaîne, ou *string*) représente un texte. Ces valeurs sont délimitées par une paire de guillemets simples : `'Ceci est une chaîne'`.
 
-I> Il est également possible de délimiter une chaîne de caractères avec une paire de guillemets doubles : "Ceci est aussi une chaîne". Par convention, nous emploierons les guillemets simples dans ce cours. L'important est d'être cohérent : utilisez l'une ou l'autre notation, mais ne mélangez pas les deux.
+I> Il est également possible de délimiter une chaîne de caractères avec une paire de guillemets doubles : `"Ceci est aussi une chaîne"`. Par convention, nous emploierons les guillemets simples dans ce cours. L'important est d'être cohérent : utilisez l'une ou l'autre notation, mais ne mélangez pas les deux.
 
 E> Il ne faut surtout pas oublier de "fermer" une chaîne : simples ou doubles, les guillemets vont toujours par deux !
 
-Pour inclure dans une chaîne certains caractères spéciaux, on utilise le caractère `\` (prononcé "antislash" ou "backslash" en anglais) qui donne un sens particulier au caractère suivant. Par exemple, `\n` permet d'ajouter un retour à la ligne dans une chaîne : 'Ceci est une chaîne\nSur plusieurs lignes'.
+Pour inclure dans une chaîne certains caractères spéciaux, on utilise le caractère `\` (prononcé "antislash" ou "backslash" en anglais) qui donne un sens particulier au caractère suivant. Par exemple, `\n` permet d'ajouter un retour à la ligne dans une chaîne : `'Ceci est une chaîne\nSur plusieurs lignes'`.
 
-On ne peut pas additionner ou supprimer des valeurs de type chaîne comme on peut le faire avec des nombres. En revanche, l'opérateur `+` peut être appliqué à deux valeurs de type chaîne. Son résultat est la jointure de ces deux chaînes, appelée **concaténation**. Par exemple, 'Bon'+'jour' produit le résultat "Bonjour".
+On ne peut pas additionner ou supprimer des valeurs de type chaîne comme on peut le faire avec des nombres. En revanche, l'opérateur `+` peut être appliqué à deux valeurs de type chaîne. Son résultat est la jointure de ces deux chaînes, appelée **concaténation**. Par exemple, `'Bon'+'jour'` produit le résultat `"Bonjour"`.
 
 ## Structure d'un programme
 
@@ -78,7 +79,7 @@ Le résultat de son exécution est le suivant.
 
 ![Résultat de l'exécution](images/chapter01-01.png)
 
-I> On remarque au passage qu'une division par zéro (`12/0`) produit, comme attendu, un résultat infini (`Infinity`).
+I> On remarque au passage qu'une division par zéro (ici `12/0`) produit, comme attendu, un résultat infini (`Infinity`).
 
 ### Commentaires
 
@@ -91,6 +92,8 @@ Par défaut, chaque ligne de texte dans les fichiers source d'un programme est c
     console.log('Au revoir !');
 
 Lors de l'exécution, les lignes commentées ne produisent plus de résultat.
+
+![Résultat de l'exécution](images/chapter01-03.png)
 
 Les commentaires servent à donner des informations sur le programme et sont destinées au programmeur, non à la machine.
 
@@ -123,7 +126,7 @@ Ecrivez un programme qui calcule et affiche le résultat de l'addition, de la so
 Observez le programme ci-dessous puis tentez de prévoir les valeurs affichées lors de son exécution.
 
     console.log(4 + 5);
-    console.log("4 + 5");
-    console.log("4" + "5");
+    console.log('4 + 5');
+    console.log('4' + '5');
 
-Vérifiez vos prévisions en créant ce programme puis en l'exécutant.
+Vérifiez vos prévisions en exécutant ce programme.
