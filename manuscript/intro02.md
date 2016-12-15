@@ -56,16 +56,19 @@ Il existe un grand nombre de langages de programmation, adaptés à des usages v
 
 Cela dit, on peut dégager des similitudes entre les langages de programmation les plus courants. Par exemple, voici le programme précédent écrit en utilisant le langage Python.
 
+{lang="python"}
     print("Bonjour")
 
 On peut écrire le même programme en utilisant le langage PHP.
 
+{lang="php"}
     <?php
     echo("Bonjour\n");
     ?>
 
 Même exemple avec le langage C#.
 
+{lang="csharp"}
     class Program {
         static void Main(string[] args) {
             Console.WriteLine("Bonjour");
@@ -104,6 +107,7 @@ Prenons un exemple concret tiré de la vie courante (l'idée originale est d'Ala
 
 On peut imaginer la solution ci-dessous.
 
+{lang="text"}
     Début
         Sortir une casserole
         Mettre de l'eau dans la casserole

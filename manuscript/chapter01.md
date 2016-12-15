@@ -6,6 +6,8 @@
 * Une **valeur** est un morceau d'information. Le **type** d'une valeur détermine son rôle et les opérations qui lui sont applicables. 
 * Le langage JavaScript dispose du type **nombre** (*number*) pour représenter une valeur numérique entière ou réelle, et du type **chaîne de caractères** (*string*) pour représenter un texte.
 * Une valeur de type texte est délimitée par une paire de guillemets simples (`'...'`) ou doubles (`"..."`).
+* Les opérateurs `+`, `-`, `*` et `/` permettent de réaliser des opérations arithmétiques entre deux nombres. 
+* Appliqué à deux chaînes, l'opérateur `+` les fusionne en une seule. Cette opération est appelée **concaténation**. 
 * Un programme informatique se compose de plusieurs **lignes de code** qui s'exécutent successivement.
 * Les **commentaires** (`// ...` ou `/* ... */`) sont des portions de code non exécutées. Ils permettent de documenter le fonctionnement d'un programme.
 
