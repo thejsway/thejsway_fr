@@ -2,9 +2,13 @@
 
 ## TL;DR
 
-TODO
+* L'instruction JavaScript `console.log()` permet d'afficher une information.
+* Une **valeur** est un morceau d'information. Le **type** d'une valeur détermine son rôle et les opérations qui lui sont applicables. 
+* Le langage JavaScript dispose (entre autres) des types **nombre** (*number*) pour représenter une valeur numérique entière ou réelle, et **chaîne de caractères** (*string*) pour représenter un texte.
+* Un programme informatique se compose de plusieurs **lignes de code** qui s'exécutent successivement.
+* Les **commentaires** (`// ...` ou `/* ... */`) sont des portions de code non exécutées. Ils permettent de documenter le fonctionnement d'un programme.
 
-## Affichage d'une valeur
+## Un premier programme
 
 C'est le moment de faire vos premiers pas avec JavaScript ! Voici votre tout premier programme.
 
@@ -28,11 +32,11 @@ W> La virgule s'exprime en informatique sous la forme d'un point : `3.14` et non
 
 Les nombres servent essentiellement à compter. Nous pouvons appliquer à des valeurs de type nombre les mêmes opérations qu'en mathématiques. Ces opérations produisent un résultat lui aussi de type nombre. Les principales opérations applicables sont rassemblées dans le tableau suivant.
 
-Opérateur|Rôle
-+|Addition
--|Soustraction
-*|Multiplication
-/|Division
+|Opérateur|Rôle|
+|+|Addition|
+|-|Soustraction|
+|*|Multiplication|
+|/|Division|
 
 ### Le type chaîne
 
@@ -42,9 +46,9 @@ I> Il est également possible de délimiter une chaîne de caractères avec une 
 
 E> Il ne faut surtout pas oublier de "fermer" une chaîne : simples ou doubles, les guillemets vont toujours par deux !
 
-Pour inclure dans une chaîne certains caractères spéciaux, on utilise le caractère `\` (prononcé "antislash" ou "backslash" en anglais) qui donne un sens particulier au caractère suivant. Par exemple, `\n` permet d'ajouter un retour à la ligne dans une chaîne.
+Pour inclure dans une chaîne certains caractères spéciaux, on utilise le caractère `\` (prononcé "antislash" ou "backslash" en anglais) qui donne un sens particulier au caractère suivant. Par exemple, `\n` permet d'ajouter un retour à la ligne dans une chaîne : 'Ceci est une chaîne\nSur plusieurs lignes'.
 
-On ne peut pas additionner ou supprimer des valeurs de type chaîne comme on peut le faire avec des nombres. En revanche, l'opérateur `+` peut être appliqué à deux valeurs de type chaîne. Son résultat est la jointure de ces deux chaînes, appelée **concaténation**.
+On ne peut pas additionner ou supprimer des valeurs de type chaîne comme on peut le faire avec des nombres. En revanche, l'opérateur `+` peut être appliqué à deux valeurs de type chaîne. Son résultat est la jointure de ces deux chaînes, appelée **concaténation**. Par exemple, 'Bon'+'jour' produit le résultat "Bonjour".
 
 ## Structure d'un programme
 
@@ -72,7 +76,9 @@ Voici un exemple de programme JavaScript composé de plusieurs instructions.
 
 Le résultat de son exécution est le suivant.
 
-![](images/chapter01-01.png)
+![Résultat de l'exécution](images/chapter01-01.png)
+
+I> On remarque au passage qu'une division par zéro (`12/0`) produit, comme attendu, un résultat infini (`Infinity`).
 
 ### Commentaires
 
@@ -89,6 +95,7 @@ Lors de l'exécution, les lignes commentées ne produisent plus de résultat.
 Les commentaires servent à donner des informations sur le programme et sont destinées au programmeur, non à la machine.
 
 I> Il existe une autre manière de créer des commentaires en entourant une ou plusieurs lignes par les caractères `/*` et `*/`.
+I> 
 I>     /* Un commentaire 
 I>     sur plusieurs
 I>     lignes */
@@ -101,41 +108,22 @@ Les commentaires fournissent une aide précieuse pour comprendre le code source 
 
 Passons maintenant à quelques exercices pratiques pour vérifier que vous avez tout compris ! 
 
-Pour chaque exercice, créez un fichier JavaScript dans le répertoire chapitre_1/js ainsi qu'un fichier HTML dans le répertoire chapitre_1/html. Le fichier HTML doit pointer vers le fichier JavaScript associé. Voici par exemple le contenu à donner au fichier presentation.html qui permet de tester le premier exercice.
+### Présentation
 
-<!doctype html>
-<html>
+Ecrivez un programme qui affiche votre nom et votre âge. Voici le résultat de l'exécution de ma version de ce programme.
 
-<head>
-    <meta charset="utf-8">
-    <title>Présentation</title>
-</head>
+![Résultat de l'exécution](images/chapter01-02.png)
 
-<body>
-    <script src="../js/presentation.js"></script>
-</body>
+### Mini-calculatrice
 
-</html>
-Si vous éprouvez des difficultés à réaliser les exercices, n'hésitez pas à étudier de nouveau le cours et à déboguer votre code.
-Présentation (résultat à obtenir)
+Ecrivez un programme qui calcule et affiche le résultat de l'addition, de la soustraction, de la multiplication et de la division de 6 par 3.
 
-Ecrivez un programme presentation.js qui affiche votre nom et votre âge. Voici le résultat de l'exécution de ma version de ce programme.
+### Valeurs affichées
 
+Observez le programme ci-dessous puis tentez de prévoir les valeurs affichées lors de son exécution.
 
+    console.log(4 + 5);
+    console.log("4 + 5");
+    console.log("4" + "5");
 
-Mini-calculatrice (résultat à obtenir)
-
-Ecrivez un programme calculette.js qui calcule et affiche le résultat de l'addition, de la soustraction, de la multiplication et de la division de 6 par 3.
-
-Valeurs affichées
-
-Observez le programme valeurs.js ci-dessous puis tentez de prévoir les valeurs affichées lors de son exécution.
-
-/*
-Exercice : prévoir les valeurs affichées par ce programme
-*/
-
-console.log(4 + 5);
-console.log("4 + 5");
-console.log("4" + "5");
 Vérifiez vos prévisions en créant ce programme puis en l'exécutant.
