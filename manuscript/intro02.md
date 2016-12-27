@@ -85,7 +85,7 @@ public class Program {
         System.out.println("Bonjour");
     }
 }
-````
+```
 
 Tous ces programmes affichent le message "Bonjour", mais chacun d'eux le fait à sa manière.
 
