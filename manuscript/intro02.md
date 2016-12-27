@@ -56,19 +56,16 @@ Il existe un grand nombre de langages de programmation, adaptés à des usages v
 
 Cela dit, on peut dégager des similitudes entre les langages de programmation les plus courants. Par exemple, voici le programme précédent écrit en utilisant le langage Python.
 
-{lang="python"}
-~~~~~~~~
+```python
 print("Bonjour")
-~~~~~~~~
+```
 
 On peut écrire le même programme en utilisant le langage PHP.
 
-{lang="php"}
-~~~~
-<?php
+```php
 echo("Bonjour\n");
 ?>
-~~~~
+```
 
 Même exemple avec le langage C#.
 
@@ -82,12 +79,13 @@ class Program {
 
 Et voici le même programme, écrit cette fois en langage Java.
 
-{lang="java"}
-    public class Program {
-        public static void main(String[] args) {
-            System.out.println("Bonjour");
-        }
+```java
+public class Program {
+    public static void main(String[] args) {
+        System.out.println("Bonjour");
     }
+}
+````
 
 Tous ces programmes affichent le message "Bonjour", mais chacun d'eux le fait à sa manière.
 

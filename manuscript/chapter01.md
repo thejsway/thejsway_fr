@@ -15,7 +15,9 @@
 
 C'est le moment de faire vos premiers pas avec JavaScript ! Voici votre tout premier programme.
 
-    console.log('Bonjour en JavaScript !');
+```javascript
+console.log('Bonjour en JavaScript !');
+```
 
 Ce programme affiche dans la console le texte "Bonjour en JavaScript !". Pour cela, il utilise l'ordre JavaScript `console.log()`, dont le rôle est d'afficher une information. Le texte à afficher est placé entre parenthèses et suivi d'un point-virgule. 
 
@@ -36,6 +38,7 @@ W> La virgule s'exprime en informatique sous la forme d'un point : `3.14` et non
 Les nombres servent essentiellement à compter. Nous pouvons appliquer à des valeurs de type nombre les mêmes opérations qu'en mathématiques. Ces opérations produisent un résultat lui aussi de type nombre. Les principales opérations applicables sont rassemblées dans le tableau suivant.
 
 |Opérateur|Rôle|
+|---------|----|
 |`+`|Addition|
 |`-`|Soustraction|
 |`*`|Multiplication|
@@ -71,11 +74,13 @@ Lorsqu'un programme est exécuté, les instructions qui le composent sont "lues"
 
 Voici un exemple de programme JavaScript composé de plusieurs instructions.
 
-    console.log('Bonjour en JavaScript !');
-    console.log('Faisons quelques ' + 'calculs.');
-    console.log(4 + 7);
-    console.log(12 / 0);
-    console.log('Au revoir !');
+```javascript
+console.log('Bonjour en JavaScript !');
+console.log('Faisons quelques calculs.');
+console.log(4 + 7);
+console.log(12 / 0);
+console.log('Au revoir !');
+```
 
 Le résultat de son exécution est le suivant.
 
