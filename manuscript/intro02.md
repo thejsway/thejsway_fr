@@ -33,20 +33,21 @@ Le seul langage de programmation directement compréhensible par un ordinateur e
 
 Voici un exemple de programme écrit en assembleur, tiré de [Wikipedia](https://fr.wikipedia.org/wiki/Assembleur#Afficher_Bonjour). Son rôle est d'afficher le message "Bonjour" à l'utilisateur.
 
-{lang="assembly"}
-    str:
-     .ascii "Bonjour\n"
-     .global _start
- 
-    _start:
-    movl $4, %eax
-    movl $1, %ebx
-    movl $str, %ecx
-    movl $8, %edx
-    int $0x80
-    movl $1, %eax
-    movl $0, %ebx
-    int $0x80
+```assembly
+str:
+    .ascii "Bonjour\n"
+    .global _start
+
+_start:
+movl $4, %eax
+movl $1, %ebx
+movl $str, %ecx
+movl $8, %edx
+int $0x80
+movl $1, %eax
+movl $0, %ebx
+int $0x80
+```
 
 Plutôt intimidant, non ? Rassurez-vous, il est heureusement possible de coder de manière bien plus simple et conviviale en utilisant d'autres langages que l'assembleur. 
 
@@ -63,6 +64,7 @@ print("Bonjour")
 On peut écrire le même programme en utilisant le langage PHP.
 
 ```php
+<?php
 echo("Bonjour\n");
 ?>
 ```
@@ -110,30 +112,31 @@ Prenons un exemple concret tiré de la vie courante (l'idée originale est d'Ala
 
 On peut imaginer la solution ci-dessous.
 
-{lang="text"}
-    Début
-        Sortir une casserole
-        Mettre de l'eau dans la casserole
-        Ajouter du sel
-        Mettre la casserole sur le feu
-        Tant que l'eau ne bout pas
+```
+Début
+    Sortir une casserole
+    Mettre de l'eau dans la casserole
+    Ajouter du sel
+    Mettre la casserole sur le feu
+    Tant que l'eau ne bout pas
+    Attendre
+    Sortir les pâtes du placard
+    Verser les pâtes dans la casserole
+    Tant que les pâtes ne sont pas cuites
         Attendre
-        Sortir les pâtes du placard
-        Verser les pâtes dans la casserole
-        Tant que les pâtes ne sont pas cuites
-            Attendre
-        Verser les pâtes dans une passoire
-        Egoutter les pâtes
-        Verser les pâtes dans un plat
+    Verser les pâtes dans une passoire
+    Egoutter les pâtes
+    Verser les pâtes dans un plat
+    Goûter
+    Tant que les pâtes sont trop fades
+        Ajouter du sel
         Goûter
-        Tant que les pâtes sont trop fades
-            Ajouter du sel
-            Goûter
-        Si on préfère le beurre à l'huile
-            Ajouter du beurre
-        Sinon
-            Ajouter de l'huile
-    Fin
+    Si on préfère le beurre à l'huile
+        Ajouter du beurre
+    Sinon
+        Ajouter de l'huile
+Fin
+```
 
 ![C'est prêt !](images/pates.jpg)
 

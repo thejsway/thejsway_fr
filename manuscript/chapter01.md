@@ -19,9 +19,9 @@ C'est le moment de faire vos premiers pas avec JavaScript ! Voici votre tout pre
 console.log('Bonjour en JavaScript !');
 ```
 
-Ce programme affiche dans la console le texte "Bonjour en JavaScript !". Pour cela, il utilise l'ordre JavaScript `console.log()`, dont le rôle est d'afficher une information. Le texte à afficher est placé entre parenthèses et suivi d'un point-virgule. 
+Ce programme affiche dans la console le texte `"Bonjour en JavaScript !"`. Pour cela, il utilise l'ordre JavaScript `console.log()`, dont le rôle est d'afficher une information. Le texte à afficher est placé entre parenthèses et suivi d'un point-virgule. 
 
-Afficher un texte à l'écran (le fameux [Hello World](https://fr.wikipedia.org/wiki/Hello_world)) est souvent la première chose que l'on apprend à faire lorsqu'on découvre un nouveau langage. Vous venez de franchir cette première étape !
+Afficher un texte à l'écran (le fameux [Hello World](https://fr.wikipedia.org/wiki/Hello_world) bien connu des programmeurs) est souvent la première chose que l'on apprend à faire lorsqu'on découvre un nouveau langage. Vous venez de franchir cette première étape !
 
 ## Valeurs et types
 
@@ -48,7 +48,7 @@ Les nombres servent essentiellement à compter. Nous pouvons appliquer à des va
 
 Une valeur de type **chaîne de caractères** (en abrégé chaîne, ou *string*) représente un texte. Ces valeurs sont délimitées par une paire de guillemets simples : `'Ceci est une chaîne'`.
 
-I> Il est également possible de délimiter une chaîne de caractères avec une paire de guillemets doubles : `"Ceci est aussi une chaîne"`. Par convention, nous emploierons les guillemets simples dans ce cours. L'important est d'être cohérent : utilisez l'une ou l'autre notation, mais ne mélangez pas les deux.
+I> Il est également possible de délimiter une chaîne de caractères avec une paire de guillemets doubles : `"Ceci est aussi une chaîne"`. Par convention, nous emploierons les guillemets simples dans tous les exemples de code de ce cours. L'important est d'être cohérent : utilisez l'une ou l'autre notation, mais ne mélangez pas les deux.
 
 E> Il ne faut surtout pas oublier de "fermer" une chaîne : simples ou doubles, les guillemets vont toujours par deux !
 
