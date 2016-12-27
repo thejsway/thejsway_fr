@@ -72,8 +72,6 @@ echo("Bonjour\n");
 
 Même exemple avec le langage C#.
 
-{lang="csharp"}
-
 ```csharp
 class Program {
     static void Main(string[] args) {
