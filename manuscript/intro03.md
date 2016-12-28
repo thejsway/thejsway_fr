@@ -25,7 +25,7 @@ Enfin, l'arrivée des smartphones et autres tablettes dotés de systèmes diffé
 
 ## JavaScript : un langage essentiel
 
-![Extrait d’une [présentation](http://somethingkindawierd.com/presentations/native-javascript/presentation/index.html#/) de Jon Beebe](images/thus-javascript-is-eating-the-world.jpg)
+![Extrait d’une présentation de Jon Beebe](images/thus-javascript-is-eating-the-world.jpg)
 
 Ce petit résumé de l'histoire de JavaScript montre à quel point ce langage est maintenant présent partout. Il dispose d’un foisonnant écosystème de composants (des "briques de base" qu'on peut intégrer pour construire un logiciel) et d’une immense communauté de développeurs.
 
