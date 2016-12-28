@@ -4,7 +4,14 @@ Vous savez maintenant utiliser JavaScript pour afficher des valeurs.  Mais pour 
 
 ## TL;DR
 
-TODO
+* Une **variable** est une zone de stockage d'information. Chaque variable possède un **nom**, une **valeur** et un **type**. En JavaScript, le type d'une variable est déduit implicitement de sa valeur, et non pas défini explicitement. Il s'agit d'un langage à typage **dynamique**.
+* On déclare une variable JavaScript avec le mot-clé `let` suivi du nom de la variable. Si la valeur initiale d'une variable n'est pas destinée à changer, on utilise de préférence le mot-clé `const` pour déclarer une variable **constante**.
+* L'opérateur d'affectation `=` permet de donner une valeur à une variable. Dans le cas d'une variable de type nombre, on peut utiliser les opérateurs `+=` et `++` pour incrémenter (augmenter de 1) sa valeur.
+* Une **expression** est un morceau de code combinant des variables, des valeurs et des opérateurs. L'évaluation d'une expression produit une valeur et correspond à un certain type.
+* On peut inclure des expressions dans une chaîne de caractères délimitée par une paire d'accents graves seuls (`\``) et appelée *template literal*.
+* Des **conversions de types** peuvent avoir lieu implicitement, ou bien explicitement avec les instructions `Number()` et `String()` qui convertissement respectivement une expression en un nombre et en une chaîne.
+* Les instructions `prompt()` et `alert()` permettent respectivement de faire saisir et d'afficher une information sous la forme d'une boîte de dialogue.
+* Il est essentiel de bien nommer ses variables et d'adopter une convention de nommage comme par exemple *camelCase*.
 
 ## La notion de variable
 
@@ -70,7 +77,7 @@ console.log(a);
 
 ### Déclarer une variable constante
 
-Si la valeur initiale d'une variable ne changera jamais au cours de l'exécution du programme, il vaut mieux la déclarer avec le mot-clé `const` plutôt qu'avec `let`. Cela rend le programme plus facile à comprendre, et cela permet aussi de détecter des erreurs.
+Si la valeur initiale d'une variable ne changera jamais au cours de l'exécution du programme, cette variable est ce qu'on appelle une **constante**. Il vaut alors mieux la déclarer avec le mot-clé `const` plutôt qu'avec `let`. Cela rend le programme plus facile à comprendre, et cela permet aussi de détecter des erreurs.
 
 ```
 const a = 3.14; // La valeur de a ne pourra plus évoluer
@@ -83,7 +90,7 @@ a = 6.28; // Impossible !
 
 Il est également possible d'augmenter ou de diminuer la valeur d'un nombre avec les opérateurs `+=` et `++`. Ce dernier est appelé opérateur d'incrémentation, car il permet **d'incrémenter** (augmenter de 1) la valeur d'une variable.
 
-Dans l'exemple suivant, les lignes 2, 3 et 4 permettent chacune d'augmenter la valeur de la variableb de 1.
+Dans l'exemple suivant, les lignes 2 et 3 permettent chacune d'augmenter la valeur de la variable `b` de 1.
 
 ```javascript
 let b = 0; // b contient la valeur 0
@@ -113,6 +120,18 @@ let e = 3 + 2 * 4; // e contient la valeur 11
 e = (3 + 2) * 4; // e contient la valeur 20
 ```
 
+Le langage JavaScript permet d'inclure des expressions dans une chaîne de caractères lorsque cette chaîne est délimitée par une paire d'accents graves seuls ou *backticks* (`\``). Une telle chaîne est appelée un *template literal* ou littéral de gabarit. A l'intérieur, les expressions sont indiquées par la syntaxe `${expression}`.
+
+On utilise souvent cette possibilité pour créer des chaînes intégrant des valeurs de variables.
+
+```javascript
+const pays = 'France';
+console.log(`J'habite en ${pays}`); // Affiche "J'habite en France"
+const x = 3;
+const y = 7;
+console.log(`${x} + ${y} = ${x + y}`); // Affiche "3 + 7 = 10"
+```
+
 ## Conversions de types
 
 L'évaluation d'une expression peut entraîner des conversions de type. Ces conversions sont dites **implicites** : elles sont faites automatiquement, sans intervention du programmeur. Par exemple, l'utilisation de l'opérateur `+` entre une valeur de type chaîne et une valeur de type nombre provoque la concaténation des deux valeurs dans un résultat de type chaîne.
@@ -120,34 +139,34 @@ L'évaluation d'une expression peut entraîner des conversions de type. Ces conv
 ```javascript
 const f = 100;
 // Affiche "La variable f contient la valeur 100"
-console.log("La variable f contient la valeur " + f);
+console.log('La variable f contient la valeur ' + f);
 ```
 
 Le langage JavaScript est extrêmement tolérant au niveau des conversions de type. Cependant, il se peut qu'aucune conversion ne soit possible. En cas d'échec de la conversion d'un nombre, la valeur du résultat est `NaN` (*Not a Number*).
 
 ```javascript
-const g = "cinq" * 2;
+const g = 'cinq' * 2;
 console.log(g); // Affiche NaN
 ```
 
 Il arrive parfois que l'on souhaite forcer la conversion d'une valeur dans un autre type. On parle alors de conversion **explicite**. Pour cela, JavaScript dispose des instructions `Number()` et `String()` qui convertissent respectivement en un nombre et une chaîne la valeur placée entre parenthèses.
 
 ```javascript
-let h = "5";
+let h = '5';
 console.log(h + 1); // Concaténation : affiche la chaîne "51"
-h = Number("5");
+h = Number('5');
 console.log(h + 1); // Addition numérique : affiche le nombre 6
 ```
 
 ## Interactions avec l'utilisateur
 
-### Saisie et affichage d'informations
+### Saisie et affichage à l'écran
 
 Maintenant que nous savons utiliser des variables, nous pouvons écrire des programmes qui échangent des informations avec l'utilisateur.
 
 ```javascript
-const prenom = prompt("Entrez votre prénom :");
-alert("Bonjour, " + prenom);
+const prenom = prompt('Entrez votre prénom :');
+alert(`Bonjour, ${prenom}`);
 ```
 
 A l'exécution, une première boîte de dialogue apparaît pour demander la saisie du prénom.
@@ -160,16 +179,31 @@ Après saisie du prénom, une seconde boîte affiche un "bonjour" personnalisé.
 
 ![Résultat de l'exécution](images/chapter02-05.png)
 
-La valeur saisie dans la première boîte de dialogue a été stockée dans une variable de type chaîne nommée `prenom`. Ensuite, l'instruction JavaScript `alert()` a déclenché l'affichage de la seconde boîte, contenant le résultat de la concaténation de la chaîne `"Bonjour"` avec la valeur de la variable `prenom`.
+La valeur saisie dans la première boîte de dialogue a été stockée dans une variable de type chaîne nommée `prenom`. Ensuite, l'instruction JavaScript `alert()` a déclenché l'affichage de la seconde boîte, contenant le message d'accueil.
 
-I> On peut donc utiliser `console.log()` ou `alert()` pour afficher des informations à l'utilisateur. Contrairement à `alert()`, `console.log()` ne bloque pas l'exécution du programme, ce qui en fait parfois un meilleur choix.
+### Affichege dans la console
+
+Nous avons vu dans le précédent chapitre que l'instruction JavaScript `console.log()` permettait d'afficher une information dans la console. 
+
+I> On désigne par "console" une zone d'informations textuelles. L'instruction `console.log()` ne fait pas à proprement parler partie de la spécification du langage JavaScript. Cependant, la très grande majorité des environnements JavaScript, et notamment les navigateurs web, disposent d'une console dans laquelle il est possible d'afficher des informations.
+
+On peut donc utiliser soit `console.log()`, soit `alert()` pour afficher des informations à l'utilisateur. Contrairement à `alert()`, `console.log()` ne bloque pas l'exécution du programme, ce qui en fait parfois un meilleur choix.
+
+Il est possible d'utiliser `console.log()` pour afficher plusieurs valeurs simultanément, en les séparant par des virgules.
+
+```javascript
+const temp1 = 36.9;
+const temp2 = 37.6;
+const temp3 = 37.1;
+console.log(temp1, temp2, temp3); // Affiche "36.9 37.6 37.1"
+```
 
 ### Saisie d'un nombre
 
 Quel que soit le texte saisi, l'instruction `prompt()` renvoie toujours une valeur de type chaîne. Il faudra penser à convertir cette valeur avec l'instruction `Number()` si vous souhaitez ensuite la comparer à d'autres nombres ou l'utiliser dans des expressions mathématiques.
 
 ```javascript
-const saisie = prompt("Entrez un nombre : "); // saisie est de type chaîne
+const saisie = prompt('Entrez un nombre : '); // saisie est de type chaîne
 const nb = Number(saisie); // nb est de type nombre
 // ...
 ```
@@ -177,7 +211,7 @@ const nb = Number(saisie); // nb est de type nombre
 Il est possible de combiner les deux opérations (saisie et conversion) en une seule ligne de code, pour un résultat identique :
 
 ```javascript
-var nb = Number(prompt("Entrez un nombre : ")); // nb est de type nombre
+var nb = Number(prompt('Entrez un nombre : ')); // nb est de type nombre
 // ...
 ```
 
