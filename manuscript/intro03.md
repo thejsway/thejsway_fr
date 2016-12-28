@@ -2,9 +2,10 @@
 
 ## TL;DR
 
-* Historiquement créé pour animer les pages web, le langage JavaScript peut maintenant être utilisé pour créer dans de très nombreux environnements : serveurs, applications mobiles, objets connectés...
+* Historiquement créé pour animer les pages web, le langage JavaScript peut maintenant être utilisé pour programmer dans de très nombreux environnements : serveurs, applications mobiles, objets connectés...
+* JavaScript est devenu essentiel pour de très nombreux développeurs. Il s'agit d'un excellent choix comme premier langage de programmation.
 * Il a été standardisé sous le nom d'**ECMAScript** et subit des améliorations régulières.
-* La version de JavaScript utilisée dans ce livre est **ES2015**, anciennement appelée **ES6**. Bien que récente, elle est maintenant bien supportée.
+* La version de JavaScript utilisée dans ce livre est **ES2015**, parfois appelée **ES6**. Bien que récente, elle est maintenant bien supportée.
 
 ## Histoire de JavaScript
 
@@ -22,10 +23,18 @@ L'explosion du Web puis l'avènement du Web 2.0, basé sur des pages riches et i
 
 Enfin, l'arrivée des smartphones et autres tablettes dotés de systèmes différents et incompatibles (iOS, Android ou Windows Phone) a conduit à l'apparition d'outils de développement dits multi-plateformes. Ils permettent d'écrire en une seule fois des applications mobiles compatibles avec l'ensemble des terminaux du marché. Ces outils sont presque toujours basés sur... JavaScript !
 
-Bref, JavaScript est partout. Sa connaissance vous ouvrira les portes de la programmation côté navigateur Web (on parle de développement *front-end*), côté serveur (*back-end*) ou côté mobile. Plutôt pas mal pour un langage qui se veut malgré tout simple et facile d'accès.
+## JavaScript : un langage essentiel
+
+Ce petit résumé de l'histoire de JavaScript montre à quel point ce langage est maintenant présent partout. Il dispose d’un foisonnant écosystème de composants (des "briques de base" qu'on peut intégrer pour construire un logiciel) et d’une immense communauté de développeurs.
+
+Sa connaissance vous ouvrira les portes de la programmation côté navigateur Web (on parle de développement *front-end*), côté serveur (*back-end*) ou côté mobile. A l'heure actuelle, beaucoup considèrent JavaScript comme la technologie la plus importante dans le monde du développement logiciel. 
+
+Sa dimension universelle conjuguée à sa facilité d'accès font de JavaScript un [excellent choix](https://medium.freecodecamp.com/what-programming-language-should-i-learn-first-%CA%87d%C4%B1%C9%B9%C9%94s%C9%90%CA%8C%C9%90%C9%BE-%C9%B9%C7%9D%CA%8Dsu%C9%90-19a33b0a467d#.3yu73z1px) comme premier langage pour débuter la programmation. 
 
 ## Version utilisée dans ce livre
 
-JavaScript a été standardisé en 1997 sous le nom d'[ECMAScript](https://fr.wikipedia.org/wiki/ECMAScript). Depuis, le langage a subi plusieurs séries d'améliorations pour corriger certaines maladresses initiales et supporter de nouvelles fonctionnalités. Ce processus se poursuit à l'heure actuelle.
+JavaScript a été standardisé en 1997 sous le nom d'[ECMAScript](https://fr.wikipedia.org/wiki/ECMAScript). Depuis, le langage a subi plusieurs séries d'améliorations pour corriger certaines maladresses initiales et supporter de nouvelles fonctionnalités.
 
-Ce livre utilise une version récente du langage appelée ES2015 (anciennement ES6). Elle apporte des évolutions très intéressantes et est maintenant bien supportée par les principaux environnements JavaScript du marché, comme le montre cette [table de compatibilité](http://kangax.github.io/compat-table/es6/).
+![Chronologie des versions de ECMAScript/JavaScript](images/ECMAScript-releases.png)
+
+Ce livre utilise une version récente du langage appelée ES2015 (ou parfois ES6). Elle apporte des évolutions très intéressantes et est maintenant bien supportée par les principaux environnements JavaScript du marché, comme le montre cette [table de compatibilité](http://kangax.github.io/compat-table/es6/).
