@@ -39,7 +39,7 @@ i> Dans les versions précédentes du langage, on déclarait une variable avec l
 
 Voici le résultat produit par l'exécution de ce programme.
 
-![Résultat de l'exécution](images/chapter02-0#.png)
+![Résultat de l'exécution](images/chapter02-01.png)
 
 On constate que le résultat affiché est `undefined`. Il s'agit d'un type JavaScript qui indique l'absence de valeur. Immédiatement après sa déclaration, une variable JavaScript n'a pas de valeur, ce qui est logique. 
 
@@ -262,9 +262,11 @@ Vérifiez ensuite vos prévisions en l'exécutant.
 
 ### Calcul de TVA
 
-Ecrivez un programme qui fait saisir un prix hors taxes à l'utilisateur, puis qui affiche le prix TTC correspondant en se basant sur un taux de TVA à 19,6%.
+Ecrivez un programme qui fait saisir un prix hors taxes à l'utilisateur, puis qui affiche le prix TTC correspondant en se basant sur un taux de TVA à 20,6%.
 
-![Résultat de l'exécution](images/chapter02-06.png)
+![Résultat de l'exécution](images/chapter02-07.png)
+
+![Résultat de l'exécution](images/chapter02-08.png)
 
 ### Conversion Celsius/Fahrenheit
 
@@ -272,7 +274,7 @@ Ecrivez un programme qui fait saisir une température en degrés Celsius, puis a
 
 > "C'est à Daniel Gabriel Fahrenheit que l'on doit l'invention des thermomètres en graduation Fahrenheit. Au début, ses thermomètres sont à l'alcool (1709), mais il remplace rapidement l'alcool par du mercure (1715), permettant à ses outils de mesure de fournir des données comparables. En 1742, un autre scientifique, Anders Celsius, propose une nouvelle graduation au thermomètre. La conversion entre les échelles est donnée par [°F] = [°C] x 9/5 + 32."
 
-![Résultat de l'exécution](images/chapter02-07.png)
+![Résultat de l'exécution](images/chapter02-09.png)
 
 ### Permutation de deux variables
 
