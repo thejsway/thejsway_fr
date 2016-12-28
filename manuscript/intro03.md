@@ -25,6 +25,8 @@ Enfin, l'arrivée des smartphones et autres tablettes dotés de systèmes diffé
 
 ## JavaScript : un langage essentiel
 
+![Extrait d’une [présentation](http://somethingkindawierd.com/presentations/native-javascript/presentation/index.html#/) de Jon Beebe](images/thus-javascript-is-eating-the-world.jpg)
+
 Ce petit résumé de l'histoire de JavaScript montre à quel point ce langage est maintenant présent partout. Il dispose d’un foisonnant écosystème de composants (des "briques de base" qu'on peut intégrer pour construire un logiciel) et d’une immense communauté de développeurs.
 
 Sa connaissance vous ouvrira les portes de la programmation côté navigateur Web (on parle de développement *front-end*), côté serveur (*back-end*) ou côté mobile. A l'heure actuelle, beaucoup considèrent JavaScript comme la technologie la plus importante dans le monde du développement logiciel. 
