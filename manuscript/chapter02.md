@@ -8,10 +8,10 @@ Vous savez maintenant utiliser JavaScript pour afficher des valeurs.  Mais pour 
 * On déclare une variable JavaScript avec le mot-clé `let` suivi du nom de la variable. Si la valeur initiale d'une variable n'est pas destinée à changer, on utilise de préférence le mot-clé `const` pour déclarer une variable **constante**.
 * L'opérateur d'affectation `=` permet de donner une valeur à une variable. Dans le cas d'une variable de type nombre, on peut utiliser les opérateurs `+=` et `++` pour incrémenter (augmenter de 1) sa valeur.
 * Une **expression** est un morceau de code combinant des variables, des valeurs et des opérateurs. L'évaluation d'une expression produit une valeur et correspond à un certain type.
-* On peut inclure des expressions dans une chaîne de caractères délimitée par une paire d'accents graves seuls (`\``) et appelée *template literal*.
-* Des **conversions de types** peuvent avoir lieu implicitement, ou bien explicitement avec les instructions `Number()` et `String()` qui convertissement respectivement une expression en un nombre et en une chaîne.
+* On peut inclure des expressions dans une chaîne de caractères délimitée par une paire d'accents graves seuls (\`) et appelée *template literal*.
+* Des **conversions de types** peuvent avoir lieu implicitement lors de l'évaluation d'une expression, ou bien explicitement avec les instructions `Number()` et `String()` qui convertissement respectivement une expression en un nombre et en une chaîne.
 * Les instructions `prompt()` et `alert()` permettent respectivement de faire saisir et d'afficher une information sous la forme d'une boîte de dialogue.
-* Il est essentiel de bien nommer ses variables et d'adopter une convention de nommage comme par exemple *camelCase*.
+* Il est essentiel de bien nommer ses variables et d'adopter une convention de nommage, comme par exemple *camelCase*.
 
 ## La notion de variable
 
@@ -120,7 +120,7 @@ let e = 3 + 2 * 4; // e contient la valeur 11
 e = (3 + 2) * 4; // e contient la valeur 20
 ```
 
-Le langage JavaScript permet d'inclure des expressions dans une chaîne de caractères lorsque cette chaîne est délimitée par une paire d'accents graves seuls ou *backticks* (`\``). Une telle chaîne est appelée un *template literal* ou littéral de gabarit. A l'intérieur, les expressions sont indiquées par la syntaxe `${expression}`.
+Le langage JavaScript permet d'inclure des expressions dans une chaîne de caractères lorsque cette chaîne est délimitée par une paire d'accents graves seuls ou *backticks* (\`). Une telle chaîne est appelée un *template literal* ou littéral de gabarit. A l'intérieur, les expressions sont indiquées par la syntaxe `${expression}`.
 
 On utilise souvent cette possibilité pour créer des chaînes intégrant des valeurs de variables.
 
@@ -173,7 +173,7 @@ A l'exécution, une première boîte de dialogue apparaît pour demander la sais
 
 ![Résultat de l'exécution](images/chapter02-04.png)
 
-Cette boîte est le résultat de l'exécution de l'instruction JavaScript `prompt("Entrez votre prénom :")`. 
+Cette boîte est le résultat de l'exécution de l'instruction JavaScript `prompt('Entrez votre prénom :')`. 
 
 Après saisie du prénom, une seconde boîte affiche un "bonjour" personnalisé. 
 
