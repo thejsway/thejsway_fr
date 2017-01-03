@@ -4,7 +4,11 @@ Jusqu'à présent, toutes les instructions de nos programmes (à l'exception des
 
 T> ## TL;DR
 T>
-T> TODO
+T> * L'instruction `if` permet d'exprimer une **condition**. Le bloc de code associé au `if` n'est exécuté que si la **condition** est vérifiée (vraie). Une **condition** est une expression dont l'évaluation produit une valeur **booléenne** (`true` ou `false`).
+T>
+T> * Les opérateurs `===`, `!==`, `<`, `<=`, `>` et `>=` permettent de comparer des nombres pour créer des conditions.
+T>
+T> * Associée à un `if`, l'instruction `else` permet d'exprimer une **alternative**.
 
 ## Exprimer une condition
 
@@ -311,7 +315,7 @@ E>    }
 
 L'exécution de cet exemple affiche deux messages : `"x vaut abc"` (résultat attendu) mais aussi `"x vaut def"`.
 
-## A vous de jouer !
+X> ## A vous de jouer !
 
 C'est le moment de valider votre compréhension de ce chapitre ! Voici quelques recommandations pour réaliser ces exercices :
 
@@ -358,9 +362,9 @@ console.log(nb1, nb2, nb3);
 
 Avant de l'exécuter, tentez de prévoir les valeurs finales des variables `nb1`, `nb2` et `nb3` en fonction de leurs valeurs initiales et complétez le tableau ci-dessous.
 
-|Valeurs initiales|Valeur finale de `nb1`|Valeur finale de `nb2`|Valeur finale de `nb3`|
-|-----------------|----------------------|----------------------|----------------------|
-|`nb1=nb2=nb3=4`|
+|Valeurs initiales    |Valeur finale `nb1`|Value finale `nb2`|Valeur finale `nb3`|
+|---------------------|-------------------|------------------|-------------------|
+|`nb1=nb2=nb3=4`      |
 |`nb1=4, nb2=3, nb3=2`|
 |`nb1=2, nb2=4, nb3=0`|
 
@@ -375,9 +379,9 @@ Ecrivez un programme qui fait saisir le numéro d'un mois (nombre entre 1 et 12)
 Ecrivez un programme qui demande une heure à un utilisateur sous la forme de trois informations (heures, minutes, secondes). il affiche ensuite l'heure qu'il sera une seconde plus tard. Les erreurs de saisie doivent être gérées.
 
 W> Ce programme est moins simple qu'il en a l'air : validez votre solution en la testant avec les entrées suivantes. Vous devez obtenir les résultats indiqués.
-I>
-I>    * 14h17m59s => 14h18m0s
-I>
-I>    * 6h59m59s => 7h0m0s
-I>
-I>    * 23h59m59s => 0h0m0s (minuit)
+W>
+W>    * 14h17m59s => 14h18m0s
+W>
+W>    * 6h59m59s => 7h0m0s
+W>
+W>    * 23h59m59s => 0h0m0s (minuit)
