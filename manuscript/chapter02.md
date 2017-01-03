@@ -212,14 +212,12 @@ Quel que soit le texte saisi, l'instruction `prompt()` renvoie toujours une vale
 ```javascript
 const saisie = prompt("Entrez un nombre : "); // saisie est de type chaîne
 const nb = Number(saisie); // nb est de type nombre
-// ...
 ```
 
 Il est possible de combiner les deux opérations (saisie et conversion) en une seule ligne de code, pour un résultat identique :
 
 ```javascript
-var nb = Number(prompt("Entrez un nombre : ")); // nb est de type nombre
-// ...
+const nb = Number(prompt("Entrez un nombre : ")); // nb est de type nombre
 ```
 
 Ici, le résultat de la saisie utilisateur est directement converti en une valeur de type nombre par l'instruction `Number()` et affecté à la variable `nb`.
