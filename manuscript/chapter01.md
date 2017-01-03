@@ -32,7 +32,7 @@ Chaque langage informatique dispose d'une panoplie de types qui lui est propre. 
 
 Une valeur de type **nombre** (*number*) représente une valeur numérique, autrement dit une quantité. Comme en mathématiques, on distingue les valeurs entières (ou entiers) 0, 1, 2, 3... et les valeurs réelles (ou réels) auxquelles on ajoute des chiffres après la virgule pour plus de précision.
 
-> La virgule s'exprime en informatique sous la forme d'un point : `3.14` et non `3,14` !
+I> La virgule s'exprime en informatique sous la forme d'un point : `3.14` et non `3,14` !
 
 Les nombres servent essentiellement à compter. Nous pouvons appliquer à des valeurs de type nombre les mêmes opérations qu'en mathématiques. Ces opérations produisent un résultat lui aussi de type nombre. Les principales opérations applicables sont rassemblées dans le tableau suivant.
 
@@ -47,9 +47,9 @@ Les nombres servent essentiellement à compter. Nous pouvons appliquer à des va
 
 Une valeur de type **chaîne de caractères** (en abrégé chaîne, ou *string*) représente un texte. Ces valeurs sont délimitées par une paire de guillemets simples : `'Ceci est une chaîne'`.
 
-Il est également possible de délimiter une chaîne de caractères avec une paire de guillemets doubles : `"Ceci est aussi une chaîne"`. Par convention, nous emploierons les guillemets simples dans tous les exemples de code de ce cours. L'important est d'être cohérent : utilisez l'une ou l'autre notation, mais ne mélangez pas les deux.
+I> Il est également possible de délimiter une chaîne de caractères avec une paire de guillemets doubles : `"Ceci est aussi une chaîne"`. Par convention, nous emploierons les guillemets simples dans tous les exemples de code de ce cours. L'important est d'être cohérent : utilisez l'une ou l'autre notation, mais ne mélangez pas les deux.
 
-> Il ne faut surtout pas oublier de "fermer" une chaîne : simples ou doubles, les guillemets vont toujours par deux !
+E> Il ne faut surtout pas oublier de "fermer" une chaîne : simples ou doubles, les guillemets vont toujours par deux !
 
 Pour inclure dans une chaîne certains caractères spéciaux, on utilise le caractère `\` (prononcé "antislash" ou "backslash" en anglais) qui donne un sens particulier au caractère suivant. Par exemple, `\n` permet d'ajouter un retour à la ligne dans une chaîne : `'Ceci est une chaîne\nSur plusieurs lignes'`.
 
@@ -59,13 +59,13 @@ On ne peut pas additionner ou supprimer des valeurs de type chaîne comme on peu
 
 Nous avons précédemment défini un programme informatique comme étant une liste d'ordres indiquant à un ordinateur ce qu'il doit faire. Ces ordres sont écrits sous forme de texte dans un ou plusieurs fichiers et forment ce qu'on appelle le code source du programme. Les lignes de texte dans un fichier de code source s'appellent des **lignes de code**.
 
-> Le code source peut comporter des lignes vides : celles-ci seront ignorées lors de l'exécution du programme.
+I> Le code source peut comporter des lignes vides : celles-ci seront ignorées lors de l'exécution du programme.
 
 ### Instructions
 
 Chaque ordre inclus dans un programme est appelée une **instruction**. Une instruction est délimitée par un point virgule. Un programme est constitué d'une suite d'instructions.
 
-> Le plus souvent, on n'écrit qu'une seule instruction par ligne, mais ce n'est pas une obligation.
+I> Le plus souvent, on n'écrit qu'une seule instruction par ligne, mais ce n'est pas une obligation.
 
 ### Déroulement de l'exécution
 
@@ -85,7 +85,7 @@ Le résultat de son exécution est le suivant.
 
 ![Résultat de l'exécution](images/chapter01-01.png)
 
-> On remarque au passage qu'une division par zéro (ici `12/0`) produit, comme attendu, un résultat infini (`Infinity`).
+I> On remarque au passage qu'une division par zéro (ici `12/0`) produit, comme attendu, un résultat infini (`Infinity`).
 
 ### Commentaires
 
@@ -103,13 +103,13 @@ Lors de l'exécution, les lignes commentées ne produisent plus de résultat.
 
 Les commentaires servent à donner des informations sur le programme et sont destinées au programmeur, non à la machine.
 
-> Il existe une autre manière de créer des commentaires en entourant une ou plusieurs lignes par les caractères `/*` et `*/`.
->
->     /* Un commentaire
->     sur plusieurs
->     lignes */
->
->     // Un commentaire sur une seule ligne
+I> Il existe une autre manière de créer des commentaires en entourant une ou plusieurs lignes par les caractères `/*` et `*/`.
+I>
+I>     /* Un commentaire
+I>     sur plusieurs
+I>     lignes */
+I>
+I>     // Un commentaire sur une seule ligne
 
 Les commentaires fournissent une aide précieuse pour comprendre le code source d'un programme. Il est important de décrire les parties importantes ou compliquées d'un programme grâce à des commentaires. Prenez cette bonne habitude dès maintenant !
 
