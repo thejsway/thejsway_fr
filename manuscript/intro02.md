@@ -13,9 +13,9 @@
 
 Depuis son invention dans les années 1950, l'informatique a révolutionné bien des domaines de notre vie quotidienne. Le calcul d'un itinéraire depuis un site Internet ou un GPS, la réservation à distance d'un billet de train ou d'avion ou encore la possibilité de voir et de parler avec des amis à l'autre bout du monde : tous ces actes courants sont possibles grâce aux **ordinateurs**.
 
-I> Le terme "ordinateur" est à prendre dans son sens le plus général, celui d'une "machine électronique capable d'exécuter des opérations arithmétiques et logiques" ([Wikipedia](https://fr.wikipedia.org/wiki/Ordinateur)). Il peut désigner aussi bien un ordinateur de bureau ou portable (PC, Mac), un serveur de calcul ou encore un terminal mobile de type tablette ou smartphone. 
+I> Le terme "ordinateur" est à prendre dans son sens le plus général, celui d'une "machine électronique capable d'exécuter des opérations arithmétiques et logiques" ([Wikipedia](https://fr.wikipedia.org/wiki/Ordinateur)). Il peut désigner aussi bien un ordinateur de bureau ou portable (PC, Mac), un serveur de calcul ou encore un terminal mobile de type tablette ou smartphone.
 
-Cependant un ordinateur, même très performant, n'est qu'une **machine** capable d'exécuter automatiquement une série d'opérations simples qu'on lui a demandées. Il ne dispose par lui-même d'aucune capacité d'apprentissage, de jugement, d'improvisation, bref d'aucune "intelligence". Il se contente de faire ce qu'on lui dit de faire. L'intérêt des ordinateurs est de savoir manipuler très rapidement et sans erreur d'énormes quantités d'informations. 
+Cependant un ordinateur, même très performant, n'est qu'une **machine** capable d'exécuter automatiquement une série d'opérations simples qu'on lui a demandées. Il ne dispose par lui-même d'aucune capacité d'apprentissage, de jugement, d'improvisation, bref d'aucune "intelligence". Il se contente de faire ce qu'on lui dit de faire. L'intérêt des ordinateurs est de savoir manipuler très rapidement et sans erreur d'énormes quantités d'informations.
 
 Une intervention humaine est nécessaire pour qu'un ordinateur puisse accomplir des tâches utiles. C'est le rôle du **programmeur** (appelé également développeur). Il va fournir les ordres que la machine doit exécuter en écrivant des **programmes**.
 
@@ -49,7 +49,7 @@ movl $0, %ebx
 int $0x80
 ```
 
-Plutôt intimidant, non ? Rassurez-vous, il est heureusement possible de coder de manière bien plus simple et conviviale en utilisant d'autres langages que l'assembleur. 
+Plutôt intimidant, non ? Rassurez-vous, il est heureusement possible de coder de manière bien plus simple et conviviale en utilisant d'autres langages que l'assembleur.
 
 ### La grande famille des langages de programmation
 
@@ -106,13 +106,13 @@ l'environnement. C'est le cas du langage Java et des langages de la plate-forme 
 
 ### Introduction aux algorithmes
 
-Sauf dans des cas très simples, on ne crée pas un programme en se lançant directement dans l'écriture du code source. Il est d'abord nécessaire d'analyser le problème pour trouver la suite d'opérations à réaliser pour le résoudre. 
+Sauf dans des cas très simples, on ne crée pas un programme en se lançant directement dans l'écriture du code source. Il est d'abord nécessaire d'analyser le problème pour trouver la suite d'opérations à réaliser pour le résoudre.
 
 Prenons un exemple concret tiré de la vie courante (l'idée originale est d'Alain Tarlowski) : je souhaite me préparer un plat de pâtes. Quelles sont les étapes qui vont me permettre d'atteindre mon objectif ?
 
 On peut imaginer la solution ci-dessous.
 
-```
+```text
 Début
     Sortir une casserole
     Mettre de l'eau dans la casserole

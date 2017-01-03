@@ -17,7 +17,7 @@ Vous savez maintenant utiliser JavaScript pour afficher des valeurs.  Mais pour 
 
 ### Rôle des variables
 
-Un programme informatique mémorise des données en utilisant des variables. Une **variable** est une zone de stockage d'information. On peut l'imaginer comme une boîte dans laquelle on range des choses. 
+Un programme informatique mémorise des données en utilisant des variables. Une **variable** est une zone de stockage d'information. On peut l'imaginer comme une boîte dans laquelle on range des choses.
 
 ### Propriétés d'une variable
 
@@ -25,7 +25,7 @@ Une variable possède trois grandes propriétés :
 
 * Son **nom**, qui permet de l'identifier. Un nom de variable peut contenir des lettres majuscules ou minuscules, des chiffres (sauf en première position) et certains caractères comme le dollar (`$`)  ou le tiret bas, appelé underscore (`_`).
 * Sa **valeur**, qui est la donnée actuellement mémorisée dans cette variable.
-* Son **type**, qui détermine le rôle et les opérations applicables à cette variable. 
+* Son **type**, qui détermine le rôle et les opérations applicables à cette variable.
 
 I> JavaScript n'impose pas de définir le type d'une variable. Ce type est déduit de la valeur stockée dans la variable, et peut donc changer au fur et à mesure de l'exécution du programme : on dit que JavaScript est un langage à typage **dynamique**. D'autres langages comme C ou Java imposent la définition du type des variables. On parle alors de typage **statique**.
 
@@ -42,13 +42,13 @@ console.log(a);
 
 En JavaScript, on déclare une variable à l'aide du mot-clé `let` suivi du nom de la variable. Dans cet exemple, la variable créée se nomme `a`.
 
-i> Dans les versions précédentes du langage, on déclarait une variable avec le mot-clé `var`.
+I> Dans les versions précédentes du langage, on déclarait une variable avec le mot-clé `var`.
 
 Voici le résultat produit par l'exécution de ce programme.
 
 ![Résultat de l'exécution](images/chapter02-01.png)
 
-On constate que le résultat affiché est `undefined`. Il s'agit d'un type JavaScript qui indique l'absence de valeur. Immédiatement après sa déclaration, une variable JavaScript n'a pas de valeur, ce qui est logique. 
+On constate que le résultat affiché est `undefined`. Il s'agit d'un type JavaScript qui indique l'absence de valeur. Immédiatement après sa déclaration, une variable JavaScript n'a pas de valeur, ce qui est logique.
 
 ### Affecter une valeur à une variable
 
@@ -70,7 +70,7 @@ W> Attention à ne pas confondre l'opérateur d'affectation `=` avec l'égalité
 
 On peut également combiner déclaration et affectation d'une valeur en une seule ligne. Il est cependant important de bien distinguer leurs rôles respectifs. Le programme ci-dessous est strictement équivalent au précédent.
 
-```
+```javascript
 let a = 3.14;
 console.log(a);
 ```
@@ -79,7 +79,7 @@ console.log(a);
 
 Si la valeur initiale d'une variable ne changera jamais au cours de l'exécution du programme, cette variable est ce qu'on appelle une **constante**. Il vaut alors mieux la déclarer avec le mot-clé `const` plutôt qu'avec `let`. Cela rend le programme plus facile à comprendre, et cela permet aussi de détecter des erreurs.
 
-```
+```javascript
 const a = 3.14; // La valeur de a ne pourra plus évoluer
 a = 6.28; // Impossible !
 ```
@@ -173,9 +173,9 @@ A l'exécution, une première boîte de dialogue apparaît pour demander la sais
 
 ![Résultat de l'exécution](images/chapter02-04.png)
 
-Cette boîte est le résultat de l'exécution de l'instruction JavaScript `prompt('Entrez votre prénom :')`. 
+Cette boîte est le résultat de l'exécution de l'instruction JavaScript `prompt('Entrez votre prénom :')`.
 
-Après saisie du prénom, une seconde boîte affiche un "bonjour" personnalisé. 
+Après saisie du prénom, une seconde boîte affiche un "bonjour" personnalisé.
 
 ![Résultat de l'exécution](images/chapter02-05.png)
 
@@ -183,7 +183,7 @@ La valeur saisie dans la première boîte de dialogue a été stockée dans une 
 
 ### Affichege dans la console
 
-Nous avons vu dans le précédent chapitre que l'instruction JavaScript `console.log()` permettait d'afficher une information dans la console. 
+Nous avons vu dans le précédent chapitre que l'instruction JavaScript `console.log()` permettait d'afficher une information dans la console.
 
 I> On désigne par "console" une zone d'informations textuelles. L'instruction `console.log()` ne fait pas à proprement parler partie de la spécification du langage JavaScript. Cependant, la très grande majorité des environnements JavaScript, et notamment les navigateurs web, disposent d'une console dans laquelle il est possible d'afficher des informations.
 
@@ -281,7 +281,7 @@ Observez le programme suivant et tentez de prévoir les valeurs finales de chaqu
 ```javascript
 let a = 2;
 a = a - 1;
-a++; 
+a++;
 let b = 8;
 b += 2;
 const c = a + b * b;
@@ -314,7 +314,7 @@ Ecrivez un programme qui fait saisir une température en degrés Celsius, puis a
 
 Ecrivez un programme ayant initialement le contenu suivant.
 
-```
+```javascript
 let nombre1 = 5;
 let nombre2 = 3;
 
