@@ -3,11 +3,17 @@
 ## TL;DR
 
 * Une **valeur** est un morceau d'information. Le **type** d'une valeur détermine son rôle et les opérations qui lui sont applicables.
+
 * Le langage JavaScript dispose du type **nombre** (*number*) pour représenter une valeur numérique entière ou réelle, et du type **chaîne de caractères** (*string*) pour représenter un texte.
+
 * Une valeur de type texte est délimitée par une paire de guillemets simples (`'...'`) ou doubles (`"..."`).
+
 * Les opérateurs `+`, `-`, `*` et `/` permettent de réaliser des opérations arithmétiques entre deux nombres. Appliqué à deux chaînes, l'opérateur `+` les fusionne en une seule. Cette opération est appelée **concaténation**.
+
 * Un programme informatique se compose de plusieurs **lignes de code** qui s'exécutent successivement.
+
 * Les **commentaires** (`// ...` ou `/* ... */`) sont des portions de code non exécutées. Ils permettent de documenter le fonctionnement d'un programme.
+
 * L'instruction JavaScript `console.log()` permet d'afficher une information.
 
 ## Un premier programme
@@ -15,7 +21,7 @@
 C'est le moment de faire vos premiers pas avec JavaScript ! Voici votre tout premier programme.
 
 ```javascript
-console.log('Bonjour en JavaScript !');
+console.log("Bonjour en JavaScript !");
 ```
 
 Ce programme affiche dans la console le texte `"Bonjour en JavaScript !"`. Pour cela, il utilise l'ordre JavaScript `console.log()`, dont le rôle est d'afficher une information. Le texte à afficher est placé entre parenthèses et suivi d'un point-virgule.
@@ -45,15 +51,15 @@ Les nombres servent essentiellement à compter. Nous pouvons appliquer à des va
 
 ### Le type chaîne
 
-Une valeur de type **chaîne de caractères** (en abrégé chaîne, ou *string*) représente un texte. Ces valeurs sont délimitées par une paire de guillemets simples : `'Ceci est une chaîne'`.
+Une valeur de type **chaîne de caractères** (en abrégé chaîne, ou *string*) représente un texte. Ces valeurs sont délimitées par une paire de guillemets doubles : `"Ceci est une chaîne"`.
 
-I> Il est également possible de délimiter une chaîne de caractères avec une paire de guillemets doubles : `"Ceci est aussi une chaîne"`. Par convention, nous emploierons les guillemets simples dans tous les exemples de code de ce cours. L'important est d'être cohérent : utilisez l'une ou l'autre notation, mais ne mélangez pas les deux.
+I> Il est également possible de délimiter une chaîne de caractères avec une paire de guillemets simples : `'Ceci est aussi une chaîne'`. Par convention, nous emploierons les guillemets doubles dans tous les exemples de code de ce cours. L'important est d'être cohérent : utilisez l'une ou l'autre notation, mais ne mélangez pas les deux.
 
 E> Il ne faut surtout pas oublier de "fermer" une chaîne : simples ou doubles, les guillemets vont toujours par deux !
 
-Pour inclure dans une chaîne certains caractères spéciaux, on utilise le caractère `\` (prononcé "antislash" ou "backslash" en anglais) qui donne un sens particulier au caractère suivant. Par exemple, `\n` permet d'ajouter un retour à la ligne dans une chaîne : `'Ceci est une chaîne\nSur plusieurs lignes'`.
+Pour inclure dans une chaîne certains caractères spéciaux, on utilise le caractère `\` (prononcé "antislash" ou "backslash" en anglais) qui donne un sens particulier au caractère suivant. Par exemple, `\n` permet d'ajouter un retour à la ligne dans une chaîne : `"Ceci est une chaîne\nSur plusieurs lignes"`.
 
-On ne peut pas additionner ou supprimer des valeurs de type chaîne comme on peut le faire avec des nombres. En revanche, l'opérateur `+` peut être appliqué à deux valeurs de type chaîne. Son résultat est la jointure de ces deux chaînes, appelée **concaténation**. Par exemple, `'Bon'+'jour'` produit le résultat `"Bonjour"`.
+On ne peut pas additionner ou supprimer des valeurs de type chaîne comme on peut le faire avec des nombres. En revanche, l'opérateur `+` peut être appliqué à deux valeurs de type chaîne. Son résultat est la jointure de ces deux chaînes, appelée **concaténation**. Par exemple, `"Bon"+"jour"` produit le résultat `"Bonjour"`.
 
 ## Structure d'un programme
 
@@ -74,11 +80,11 @@ Lorsqu'un programme est exécuté, les instructions qui le composent sont "lues"
 Voici un exemple de programme JavaScript composé de plusieurs instructions.
 
 ```javascript
-console.log('Bonjour en JavaScript !');
-console.log('Faisons quelques calculs.');
+console.log("Bonjour en JavaScript !");
+console.log("Faisons quelques calculs.");
 console.log(4 + 7);
 console.log(12 / 0);
-console.log('Au revoir !');
+console.log("Au revoir !");
 ```
 
 Le résultat de son exécution est le suivant.
@@ -91,11 +97,11 @@ I> On remarque au passage qu'une division par zéro (ici `12/0`) produit, comme 
 
 Par défaut, chaque ligne de texte dans les fichiers source d'un programme est considérée comme une instruction à exécuter. Il est possible d'exclure certaines lignes de l'exécution en les préfixant par une double barre oblique `//`. Ce faisant, on transforme ces lignes en **commentaires**.
 
-    console.log('Bonjour en JavaScript !');
-    //console.log('Faisons quelques ' + 'calculs.');
+    console.log("Bonjour en JavaScript !");
+    //console.log("Faisons quelques calculs.");
     console.log(4 + 7);
     //console.log(12 / 0);
-    console.log('Au revoir !');
+    console.log("Au revoir !");
 
 Lors de l'exécution, les lignes commentées ne produisent plus de résultat.
 
@@ -119,9 +125,7 @@ Passons maintenant à quelques exercices pratiques pour vérifier que vous avez 
 
 ### Présentation
 
-Ecrivez un programme qui affiche votre nom et votre âge. Voici le résultat de l'exécution de ma version de ce programme.
-
-![Résultat de l'exécution](images/chapter01-02.png)
+Ecrivez un programme qui affiche votre nom et votre âge.
 
 ### Mini-calculatrice
 
@@ -132,7 +136,9 @@ Ecrivez un programme qui calcule et affiche le résultat de l'addition, de la so
 Observez le programme ci-dessous puis tentez de prévoir les valeurs affichées lors de son exécution.
 
     console.log(4 + 5);
-    console.log('4 + 5');
-    console.log('4' + '5');
+    console.log("4 + 5");
+    console.log("4" + "5");
 
 Vérifiez vos prévisions en exécutant ce programme.
+
+I> Les résultats à obtenir sont [disponibles en ligne](http://codepen.io/bpesquet/pen/yVQoaa?editors=1102).

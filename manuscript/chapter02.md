@@ -5,12 +5,19 @@ Vous savez maintenant utiliser JavaScript pour afficher des valeurs.  Mais pour 
 ## TL;DR
 
 * Une **variable** est une zone de stockage d'information. Chaque variable possède un **nom**, une **valeur** et un **type**. En JavaScript, le type d'une variable est déduit implicitement de sa valeur, et non pas défini explicitement. Il s'agit d'un langage à typage **dynamique**.
+
 * On déclare une variable JavaScript avec le mot-clé `let` suivi du nom de la variable. Si la valeur initiale d'une variable n'est pas destinée à changer, on utilise de préférence le mot-clé `const` pour déclarer une variable **constante**.
+
 * L'opérateur d'affectation `=` permet de donner une valeur à une variable. Dans le cas d'une variable de type nombre, on peut utiliser les opérateurs `+=` et `++` pour incrémenter (augmenter de 1) sa valeur.
+
 * Une **expression** est un morceau de code combinant des variables, des valeurs et des opérateurs. L'évaluation d'une expression produit une valeur et correspond à un certain type.
+
 * On peut inclure des expressions dans une chaîne de caractères délimitée par une paire d'accents graves seuls (\`) et appelée *template literal*.
+
 * Des **conversions de types** peuvent avoir lieu implicitement lors de l'évaluation d'une expression, ou bien explicitement avec les instructions `Number()` et `String()` qui convertissement respectivement une expression en un nombre et en une chaîne.
+
 * Les instructions `prompt()` et `alert()` permettent respectivement de faire saisir et d'afficher une information sous la forme d'une boîte de dialogue.
+
 * Il est essentiel de bien nommer ses variables et d'adopter une convention de nommage, comme par exemple *camelCase*.
 
 ## La notion de variable
@@ -125,7 +132,7 @@ Le langage JavaScript permet d'inclure des expressions dans une chaîne de carac
 On utilise souvent cette possibilité pour créer des chaînes intégrant des valeurs de variables.
 
 ```javascript
-const pays = 'France';
+const pays = "France";
 console.log(`J'habite en ${pays}`); // Affiche "J'habite en France"
 const x = 3;
 const y = 7;
@@ -139,23 +146,23 @@ L'évaluation d'une expression peut entraîner des conversions de type. Ces conv
 ```javascript
 const f = 100;
 // Affiche "La variable f contient la valeur 100"
-console.log('La variable f contient la valeur ' + f);
+console.log("La variable f contient la valeur " + f);
 ```
 
 Le langage JavaScript est extrêmement tolérant au niveau des conversions de type. Cependant, il se peut qu'aucune conversion ne soit possible. En cas d'échec de la conversion d'un nombre, la valeur du résultat est `NaN` (*Not a Number*).
 
 ```javascript
-const g = 'cinq' * 2;
+const g = "cinq" * 2;
 console.log(g); // Affiche NaN
 ```
 
 Il arrive parfois que l'on souhaite forcer la conversion d'une valeur dans un autre type. On parle alors de conversion **explicite**. Pour cela, JavaScript dispose des instructions `Number()` et `String()` qui convertissent respectivement en un nombre et une chaîne la valeur placée entre parenthèses.
 
 ```javascript
-let h = '5';
+const h = "5";
 console.log(h + 1); // Concaténation : affiche la chaîne "51"
-h = Number('5');
-console.log(h + 1); // Addition numérique : affiche le nombre 6
+const i = Number("5");
+console.log(i + 1); // Addition numérique : affiche le nombre 6
 ```
 
 ## Interactions avec l'utilisateur
@@ -165,7 +172,7 @@ console.log(h + 1); // Addition numérique : affiche le nombre 6
 Maintenant que nous savons utiliser des variables, nous pouvons écrire des programmes qui échangent des informations avec l'utilisateur.
 
 ```javascript
-const prenom = prompt('Entrez votre prénom :');
+const prenom = prompt("Entrez votre prénom :");
 alert(`Bonjour, ${prenom}`);
 ```
 
@@ -173,7 +180,7 @@ A l'exécution, une première boîte de dialogue apparaît pour demander la sais
 
 ![Résultat de l'exécution](images/chapter02-04.png)
 
-Cette boîte est le résultat de l'exécution de l'instruction JavaScript `prompt('Entrez votre prénom :')`.
+Cette boîte est le résultat de l'exécution de l'instruction JavaScript `prompt("Entrez votre prénom :")`.
 
 Après saisie du prénom, une seconde boîte affiche un "bonjour" personnalisé.
 
@@ -183,7 +190,7 @@ La valeur saisie dans la première boîte de dialogue a été stockée dans une 
 
 ### Affichege dans la console
 
-Nous avons vu dans le précédent chapitre que l'instruction JavaScript `console.log()` permettait d'afficher une information dans la console.
+Nous avons vu dans le précédent chapitre que l'instruction JavaScript `console.log()` permettait d'afficher une information.
 
 I> On désigne par "console" une zone d'informations textuelles. L'instruction `console.log()` ne fait pas à proprement parler partie de la spécification du langage JavaScript. Cependant, la très grande majorité des environnements JavaScript, et notamment les navigateurs web, disposent d'une console dans laquelle il est possible d'afficher des informations.
 
@@ -203,7 +210,7 @@ console.log(temp1, temp2, temp3); // Affiche "36.9 37.6 37.1"
 Quel que soit le texte saisi, l'instruction `prompt()` renvoie toujours une valeur de type chaîne. Il faudra penser à convertir cette valeur avec l'instruction `Number()` si vous souhaitez ensuite la comparer à d'autres nombres ou l'utiliser dans des expressions mathématiques.
 
 ```javascript
-const saisie = prompt('Entrez un nombre : '); // saisie est de type chaîne
+const saisie = prompt("Entrez un nombre : "); // saisie est de type chaîne
 const nb = Number(saisie); // nb est de type nombre
 // ...
 ```
@@ -211,7 +218,7 @@ const nb = Number(saisie); // nb est de type nombre
 Il est possible de combiner les deux opérations (saisie et conversion) en une seule ligne de code, pour un résultat identique :
 
 ```javascript
-var nb = Number(prompt('Entrez un nombre : ')); // nb est de type nombre
+var nb = Number(prompt("Entrez un nombre : ")); // nb est de type nombre
 // ...
 ```
 
@@ -268,11 +275,9 @@ W> Comme de nombreux langages, JavaScript fait la distinction entre majuscules e
 
 Cherchez les exercices ci-dessous en faisant l'effort de bien nommer toutes vos variables.
 
-### Bonjour amélioré
+### Bonjour amélioré ([résultat à obtenir](http://codepen.io/bpesquet/pen/zNYRGJ?editors=1102))
 
 Modifiez le programme créé au chapitre précédent afin qu'il fasse saisir et affiche le nom de l'utilisateur en plus de son prénom de l'utilisateur. Attention à bien respecter les espaces entre les mots dans le message final.
-
-![Résultat de l'exécution](images/chapter02-06.png)
 
 ### Valeurs finales
 
@@ -294,23 +299,17 @@ console.log(a, b, c, d, e, f, g);
 
 Vérifiez ensuite vos prévisions en l'exécutant.
 
-### Calcul de TVA
+### Calcul de TVA ([résultat à obtenir](http://codepen.io/bpesquet/pen/XpWZmP?editors=1102))
 
 Ecrivez un programme qui fait saisir un prix hors taxes à l'utilisateur, puis qui affiche le prix TTC correspondant en se basant sur un taux de TVA à 20,6%.
 
-![Résultat de l'exécution](images/chapter02-07.png)
-
-![Résultat de l'exécution](images/chapter02-08.png)
-
-### Conversion Celsius/Fahrenheit
+### Conversion Celsius/Fahrenheit ([résultat à obtenir](http://codepen.io/bpesquet/pen/vgYdGE?editors=1102))
 
 Ecrivez un programme qui fait saisir une température en degrés Celsius, puis affiche le résultat de sa conversion en degrés Fahrenheit. Rappel : en informatique, la virgule s'écrit avec un point.
 
 > "C'est à Daniel Gabriel Fahrenheit que l'on doit l'invention des thermomètres en graduation Fahrenheit. Au début, ses thermomètres sont à l'alcool (1709), mais il remplace rapidement l'alcool par du mercure (1715), permettant à ses outils de mesure de fournir des données comparables. En 1742, un autre scientifique, Anders Celsius, propose une nouvelle graduation au thermomètre. La conversion entre les échelles est donnée par [°F] = [°C] x 9/5 + 32."
 
-![Résultat de l'exécution](images/chapter02-09.png)
-
-### Permutation de deux variables
+### Permutation de deux variables ([résultat à obtenir](http://codepen.io/bpesquet/pen/aBeoPB?editors=1102))
 
 Ecrivez un programme ayant initialement le contenu suivant.
 

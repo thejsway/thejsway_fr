@@ -2,19 +2,19 @@
 
 Jusqu'à présent, toutes les instructions de nos programmes (à l'exception des lignes de commentaires) étaient systématiquement exécutées. Nous allons voir comment enrichir ces programmes en y ajoutant des possibilités d'exécution conditionnelle.
 
-T> ## TL;DR
-T>
-T> * L'instruction `if` permet d'exprimer une **condition**. Le bloc de code associé au `if` n'est exécuté que si la condition est vérifiée (vraie). Une **condition** est une expression dont l'évaluation produit une valeur **booléenne** (`true` ou `false`).
-T>
-T> * Le bloc de code associé à une instruction `if` est délimité par une paire d'accolades ouvrante et fermante. Pour plus de lisibilité, il doit être **indenté** (décalé vers la droite) par rapport au `if`.
-T>
-T> * Les opérateurs `===`, `!==`, `<`, `<=`, `>` et `>=` peuvent être utilisés pour comparer des nombres au sein d'une condition. Ils renvoient tous un résultat booléen.
-T>
-T> * Associée à un `if`, l'instruction `else` permet d'exprimer une **alternative**. Selon la valeur de la condition, le bloc de code associé au `if` ou celui associé au `else` sera exécuté, mais jamais les deux. On peut imbriquer sans limite des instructions `if/else` à l'intérieur d'autres instructions `if/else`.
-T>
-T> * Les opérateurs logiques `&&` (ET), `||` (OU) et `!` (NON) permettent de créer des conditions composées.
-T>
-T> * L'instruction `switch` permet d'exécuter un bloc de code parmi plusieurs selon la valeur d'une expression.
+## TL;DR
+
+* L'instruction `if` permet d'exprimer une **condition**. Les instructions associées au `if` n'est exécuté que si la condition est vérifiée (vraie). Une **condition** est une expression dont l'évaluation produit une valeur **booléenne** (`true` ou `false`).
+
+* Les instructions associées à une instruction `if` sont regroupées dans un **bloc de code** délimité par une paire d'accolades ouvrante et fermante. Pour plus de lisibilité, le contenu d'un bloc de code être **indenté** (décalé vers la droite) par rapport à l'instruction à laquelle il est associé.
+
+* Les opérateurs `===`, `!==`, `<`, `<=`, `>` et `>=` peuvent être utilisés pour comparer des nombres au sein d'une condition. Ils renvoient tous un résultat booléen.
+
+* Associée à un `if`, l'instruction `else` permet d'exprimer une **alternative**. Selon la valeur de la condition, le bloc de code associé au `if` ou celui associé au `else` sera exécuté, mais jamais les deux. On peut imbriquer sans limite des instructions `if/else` à l'intérieur d'autres instructions `if/else`.
+
+* Les opérateurs logiques `&&` (ET), `||` (OU) et `!` (NON) permettent de créer des conditions composées.
+
+* L'instruction `switch` permet d'exécuter un bloc de code parmi plusieurs selon la valeur d'une expression.
 
 ## Exprimer une condition
 
@@ -321,15 +321,15 @@ E>     }
 
 L'exécution de cet exemple affiche deux messages : `"x vaut abc"` (résultat attendu) mais aussi `"x vaut def"`.
 
-X> ## A vous de jouer !
-X>
-X> C'est le moment de valider votre compréhension de ce chapitre ! Voici quelques recommandations pour réaliser ces exercices :
-X>
-X> * Continuez à bien nommer vos variables en respectant les normes définies au chapitre précédent, et indentez systématiquement les blocs de code associés aux instructions `if`, `else` et `switch`.
-X> 
-X> * Essayez de trouver et d'écrire plusieurs solutions au problème posé, par exemple une solution utilisant l'instruction if et une autre utilisant le switch.
-X> 
-X> * Entraînez-vous à tester vos programmes aussi complètement que possible, sans avoir peur d'y trouver des erreurs. C'est un exercice très formateur.
+## A vous de jouer !
+
+C'est le moment de valider votre compréhension de ce chapitre ! Voici quelques recommandations pour réaliser ces exercices :
+
+* Continuez à bien nommer vos variables en respectant les normes définies au chapitre précédent, et indentez systématiquement les blocs de code associés aux instructions `if`, `else` et `switch`.
+
+* Essayez de trouver et d'écrire plusieurs solutions au problème posé, par exemple une solution utilisant l'instruction `if` et une autre utilisant le `switch`.
+
+* Entraînez-vous à tester vos programmes aussi complètement que possible, sans avoir peur d'y trouver des erreurs. C'est un exercice très formateur.
 
 ### Jour suivant ([résultat à obtenir](http://codepen.io/bpesquet/pen/BpaWwy?editors=1102))
 
