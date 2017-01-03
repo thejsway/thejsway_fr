@@ -4,11 +4,17 @@ Jusqu'à présent, toutes les instructions de nos programmes (à l'exception des
 
 T> ## TL;DR
 T>
-T> * L'instruction `if` permet d'exprimer une **condition**. Le bloc de code associé au `if` n'est exécuté que si la **condition** est vérifiée (vraie). Une **condition** est une expression dont l'évaluation produit une valeur **booléenne** (`true` ou `false`).
+T> * L'instruction `if` permet d'exprimer une **condition**. Le bloc de code associé au `if` n'est exécuté que si la condition est vérifiée (vraie). Une **condition** est une expression dont l'évaluation produit une valeur **booléenne** (`true` ou `false`).
 T>
-T> * Les opérateurs `===`, `!==`, `<`, `<=`, `>` et `>=` permettent de comparer des nombres pour créer des conditions.
+T> * Le bloc de code associé à une instruction `if` est délimité par une paire d'accolades ouvrante et fermante. Pour plus de lisibilité, il doit être **indenté** (décalé vers la droite) par rapport au `if`.
 T>
-T> * Associée à un `if`, l'instruction `else` permet d'exprimer une **alternative**.
+T> * Les opérateurs `===`, `!==`, `<`, `<=`, `>` et `>=` peuvent être utilisés pour comparer des nombres au sein d'une condition. Ils renvoient tous un résultat booléen.
+T>
+T> * Associée à un `if`, l'instruction `else` permet d'exprimer une **alternative**. Selon la valeur de la condition, le bloc de code associé au `if` ou celui associé au `else` sera exécuté, mais jamais les deux. On peut imbriquer sans limite des instructions `if/else` à l'intérieur d'autres instructions `if/else`.
+T>
+T> * Les opérateurs logiques `&&` (ET), `||` (OU) et `!` (NON) permettent de créer des conditions composées.
+T>
+T> * L'instruction `switch` permet d'exécuter un bloc de code parmi plusieurs selon la valeur d'une expression.
 
 ## Exprimer une condition
 
@@ -303,27 +309,27 @@ Il n'y a pas de limite au nombre de cas possibles. Le mot-clé `default`, à pla
 
 E> Les instructions `break;` dans les blocs `case` sont indispensables pour sortir du `switch` et éviter de passer d'un bloc à un autre.
 E>
-E>    const x = "abc";
-E>    switch (x) {
-E>    case "abc":
-E>        console.log("x vaut abc");
-E>        // pas de break : on passe au bloc suivant !
-E>    case "def":
-E>        console.log("x vaut def");
-E>        break;
-E>    }
+E>     const x = "abc";
+E>     switch (x) {
+E>     case "abc":
+E>         console.log("x vaut abc");
+E>         // pas de break : on passe au bloc suivant !
+E>     case "def":
+E>         console.log("x vaut def");
+E>         break;
+E>     }
 
 L'exécution de cet exemple affiche deux messages : `"x vaut abc"` (résultat attendu) mais aussi `"x vaut def"`.
 
 X> ## A vous de jouer !
-
-C'est le moment de valider votre compréhension de ce chapitre ! Voici quelques recommandations pour réaliser ces exercices :
-
-* Continuez à bien nommer vos variables en respectant les normes définies au chapitre précédent, et indentez systématiquement les blocs de code associés aux instructions `if`, `else` et `switch`.
-
-* Essayez de trouver et d'écrire plusieurs solutions au problème posé, par exemple une solution utilisant l'instruction if et une autre utilisant le switch.
-
-* Entraînez-vous à tester vos programmes aussi complètement que possible, sans avoir peur d'y trouver des erreurs. C'est un exercice très formateur.
+X>
+X> C'est le moment de valider votre compréhension de ce chapitre ! Voici quelques recommandations pour réaliser ces exercices :
+X>
+X> * Continuez à bien nommer vos variables en respectant les normes définies au chapitre précédent, et indentez systématiquement les blocs de code associés aux instructions `if`, `else` et `switch`.
+X> 
+X> * Essayez de trouver et d'écrire plusieurs solutions au problème posé, par exemple une solution utilisant l'instruction if et une autre utilisant le switch.
+X> 
+X> * Entraînez-vous à tester vos programmes aussi complètement que possible, sans avoir peur d'y trouver des erreurs. C'est un exercice très formateur.
 
 ### Jour suivant ([résultat à obtenir](http://codepen.io/bpesquet/pen/BpaWwy?editors=1102))
 
@@ -378,7 +384,7 @@ Ecrivez un programme qui fait saisir le numéro d'un mois (nombre entre 1 et 12)
 
 Ecrivez un programme qui demande une heure à un utilisateur sous la forme de trois informations (heures, minutes, secondes). il affiche ensuite l'heure qu'il sera une seconde plus tard. Les erreurs de saisie doivent être gérées.
 
-W> Ce programme est moins simple qu'il en a l'air : validez votre solution en la testant avec les entrées suivantes. Vous devez obtenir les résultats indiqués.
+W> Ce programme est moins simple qu'il en a l'air : validez votre solution en la testant avec les entrées suivantes. Vous devez obtenir les résultats indiqués ci-dessous.
 W>
 W>    * 14h17m59s => 14h18m0s
 W>
