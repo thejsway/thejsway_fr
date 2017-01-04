@@ -225,7 +225,7 @@ Ensuite, améliorez le programme pour que le nombre de départ soit saisi par l'
 
 W> Le programme ne doit afficher que 10 nombres (y compris celui saisi) et non 11.
 
-### Contrôle de saisie (résultat à obtenir)
+### Contrôle de saisie ([résultat à obtenir](http://codepen.io/bpesquet/pen/WRNPQp?editors=1102))
 
 Ecrivez un programme qui fait saisir un nombre à l'utilisateur jusqu'à ce que ce nombre soit inférieur ou égal à 100.
 
@@ -233,26 +233,28 @@ Ensuite, améliorez votre programme pour que le nombre saisi soit compris entre 
 
 I> Réfléchissez bien à la condition de votre boucle : quel est l'inverse de "compris entre 50 et 100" ?
 
-### Table de multiplication (résultat à obtenir)
+### Table de multiplication ([résultat à obtenir](http://codepen.io/bpesquet/pen/PWoVzN?editors=1102))
 
-Ecrivez un programme multiplication.js qui fait saisir un nombre à l'utilisateur puis affiche la table de multiplication de ce nombre.
+Ecrivez un programme qui fait saisir un nombre à l'utilisateur, puis affiche la table de multiplication de ce nombre.
 
 Ensuite, améliorez votre programme pour vérifier que le nombre saisi soit compris entre 2 et 9, en vous inspirant de l'exercice précédent.
-Ni oui ni non (résultat à obtenir)
 
-Ecrivez un programme oui_non.js qui fait jouer l'utilisateur au ni oui, ni non : il entre un texte jusqu'à saisir "oui" ou "non", ce qui déclenche la fin du jeu.
-Triangle (résultat à obtenir)
+### Ni oui ni non ([résultat à obtenir](http://codepen.io/bpesquet/pen/JEjxbz?editors=1102))
 
-Ecrivez un programme triangle.js qui construit progressivement un triangle de 7 lignes.
+Ecrivez un programme qui fait jouer l'utilisateur au ni oui, ni non : il entre un texte jusqu'à saisir "oui" ou "non", ce qui déclenche la fin du jeu.
 
-### FizzBuzz (résultat à obtenir)
+### Triangle ([résultat à obtenir](http://codepen.io/bpesquet/pen/VPwgpw?editors=1102))
 
-Ecrivez un programme fizzbuzz.js qui affiche tous les nombres entre 1 et 100 avec les exceptions suivantes :
+Ecrivez un programme qui construit progressivement un triangle de 7 lignes.
 
-    Il affiche "Fizz" à la place du nombre si celui-ci est divisible par 3.
+### FizzBuzz ([résultat à obtenir](http://codepen.io/bpesquet/pen/VPwgNj?editors=1102))
 
-    Il affiche "Buzz" à la place du nombre si celui-ci est divisible par 5 et non par 3.
+Ecrivez un programme qui affiche tous les nombres entre 1 et 100 avec les exceptions suivantes :
 
-Ensuite, améliorez votre programme pour qu'il affiche "FizzBuzz" à la place des nombres divisibles à la fois par 3 et par 5.
+* Il affiche `"Fizz"` à la place du nombre si celui-ci est divisible par 3.
 
-Cet exercice a de nombreuses solutions possibles et constitue un test d'entretien d'embauche classique qui élimine un nombre significatif de candidats. Accrochez-vous pour le réussir !
+* Il affiche `"Buzz"` à la place du nombre si celui-ci est divisible par 5 et non par 3.
+
+Ensuite, améliorez votre programme pour qu'il affiche `"FizzBuzz"` à la place des nombres divisibles à la fois par 3 et par 5.
+
+I> Cet exercice a de [nombreuses solutions possibles](http://www.tomdalling.com/blog/software-design/fizzbuzz-in-too-much-detail/) et constitue un [test d'entretien d'embauche classique](http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) qui élimine un nombre *significatif* de candidats. Accrochez-vous pour le réussir !
