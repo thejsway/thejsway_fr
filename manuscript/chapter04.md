@@ -3,6 +3,15 @@
 L'objectif de ce chapitre est d'apprendre comment ajouter à nos programmes des possibilités
 d'exécution répétitive.
 
+## TL;DR
+
+* On utilise une **boucle**  afin d'exécuter plusieurs fois un bloc d'instructions. Chaque exécution est appelée un **tour de boucle** ou une **itération**. Le bloc d'instructions associé à une boucle est appelé le **corps de la boucle**.
+* La boucle `while` permet de répéter des instructions tant qu'une condition est vérifiée. La boucle `for` ajoute la possibilité d'effectuer un traitement à l'entrée dans la boucle (initialisation) et après chaque tour de boucle (étape).
+* La variable utilisée dans l'initialisation, la condition et l'étape d'une boucle `for` est appelée le **compteur** de la boucle.
+* Il faut toujours que la condition d'une boucle `while` puisse devenir fausse afin d'éviter le risque d'une **boucle infinie**.
+* On s'interdit de manipuler le compteur d'une boucle `for` à l'intérieur du corps de la boucle.
+* Toutes les boucles peuvent s'écrire avec un `while`. La boucle `for` est à privilégier lorsque le nombre d'itérations est connu à l'avance.
+
 ## Introduction
 
 Essayons de créer un programme qui affiche tous les nombres entre 1 et 5. Voici ce que nous pouvons écrire avec nos connaissances actuelles.
@@ -19,7 +28,7 @@ Même s'il reste relativement court, ce programme est très répétitif. Que se 
 
 Pour cela, le langage JavaScript offre la possibilité de répéter l'exécution d'un ensemble d'instructions en plaçant ces instructions à l'intérieur d'une **boucle**. Le nombre de répétitions peut être connu à l'avance ou dépendre de l'évaluation d'une condition. A chaque répétition, les instructions contenues dans la boucle sont exécutées. C'est ce qu'on appelle un **tour de boucle** ou encore une **itération**.
 
-![Les boucles, par Bart S.](images/chapter04-01.png)
+![Si seulement Bart connaissant les boucles...](images/chapter04-01.png)
 
 Nous allons étudier les deux grands types de boucles utilisables en JavaScript ainsi que dans la plupart des autres langages de programmation.
 
@@ -39,7 +48,7 @@ while (nombre <= 5) {
 }
 ```
 
-Exactement comme le précédent, il affiche les nombres de 1 et 5 dans la console.
+Exactement comme le précédent, il affiche les nombres entre 1 et 5 dans la console.
 
 ![Résultat de l'exécution](images/chapter04-02.png)
 
@@ -59,11 +68,11 @@ Avant chaque tour de boucle, la condition associée au `while` est évaluée.
 
 * Si elle est fausse, les instructions du bloc ne sont pas exécutées et le programme continue juste après le bloc `while`.
 
-Dans l'exemple précédent, la valeur du la variable `nombre` est affichée tant que cette valeur ne dépasse pas 5. Lorsque c'est le cas, la boucle `while` se termine.
-
 Le bloc d'instructions associé à une boucle est appelé le **corps de la boucle**.
 
 W> Le corps de la boucle doit être placé entre accolades, sauf s'il se réduit à une seule instruction. Dans un premier temps, je vous conseille d'ajouter systématiquement des accolades à toutes vos boucles.
+
+Dans l'exemple précédent, la valeur du la variable `nombre` est affichée tant que cette valeur ne dépasse pas 5. Lorsque c'est le cas, la boucle `while` se termine.
 
 ## La boucle `for`
 
@@ -130,15 +139,15 @@ Voici l'exemple de boucle `while` modifié pour oublier volontairement la ligne 
 let nombre = 1;
 while (nombre <= 5) {
     console.log(nombre);
-    // La variable nombre n'est plus modifiée : la condition restera toujours vraie
+    // La variable n'est plus modifiée : la condition restera toujours vraie
 }
 ```
 
 Ce programme affiche indéfiniment le nombre 1. Lors de son exécution, on fait un premier tour de boucle puisque la condition `(nombre <= 5)` est initialement vérifiée. Mais comme on ne modifie plus la variable `nombre` dans le corps de la boucle, la condition reste indéfiniment vraie : il s'agit d'une boucle infinie.
 
-E> Pour éviter d'écrire par mégarde une boucle infinie, il faut s'assurer que la variable impliquée dans la condition puisse être modifiée dans le corps de la boucle.
+Pour éviter d'écrire par mégarde une boucle infinie, il faut s'assurer que la variable impliquée dans la condition puisse être modifiée dans le corps de la boucle.
 
-### Manipulation du compteur d'une boucle for
+### Manipulation du compteur d'une boucle `for`
 
 Imaginons qu'une inspiration bizarre vous conduise à modifier le compteur d'une boucle `for` dans le corps de la boucle, comme dans l'exemple suivant.
 
@@ -155,7 +164,7 @@ L'exécution de cet exemple produit le résultat suivant.
 
 A chaque tour de boucle, la variable `i` est incrémentée deux fois : dans le corps de la boucle, puis dans l'étape exécutée à la fin de chaque tour.
 
-E> Quand on emploie une boucle `for`, la modification du compteur de boucle (le plus souvent une incrémentation) est réalisée à la fin de chaque tour de boucle. Sauf exception rarissime, Il ne faut surtout pas modifier le compteur dans le corps de la boucle.
+Quand on emploie une boucle `for`, la modification du compteur de boucle (le plus souvent une incrémentation) est réalisée à la fin de chaque tour de boucle. Sauf exception rarissime, Il ne faut surtout pas modifier le compteur dans le corps de la boucle.
 
 ## Choix entre un `while` et un `for`
 
