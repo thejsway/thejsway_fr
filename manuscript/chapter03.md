@@ -6,7 +6,7 @@ Jusqu'à présent, toutes les instructions de nos programmes (à l'exception des
 
 * L'instruction `if` permet d'exprimer une **condition**. Les instructions associées au `if` n'est exécuté que si la condition est vérifiée (vraie). Une **condition** est une expression dont l'évaluation produit une valeur **booléenne** (`true` ou `false`).
 
-* Les instructions associées à une instruction `if` sont regroupées dans un **bloc de code** délimité par une paire d'accolades ouvrante et fermante. Pour plus de lisibilité, le contenu d'un bloc de code être **indenté** (décalé vers la droite) par rapport à l'instruction à laquelle il est associé.
+* Les instructions associées à une instruction `if` sont regroupées dans un **bloc de code** délimité par une paire d'accolades ouvrante et fermante. Pour plus de lisibilité, le contenu d'un bloc de code être **indenté** (décalé vers la droite) par rapport à l'instruction `if` à laquelle il est associé.
 
 * Les opérateurs `===`, `!==`, `<`, `<=`, `>` et `>=` peuvent être utilisés pour comparer des nombres au sein d'une condition. Ils renvoient tous un résultat booléen.
 
@@ -49,7 +49,7 @@ if (condition) {
 }
 ```
 
-La paire d'accolades ouvrante et fermante délimite ce que l'on appelle un **bloc de code** associé à l'instruction `if`. Cette instruction représente un **test**. On peut la traduire par l'ordre suivant : "Si la condition est vraie, alors exécute les instructions contenues dans le bloc de code".
+La paire d'accolades ouvrante et fermante délimite le **bloc de code** associé à l'instruction `if`. Cette instruction représente un **test**. On peut la traduire par l'ordre suivant : "Si la condition est vraie, alors exécute les instructions contenues dans le bloc de code".
 
 W> Lorsque le bloc de code ne contient qu'une seule instruction, les accolades ne sont pas obligatoires. Dans un premier temps, je vous conseille tout de même de les ajouter systématiquement.
 

@@ -119,12 +119,13 @@ La variable utilisée dans l'initialisation, la condition et l'étape d'une bouc
 
 I> Par convention, la variable compteur d'une boucle for est souvent nommée `i`.
 
-Très souvent,  on n'a pas besoin d'utiliser la variable compteur en dehors du corps de la boucle. Dans ce cas, on peut la déclarer en même temps qu'on l'initialise dans la boucle. Notre programme d'exemple peut être réécrit ainsi :
+Très souvent,  on n'a pas besoin d'utiliser la variable compteur en dehors du corps de la boucle. Dans ce cas, on peut la déclarer en même temps qu'on l'initialise dans la boucle. Dans ce cas, sa portée se limite à la boucle. Notre programme d'exemple peut être réécrit ainsi :
 
 ```javascript
 for (let nombre = 1; nombre <= 5; nombre++) {
     console.log(nombre);
 }
+// La variable nombre n'est plus visible ici
 ```
 
 ## Erreurs fréquentes

@@ -10,6 +10,8 @@ Vous savez maintenant utiliser JavaScript pour afficher des valeurs.  Mais pour 
 
 * L'opérateur d'affectation `=` permet de donner une valeur à une variable. Dans le cas d'une variable de type nombre, on peut utiliser les opérateurs `+=` et `++` pour incrémenter (augmenter de 1) sa valeur.
 
+* La **portée** (*scope*) d'une variable représente la portion du code source dans laquelle cette variable est utilisable. Les variables définies avec `let` et `const` ont une portée de type bloc : elles ne sont utilisables qu'à l'intérieur du **bloc de code** dans lequel elles sont définies. Un bloc de code est délimité par une paire d'accolades ouvrante et fermante.
+
 * Une **expression** est un morceau de code combinant des variables, des valeurs et des opérateurs. L'évaluation d'une expression produit une valeur et correspond à un certain type.
 
 * On peut inclure des expressions dans une chaîne de caractères délimitée par une paire d'accents graves seuls (\`) et appelée *template literal*.
@@ -95,7 +97,7 @@ a = 6.28; // Impossible !
 
 ### Incrémenter une variable de type nombre
 
-Il est également possible d'augmenter ou de diminuer la valeur d'un nombre avec les opérateurs `+=` et `++`. Ce dernier est appelé opérateur d'incrémentation, car il permet **d'incrémenter** (augmenter de 1) la valeur d'une variable.
+Il est également possible d'augmenter ou de diminuer la valeur d'un nombre avec les opérateurs `+=` et `++`. Ce dernier est appelé opérateur d'**incrémentation**, car il permet d'incrémenter (augmenter de 1) la valeur d'une variable.
 
 Dans l'exemple suivant, les lignes 2 et 3 permettent chacune d'augmenter la valeur de la variable `b` de 1.
 
@@ -104,6 +106,20 @@ let b = 0; // b contient la valeur 0
 b += 1; // b contient la valeur 1
 b++; // b contient la valeur 2
 console.log(b); // Affiche 2
+```
+
+### Portée d'une variable
+
+On appelle **portée** (*scope*) d'une variable la portion du code source dans laquelle cette variable est visible et donc utilisable. Les variables déclarées avec `let` et `const` ont une portée de type bloc : elles ne sont visibles qu'au sein du bloc de code dans lequel elles sont déclarées (ainsi que dans tous les sous-blocs éventuels). En JavaScript et dans de nombreux autres langages, un **bloc de code** est délimité par une paire d'accolades ouvrante et fermante. Un programme JavaScript correspond par défaut à un unique bloc de code.
+
+```javascript
+let var1 = 0;
+{
+    var1 = 1; // OK : var1 est déclarée dans le bloc parent
+    const var2 = 0;
+}
+console.log(var1); // OK : var1 est déclarée dans le bloc courant
+console.log(var2); // Erreur : var2 n'est pas visible ici
 ```
 
 ## La notion d'expression
