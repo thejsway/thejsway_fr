@@ -1,6 +1,6 @@
 # Jouez avec les variables
 
-Vous savez maintenant utiliser JavaScript pour afficher des valeurs.  Mais pour qu'un programme soit véritablement utile, il faut qu'il puisse mémoriser des données, par exemple des informations saisies par un utilisateur. C'est l'objet de ce chapitre.
+Vous savez maintenant afficher des valeurs avec JavaScript.  Mais pour qu'un programme soit véritablement utile, il faut qu'il puisse mémoriser des données, par exemple des informations saisies par un utilisateur. C'est l'objet de ce chapitre.
 
 ## TL;DR
 
@@ -51,7 +51,7 @@ console.log(a);
 
 En JavaScript, on déclare une variable à l'aide du mot-clé `let` suivi du nom de la variable. Dans cet exemple, la variable créée se nomme `a`.
 
-I> Dans les versions précédentes du langage, on déclarait une variable avec le mot-clé `var`.
+I> Dans les versions précédentes du langage, on déclarait une variable avec le mot-clé `var`. `let` et `const`le remplacent avantageusement.
 
 Voici le résultat produit par l'exécution de ce programme.
 
