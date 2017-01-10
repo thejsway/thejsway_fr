@@ -4,7 +4,12 @@ Dans ce chapitre, vous allez découvrir comment décomposer un programme en sous
 
 ## TL;DR
 
-TODO
+* Une **fonction** est un regroupement d'instructions qui réalise une tâche donnée. En JavaScript, une fonction est créée à l'aide du mot-clé `function`.
+* Ecrire un programme sous forme d'un ensemble de fonctions plutôt qu'en un seul bloc permet de gagner en **lisibilité** et en **modularité**.
+* Les variables déclarées dans le corps d'une fonction sont appelées des **variables locales**. Leur portée se limite au corps de la fonction.
+* Une fonction peut renvoyer une valeur grâce au mot-clé `return`, ou ne rien renvoyer (on parle alors de **procédure**). Elle peut également accepter ou non des **paramètres**, qui sont les données dont elle a besoin pour fonctionner.
+* En JavaScript, la valeur d'une variable peut être une fonction. On peut donc créer une **fonction anonyme** et l'affecter à une variable. Pour cela, il est possible de définir la fonction de manière classique ou d'utiliser la syntaxe dite **fonction fléchée** (*fat arrow*).
+* Il est important de créer des fonctions ayant un **rôle** bien défini et de limiter leur complexité. Le **nom** de la fonction, souvent basé sur un verbe à l'infinitif exprimant une **action**, doit réfléter son rôle. JavaScript offre de nombreuses fonctions prédéfinies qui peuvent simplifier la tâche du programmeur.
 
 ## Introduction : le rôle des fonctions
 
@@ -241,7 +246,7 @@ Modifions notre exemple pour construire un message de bienvenue personnalisé.
 
 ```js
 function direBonjour(prenom) {
-    var message = `Bonjour, ${prenom} !`;
+    const message = `Bonjour, ${prenom} !`;
     return message;
 }
 
@@ -281,9 +286,59 @@ presentation(5, "Prosper"); // Affiche "Tu t'appelles 5 et tu as Prosper ans"
 
 Lors du second appel, les valeurs données aux paramètres sont inversées : `prenom` reçoit la valeur `3` et `age` reçoit la valeur `"Prosper"`.
 
-## Utilisation de fonctions anonymes
+## Fonctions anonymes
 
-TODO
+Il existe d'autres manières de créer des fonctions en JavaScript. En voici un exemple.
+
+```js
+const bonjour = function(prenom) {
+    const message = `Bonjour, ${prenom} !`;
+    return message;
+}
+
+console.log(bonjour("Thomas")); // Affiche "Bonjour, Thomas !"
+```
+
+La fonction créée ci-dessus est **anonyme** et directement affectée à la variable `bonjour`. La valeur de cette variable est donc une fonction.
+
+La syntaxe pour créer une fonction anonyme est la suivante.
+
+```js
+// Affection d'une fonction anonyme à la variable maVariable
+const maVariable = function(param1, param2, ...) {
+    // Instructions pouvant utiliser param1, param2, ...
+}
+
+// Appel de la fonction anonyme
+// param1 reçoit la valeur de arg1, param2 la valeur de arg2, ...
+maVariable(arg1, arg2, ...);
+```
+
+Les dernières évolutions du langage JavaScript ont introduit une syntaxe plus concise pour créer des fonctions anonymes. L'exemple suivant est strictement équivalent au précédent.
+
+```js
+const bonjour = (prenom) => {
+    const message = `Bonjour, ${prenom} !`;
+    return message;
+}
+
+console.log(bonjour("Thomas")); // Affiche "Bonjour, Thomas !"
+```
+
+Cette syntaxe est appelée **fonction fléchée** (*fat arrow*).
+
+```js
+// Affection d'une fonction anonyme à la variable maVariable
+const maVariable = (param1, param2, ...)  => {
+    // Instructions pouvant utiliser param1, param2, ...
+}
+
+// Appel de la fonction anonyme
+// param1 reçoit la valeur de arg1, param2 la valeur de arg2, ...
+maVariable(arg1, arg2, ...);
+```
+
+Nous reviendrons plus loin sur les utilisations possibles des fonctions anonymes et les nombreuses possibilités offertes par les fonctions en JavaScript.
 
 ## Comment (bien) programmer avec les fonctions
 
@@ -310,7 +365,7 @@ console.log(Math.random());    // Affiche un nombre aléatoire entre 0 et 1
 
 La fonction `Math.min()` renvoie le minimum des nombres passés en paramètres. La fonction `Math.random()` génère un nombre aléatoire entre 0 et 1.
 
-Nous découvrirons d'autres fonctions prédéfinies dans la suite de ce cours.
+Nous découvrirons d'autres fonctions prédéfinies dans la suite de ce livre.
 
 ### Limiter la complexité des fonctions
 
@@ -318,6 +373,8 @@ Le corps d'une fonction doit garder un niveau de complexité faible et ne pas ê
 
 ### Bien nommer fonctions et paramètres
 
-Comme pour les variables, le nommage des fonctions et des paramètres joue un rôle important dans la lisibilité du programme. Les recommandations sont les mêmes : choisir des noms qui expriment précisément le rôle et respecter la norme camelCase.
+Comme pour les variables, le nommage des fonctions et des paramètres joue un rôle important dans la lisibilité du programme. Les recommandations sont les mêmes : choisir des noms qui expriment précisément le rôle et respecter la norme [camelCase](https://fr.wikipedia.org/wiki/CamelCase).
+
+Le plus souvent, on choisira un nom basé sur un verbe à l'infinitif exprimant une **action** (*calculer*, *afficher*, *trouver*, etc).
 
 T> S'il est difficile de trouver un nom pertinent pour une fonction, c'est sans doute que son rôle n'est pas bien défini et que son existence doit être remise en cause.
