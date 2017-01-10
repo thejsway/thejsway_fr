@@ -6,6 +6,4 @@ Ce livre est divisé en trois grandes parties. La première présente les bases 
 
 Chacun des chapitres commence par un paragraphe **TL;DR** qui résume le contenu développé dans le chapitre. Il est ainsi possible d'avancer rapidement dans le livre en évitant de lire en détail les chapitres dont le résumé est déjà connu.
 
-A la fin de chaque chapitre se trouve une série d'exercices, destinés à appliquer les notions qui viennent d'être découvertes. Il est très important de chercher sérieusement ces exercices : c'est en pratiquant qu'on comprend et qu'on retient le mieux les choses. Les solutions de tous les exercices se trouvent en ligne sur la plate-forme [CodePen](http://codepen.io/bpesquet/pens/tags/?grid_type=list&selected_tag=jsway_fr#), mais n'allez pas les voir trop vite...
-
 Je vous souhaite la bienvenue dans le monde merveilleux de JavaScript !

@@ -32,7 +32,7 @@ L'affichage du message ne doit avoir lieu que si le nombre est positif : on dit 
 
 Voici comment ce programme se traduit en JavaScript.
 
-```javascript
+```js
 const nombre = Number(prompt("Entrez un nombre :"));
 if (nombre > 0) {
     console.log(`${nombre} est positif`);
@@ -63,7 +63,7 @@ I> Quand la valeur d'une condition est vraie, on dit que cette condition est **v
 
 Nous avons déjà étudié les types **nombre** et **chaîne** : le type **booléen** fait également partie des types supportés par le langage JavaScript. Ce type n'a que deux valeurs possibles : `true` (vrai) et `false` (faux).
 
-```javascript
+```js
 if (true) {
     // la condition du if est toujours vraie
     // les instructions de ce bloc seront toujours exécutées
@@ -93,7 +93,7 @@ E> La confusion entre l'opérateur d'égalité `===` (ou `==`) et l'opérateur d
 
 Modifions le programme d'exemple pour remplacer l'opérateur `>` par `>=` et modifier le message affiché.
 
-```javascript
+```js
 const nombre = Number(prompt("Entrez un nombre :"));
 if (nombre >= 0) {
     console.log(`${nombre} est positif ou nul`);
@@ -110,7 +110,7 @@ Dans un programme, on souhaite fréquemment agir différemment selon que la cond
 
 Enrichissons notre programme d'exemple pour qu'il affiche un message adapté au nombre saisi par l'utilisateur.
 
-```javascript
+```js
 const nombre = Number(prompt("Entrez un nombre :"));
 if (nombre > 0) {
     console.log(`${nombre} est positif`);
@@ -124,7 +124,7 @@ Selon le nombre saisi, un message adapté est toujours affiché dans la console.
 
 Une alternative s'exprime en JavaScript grâce à l'instruction `else` associée à un `if`. Voici sa syntaxe.
 
-```javascript
+```js
 if (condition) {
     // instructions exécutées quand la condition est vraie
 }
@@ -141,7 +141,7 @@ L'instruction `if/else` permet de créer un **branchement logique** à l'intéri
 
 Notre programme d'exemple peut encore être enrichi pour afficher un message spécifique si le nombre saisi est nul. Pour cela, le code doit être modifié de la manière suivante.
 
-```javascript
+```js
 const nombre = Number(prompt("Entrez un nombre :"));
 if (nombre > 0) {
     console.log(`${nombre} est positif`);
@@ -168,7 +168,7 @@ Cet exemple nous montre que l'indentation permet de bien visualiser les différe
 
 On rencontre fréquemment le cas particulier où la seule instruction d'un bloc `else` est un `if` (le `else` éventuellement associé à ce `if` ne compte pas comme une seconde instruction). Dans ce cas, il est possible d'écrire ce `if`  sur la même ligne que le premier `else`, sans accolades ni indentation. Ainsi, notre programme d'exemple peut être réécrit de la manière suivante.
 
-```javascript
+```js
 const nombre = Number(prompt("Entrez un nombre :"));
 if (nombre > 0) {
     console.log(`${nombre} est positif`);
@@ -189,7 +189,7 @@ I> L'expression `0 <= nombre <= 100` est mathématiquement exacte mais ne peut p
 
 La traduction en JavaScript de cette condition donne le résultat suivant.
 
-```javascript
+```js
 if ((nombre >= 0) && (nombre <= 100)) {
     console.log(`${nombre} est compris entre 0 et 100`);
 }
@@ -199,7 +199,7 @@ I> Les parenthèses entre les sous-conditions ne sont pas obligatoires. Cependan
 
 L'opérateur `&&` (ET logique) s'applique à deux valeurs de type booléen. Son résultat est la valeur `true` uniquement si les deux valeurs auxquelles il s'applique valent `true`.
 
-```javascript
+```js
 console.log(true && true);   // Affiche true
 console.log(true && false);  // Affiche false
 console.log(false && true);  // Affiche false
@@ -214,7 +214,7 @@ Imaginons maintenant qu'on souhaite vérifier qu'un nombre est en dehors de l'in
 
 Traduit en JavaScript, cet exemple donne le résultat suivant.
 
-```javascript
+```js
 if ((nombre < 0) || (nombre > 100)) {
     console.log(`${nombre} est en dehors de l'intervalle [0, 100]`);
 }
@@ -222,7 +222,7 @@ if ((nombre < 0) || (nombre > 100)) {
 
 L'opérateur `||` (OU logique) s'applique à deux valeurs de type booléen. Son résultat est la valeur true si au moins une des deux valeurs auxquelles il s'applique vaut `true`. Voici la table de vérité de l'opérateur `||`.
 
-```javascript
+```js
 console.log(true || true);   // Affiche true
 console.log(true || false);  // Affiche true
 console.log(false || true);  // Affiche true
@@ -233,7 +233,7 @@ console.log(false || false); // Affiche false
 
 Il existe un troisième opérateur logique qui permet d'inverser la valeur d'une condition : l'opérateur NON. Il s'écrit en JavaScript sous la forme d'un point d'exclamation `!`.
 
-```javascript
+```js
 if (!(nombre > 100)) {
     console.log(`${nombre} est inférieur ou égal à 100`);
 }
@@ -241,7 +241,7 @@ if (!(nombre > 100)) {
 
 Voici la table de vérité de cet opérateur.
 
-```javascript
+```js
 console.log(!true);  // Affiche false
 console.log(!false); // Affiche true
 ```
@@ -250,7 +250,7 @@ console.log(!false); // Affiche true
 
 Essayons d'écrire un programme qui conseille l'utilisateur sur la tenue à porter en fonction de la météo actuelle. Une première solution consiste à utiliser des instructions `if/else`.
 
-```javascript
+```js
 const meteo = prompt("Quel temps fait-il dehors ?");
 if (meteo === "soleil") {
     console.log("Sortez en t-shirt");
@@ -267,7 +267,7 @@ if (meteo === "soleil") {
 
 Lorsqu'un programme consiste à déclencher un bloc d'opérations parmi plusieurs selon la valeur d'une expression, on peut l'écrire en utilisant l'instruction JavaScript `switch`.
 
-```javascript
+```js
 const meteo = prompt("Quel temps fait-il dehors ?");
 switch (meteo) {
 case "soleil":
@@ -291,7 +291,7 @@ Le comportement de ce programme est strictement identique à celui de la version
 
 L'instruction `switch` déclenche l'exécution d'un bloc d'instructions parmi plusieurs possibles. Seul le bloc correspondant à la valeur de l'expression testée sera pris en compte. Sa syntaxe est la suivante.
 
-```javascript
+```js
 switch (expression) {
 case valeur1:
     // instructions exécutées quand expression vaut valeur1
@@ -320,74 +320,3 @@ E>         break;
 E>     }
 
 L'exécution de cet exemple affiche deux messages : `"x vaut abc"` (résultat attendu) mais aussi `"x vaut def"`.
-
-## A vous de jouer !
-
-C'est le moment de valider votre compréhension de ce chapitre ! Voici quelques recommandations pour réaliser ces exercices :
-
-* Continuez à bien nommer vos variables en respectant les normes définies au chapitre précédent, et indentez systématiquement les blocs de code associés aux instructions `if`, `else` et `switch`.
-
-* Essayez de trouver et d'écrire plusieurs solutions au problème posé, par exemple une solution utilisant l'instruction `if` et une autre utilisant le `switch`.
-
-* Entraînez-vous à tester vos programmes aussi complètement que possible, sans avoir peur d'y trouver des erreurs. C'est un exercice très formateur.
-
-### Jour suivant ([résultat à obtenir](http://codepen.io/bpesquet/pen/BpaWwy?editors=1102))
-
-Ecrivez un programme qui fait saisir un nom de jour à l'utilisateur, puis affiche le nom du jour suivant. Les erreurs de saisie (jour incorrect) doivent être gérées.
-
-### Comparaison de deux nombres ([résultat à obtenir](http://codepen.io/bpesquet/pen/jyOGmY?editors=1102))
-
-Ecrivez un programme qui fait saisir deux nombres puis compare leurs valeurs et affiche un message approprié.
-
-### Baccalauréat ([résultat à obtenir](http://codepen.io/bpesquet/pen/egYGGQ?editors=1102))
-
-Ecrivez un programme qui fait saisir la moyenne d'un candidat puis affiche si ce candidat est recalé (moyenne inférieure à 10), reçu (moyenne entre 10 et 12) ou reçu avec mention (moyenne supérieure ou égale à 12).
-
-### Valeurs finales
-
-Examinez le programme JavaScript ci-dessous.
-
-```javascript
-let nb1 = Number(prompt("Entrez nb1 :"));
-let nb2 = Number(prompt("Entrez nb2 :"));
-let nb3 = Number(prompt("Entrez nb3 :"));
-
-if (nb1 > nb2) {
-    nb1 = nb3 * 2;
-} else {
-    nb1++;
-    if (nb2 > nb3) {
-        nb1 = nb1 + nb3 * 3;
-    } else {
-        nb1 = 0;
-        nb3 = nb3 * 2 + nb2;
-    }
-}
-console.log(nb1, nb2, nb3);
-```
-
-Avant de l'exécuter, tentez de prévoir les valeurs finales des variables `nb1`, `nb2` et `nb3` en fonction de leurs valeurs initiales et complétez le tableau ci-dessous.
-
-|Valeurs initiales    |Valeur finale `nb1`|Value finale `nb2`|Valeur finale `nb3`|
-|---------------------|-------------------|------------------|-------------------|
-|`nb1=nb2=nb3=4`      |
-|`nb1=4, nb2=3, nb3=2`|
-|`nb1=2, nb2=4, nb3=0`|
-
-Vérifiez vos prévisions en exécutant le programme.
-
-### Nombre de jours du mois ([résultat à obtenir](http://codepen.io/bpesquet/pen/MJWEXP?editors=1102))
-
-Ecrivez un programme qui fait saisir le numéro d'un mois (nombre entre 1 et 12) puis affiche le nombre de jours de ce mois. On ne tiendra pas compte des années bissextiles. Les erreurs de saisie doivent être gérées.
-
-### Heure suivante ([résultat à obtenir](http://codepen.io/bpesquet/pen/JEjrzd?editors=1102))
-
-Ecrivez un programme qui demande une heure à un utilisateur sous la forme de trois informations (heures, minutes, secondes). il affiche ensuite l'heure qu'il sera une seconde plus tard. Les erreurs de saisie doivent être gérées.
-
-W> Ce programme est moins simple qu'il en a l'air : validez votre solution en la testant avec les entrées suivantes. Vous devez obtenir les résultats indiqués ci-dessous.
-W>
-W>    * 14h17m59s => 14h18m0s
-W>
-W>    * 6h59m59s => 7h0m0s
-W>
-W>    * 23h59m59s => 0h0m0s (minuit)

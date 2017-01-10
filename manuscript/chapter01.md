@@ -2,6 +2,8 @@
 
 ## TL;DR
 
+* L'instruction JavaScript `console.log()` permet d'afficher une information.
+
 * Une **valeur** est un morceau d'information. Le **type** d'une valeur détermine son rôle et les opérations qui lui sont applicables.
 
 * Le langage JavaScript dispose du type **nombre** (*number*) pour représenter une valeur numérique entière ou réelle, et du type **chaîne de caractères** (*string*) pour représenter un texte.
@@ -13,8 +15,6 @@
 * Un programme informatique se compose de plusieurs **lignes de code** qui s'exécutent successivement.
 
 * Les **commentaires** (`// ...` ou `/* ... */`) sont des portions de code non exécutées. Ils permettent de documenter le fonctionnement d'un programme.
-
-* L'instruction JavaScript `console.log()` permet d'afficher une information.
 
 ## Un premier programme
 
@@ -79,7 +79,7 @@ Lorsqu'un programme est exécuté, les instructions qui le composent sont "lues"
 
 Voici un exemple de programme JavaScript composé de plusieurs instructions.
 
-```javascript
+```js
 console.log("Bonjour en JavaScript !");
 console.log("Faisons quelques calculs.");
 console.log(4 + 7);
@@ -97,11 +97,13 @@ I> On remarque au passage qu'une division par zéro (ici `12/0`) produit, comme 
 
 Par défaut, chaque ligne de texte dans les fichiers source d'un programme est considérée comme une instruction à exécuter. Il est possible d'exclure certaines lignes de l'exécution en les préfixant par une double barre oblique `//`. Ce faisant, on transforme ces lignes en **commentaires**.
 
-    console.log("Bonjour en JavaScript !");
-    //console.log("Faisons quelques calculs.");
-    console.log(4 + 7);
-    //console.log(12 / 0);
-    console.log("Au revoir !");
+```js
+console.log("Bonjour en JavaScript !");
+//console.log("Faisons quelques calculs.");
+console.log(4 + 7);
+//console.log(12 / 0);
+console.log("Au revoir !");
+```
 
 Lors de l'exécution, les lignes commentées ne produisent plus de résultat.
 
@@ -118,27 +120,3 @@ I>
 I>     // Un commentaire sur une seule ligne
 
 Les commentaires fournissent une aide précieuse pour comprendre le code source d'un programme. Il est important de décrire les parties importantes ou compliquées d'un programme grâce à des commentaires. Prenez cette bonne habitude dès maintenant !
-
-## A vous de jouer !
-
-Passons maintenant à quelques exercices pratiques pour vérifier que vous avez tout compris !
-
-### Présentation
-
-Ecrivez un programme qui affiche votre nom et votre âge.
-
-### Mini-calculatrice
-
-Ecrivez un programme qui calcule et affiche le résultat de l'addition, de la soustraction, de la multiplication et de la division de 6 par 3.
-
-### Valeurs affichées
-
-Observez le programme ci-dessous puis tentez de prévoir les valeurs affichées lors de son exécution.
-
-    console.log(4 + 5);
-    console.log("4 + 5");
-    console.log("4" + "5");
-
-Vérifiez vos prévisions en exécutant ce programme.
-
-I> Les résultats à obtenir sont [disponibles en ligne](http://codepen.io/bpesquet/pen/yVQoaa?editors=1102).

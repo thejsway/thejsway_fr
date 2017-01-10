@@ -55,7 +55,7 @@ Une **fonction** est un regroupement d'instructions qui réalise une tâche donn
 
 Voici un exemple basique utilisant une fonction.
 
-```javascript
+```js
 function direBonjour() {
     console.log("Bonjour !");
 }
@@ -83,7 +83,7 @@ Cet extrait permet de créer une fonction nommée `direBonjour()`. Elle n'est co
 
 Cet extrait de code constitue la **déclaration** d'une fonction. Voici sa syntaxe.
 
-```javascript
+```js
 // Déclaration d'une fonction nommée maFonction
 function maFonction() {
     // Instructions de la fonction
@@ -107,7 +107,7 @@ La première et la troisième instructions affichent des messages dans la consol
 
 L'appel d'une fonction s'effectue en écrivant le nom de la fonction suivi d'une paire de parenthèses.
 
-```javascript
+```js
 // ...
 maFonction(); // Appel de la fonction maFonction
 // ...
@@ -133,7 +133,7 @@ Enfin, la création d'une fonction permet de lutter contre la [duplication de co
 
 Voici une variante de notre programme d'exemple.
 
-```javascript
+```js
 function direBonjour() {
     return "Bonjour !";
 }
@@ -146,13 +146,13 @@ console.log("Fin du programme");
 
 Elle produit exactement le même résultat que précédemment.
 
-Dans cet exemple, le corps de la fonction `direBonjour()` a été modifié : l'instruction `console.log("Bonjour !")` a été remplacée par la ligne `return "Bonjour !"`.
+Dans cet exemple, le corps de la fonction `direBonjour()` a été modifié : l'instruction `console.log(...)` a été remplacée par la ligne `return "Bonjour !"`.
 
 L'utilisation du mot-clé `return` dans une fonction permet de lui donner une **valeur de retour**. Son appel produit un résultat qui correspond à la valeur placée juste après le `return` dans la fonction. Ce résultat peut être récupéré par le programme appelant. Ici, la fonction `direBonjour()` renvoie la valeur chaîne `"Bonjour !"`. Cette valeur est stockée par le programme dans la variable `resultat`, qui est ensuite affichée.
 
 Une fonction incluant une instruction `return` renvoie une valeur de retour lorsqu'elle est appelée : l'expression située immédiatement après lereturn.
 
-```javascript
+```js
 // Déclaration d'une fonction nommée maFonction
 function maFonction() {
     let valeurRetour;
@@ -172,7 +172,7 @@ W> Rien n'oblige à récupérer la valeur de retour d'une fonction, mais dans ce
 
 Si on essaie de récupérer la valeur de retour d'une fonction qui n'inclut pas d'instruction `return`, on obtient la valeur JavaScript `undefined`.
 
-```javascript
+```js
 function maFonction() {
     // ...
     // Pas d'instruction return
@@ -188,7 +188,7 @@ W> L'exécution de l'instruction `return` renvoie immédiatement vers le program
 
 On peut simplifier un peu notre exemple en affichant directement le résultat de l'appel à la fonction `direBonjour()` sans utiliser de variable. Ici, la valeur de retour de `direBonjour()` est directement affichée dans la console.
 
-```javascript
+```js
 function direBonjour() {
     return "Bonjour !";
 }
@@ -200,7 +200,7 @@ console.log(direBonjour()); // Affiche "Bonjour !"
 
 Il est possible de déclarer des variables à l'intérieur d'une fonction, comme dans l'exemple ci-dessous.
 
-```javascript
+```js
 function direBonjour() {
     const message = "Bonjour !";
     return message;
@@ -213,7 +213,7 @@ La fonction `direBonjour()` déclare une variable nommée `message`, puis renvoi
 
 Les variables déclarées dans le corps d'une fonction sont appelées des **variables locales**. En effet, leur portée se limite au corps de la fonction. Ainsi, l'exécution du programme suivant provoquera une erreur.
 
-```javascript
+```js
 function direBonjour() {
     const message = "Bonjour !";
     return message;
@@ -239,7 +239,7 @@ La valeur d'un paramètre est fournie au moment de l'appel de la fonction : on d
 
 Modifions notre exemple pour construire un message de bienvenue personnalisé.
 
-```javascript
+```js
 function direBonjour(prenom) {
     var message = `Bonjour, ${prenom} !`;
     return message;
@@ -257,7 +257,7 @@ Les paramètres d'une fonction sont parfois appelés des paramètres formels et 
 
 Voici la syntaxe générale de la déclaration d'une fonction acceptant des paramètres. Leur nombre n'est pas limité, mais il est rarement nécessaire de dépasser 3 ou 4 paramètres.
 
-```javascript
+```js
 // Déclaration de la fonction maFonction
 function maFonction(param1, param2, ...) {
     // Instructions pouvant utiliser param1, param2, ...
@@ -270,7 +270,7 @@ maFonction(arg1, arg2, ...);
 
 Lors d'un appel à une fonction acceptant des paramètres, le nombre et l'ordre des paramètres doivent être respectés. Observez l'exemple suivant et le résultat de son exécution.
 
-```javascript
+```js
 function presentation(prenom, age) {
     console.log(`Tu t'appelles ${prenom} et tu as ${age} ans`);
 }
@@ -301,7 +301,7 @@ I> La seule exception à cette règle est d'ordre pédagogique : apprendre à "f
 
 Voici un exemple utilisant deux des nombreuses fonctions mathématiques offertes par JavaScript.
 
-```javascript
+```js
 console.log(Math.min(4.5, 5)); // Affiche 4.5
 console.log(Math.min(19, 9));  // Affiche 9
 console.log(Math.min(1, 1));   // Affiche 1
@@ -320,88 +320,4 @@ Le corps d'une fonction doit garder un niveau de complexité faible et ne pas ê
 
 Comme pour les variables, le nommage des fonctions et des paramètres joue un rôle important dans la lisibilité du programme. Les recommandations sont les mêmes : choisir des noms qui expriment précisément le rôle et respecter la norme camelCase.
 
-T> S'il est difficile de trouver un nom pertinent pour une fonction, c'est sans doute que son rôle n'est pas bien défini et que sa création doit être remise en cause.
-
-## A vous de jouer !
-
-### Bonjour amélioré (résultat à obtenir)
-
-Complétez le programme ci-dessous pour qu'il fasse saisir le prénom et le nom de l'utilisateur dans deux variables, puis affiche le résultat de l'appel à la fonctiondireBonjour().
-
-// Renvoie un message de bienvenue
-
-function direBonjour(prenom, nom) {
-
-    var message = "Bonjour, " + prenom + " " + nom + " !";
-
-    return message;
-
-}
-
-
-// TODO : faire saisir le prénom et le nom de l'utilisateur
-
-// TODO : appeler direBonjour() avec les bons arguments et afficher son résultat
-
-Carré d'un nombre (résultat à obtenir)
-
-Complétez le programmecarre.js ci-dessous pour que la fonctioncarre() renvoie le carré d'un nombre passé en paramètre.
-
-// Renvoie le carré d'un nombre
-
-function carre(x) {
-
-  // TODO : compléter le code de la fonction
-
-}
-
-
-console.log(carre(0)); // Doit afficher 0
-
-console.log(carre(2)); // Doit afficher 4
-
-console.log(carre(5)); // Doit afficher 25
-
-Modifiez ensuite le programme pour afficher le carré de tous les nombres entre 0 et 10. 
-
-Pas question d'écrire bêtement dix appels àcarre() alors que vous savez maintenant comment répéter des instructions !
-Minimum de deux nombres (résultat à obtenir)
-
-Complétez le programmeminimum.js ci-dessous pour que la fonctionmin() renvoie le plus petit des deux nombres passés en paramètres.
-
-// TODO : écrire la fonction min()
-
-
-console.log(min(4.5, 5)); // Doit afficher 4.5
-
-console.log(min(19, 9)); // Doit afficher 9
-
-console.log(min(1, 1)); // Doit afficher 1
-
-Calculatrice (résultat à obtenir)
-
-Complétez le programmecalculatrice.js ci-dessous pour que la fonctioncalculer() gère les 4 opérations mathématiques de base : addition, soustraction, multiplication et division.
-
-// TODO : écrire la fonction calculer()
-
-
-console.log(calculer(4, "+", 6)); // Doit afficher 10
-
-console.log(calculer(4, "-", 6)); // Doit afficher -2
-
-console.log(calculer(2, "*", 0)); // Doit afficher 0
-
-console.log(calculer(12, "/", 0)); // Doit afficher Infinity
-
-Périmètre et aire d'un cercle (résultat à obtenir)
-
-Ecrivez un programmecercle.js qui contient deux fonctionsperimetre() etaire() qui calculent respectivement le périmètre et l'aire d'un cercle à partir de son rayon. Testez vos fonctions avec un rayon saisi par l'utilisateur. 
-
-Vous (re)trouverez les formules de calcul du périmètre et de l'aire d'un cercle en cherchant dans vos souvenirs... Ou bien sur Internet .
-
-La valeur du nombre π (Pi) peut s'obtenir en JavaScript en écrivantMath.PI.
-Solutions des exercices
-
-Le code source des solutions est consultable en ligne. 
-
-N'allez pas voir les solutions avant d'avoir bien cherché les exercices par vous-même !
+T> S'il est difficile de trouver un nom pertinent pour une fonction, c'est sans doute que son rôle n'est pas bien défini et que son existence doit être remise en cause.

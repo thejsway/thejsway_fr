@@ -44,7 +44,7 @@ Avant de pouvoir stocker des informations dans une variable, il faut la créer. 
 
 Voici un exemple de code qui déclare une variable puis affiche sa valeur.
 
-```javascript
+```js
 let a;
 console.log(a);
 ```
@@ -79,7 +79,7 @@ W> Attention à ne pas confondre l'opérateur d'affectation `=` avec l'égalité
 
 On peut également combiner déclaration et affectation d'une valeur en une seule ligne. Il est cependant important de bien distinguer leurs rôles respectifs. Le programme ci-dessous est strictement équivalent au précédent.
 
-```javascript
+```js
 let a = 3.14;
 console.log(a);
 ```
@@ -88,7 +88,7 @@ console.log(a);
 
 Si la valeur initiale d'une variable ne changera jamais au cours de l'exécution du programme, cette variable est ce qu'on appelle une **constante**. Il vaut alors mieux la déclarer avec le mot-clé `const` plutôt qu'avec `let`. Cela rend le programme plus facile à comprendre, et cela permet aussi de détecter des erreurs.
 
-```javascript
+```js
 const a = 3.14; // La valeur de a ne pourra plus évoluer
 a = 6.28; // Impossible !
 ```
@@ -101,7 +101,7 @@ Il est également possible d'augmenter ou de diminuer la valeur d'un nombre avec
 
 Dans l'exemple suivant, les lignes 2 et 3 permettent chacune d'augmenter la valeur de la variable `b` de 1.
 
-```javascript
+```js
 let b = 0; // b contient la valeur 0
 b += 1; // b contient la valeur 1
 b++; // b contient la valeur 2
@@ -112,7 +112,7 @@ console.log(b); // Affiche 2
 
 On appelle **portée** (*scope*) d'une variable la portion du code source dans laquelle cette variable est visible et donc utilisable. Les variables déclarées avec `let` et `const` ont une portée de type bloc : elles ne sont visibles qu'au sein du bloc de code dans lequel elles sont déclarées (ainsi que dans tous les sous-blocs éventuels). En JavaScript et dans de nombreux autres langages, un **bloc de code** est délimité par une paire d'accolades ouvrante et fermante. Un programme JavaScript correspond par défaut à un unique bloc de code.
 
-```javascript
+```js
 let var1 = 0;
 {
     var1 = 1; // OK : var1 est déclarée dans le bloc parent
@@ -126,7 +126,7 @@ console.log(var2); // Erreur : var2 n'est pas visible ici
 
 Une **expression** est un morceau de code qui produit une valeur. On crée une expression en combinant des variables, des valeurs et des opérateurs. Toute expression produit une valeur et correspond à un certain type. Le calcul de la valeur d'une expression s'appelle **l'évaluation**. Lors de l'évaluation d'une expression, les variables sont remplacées par leur valeur.
 
-```javascript
+```js
 // 3 est une expression dont la valeur est le nombre 3
 const c = 3;
 // c est une expression dont la valeur est celle de c (ici 3)
@@ -138,7 +138,7 @@ console.log(d); // Affiche 4
 
 Une expression peut comporter des parenthèses qui modifient la priorité des opérations lors de l'évaluation. En l'absence de parenthèses, la priorité des opérateurs est la même qu'en mathématiques.
 
-```javascript
+```js
 let e = 3 + 2 * 4; // e contient la valeur 11
 e = (3 + 2) * 4; // e contient la valeur 20
 ```
@@ -147,7 +147,7 @@ Le langage JavaScript permet d'inclure des expressions dans une chaîne de carac
 
 On utilise souvent cette possibilité pour créer des chaînes intégrant des valeurs de variables.
 
-```javascript
+```js
 const pays = "France";
 console.log(`J'habite en ${pays}`); // Affiche "J'habite en France"
 const x = 3;
@@ -159,7 +159,7 @@ console.log(`${x} + ${y} = ${x + y}`); // Affiche "3 + 7 = 10"
 
 L'évaluation d'une expression peut entraîner des conversions de type. Ces conversions sont dites **implicites** : elles sont faites automatiquement, sans intervention du programmeur. Par exemple, l'utilisation de l'opérateur `+` entre une valeur de type chaîne et une valeur de type nombre provoque la concaténation des deux valeurs dans un résultat de type chaîne.
 
-```javascript
+```js
 const f = 100;
 // Affiche "La variable f contient la valeur 100"
 console.log("La variable f contient la valeur " + f);
@@ -167,14 +167,14 @@ console.log("La variable f contient la valeur " + f);
 
 Le langage JavaScript est extrêmement tolérant au niveau des conversions de type. Cependant, il se peut qu'aucune conversion ne soit possible. En cas d'échec de la conversion d'un nombre, la valeur du résultat est `NaN` (*Not a Number*).
 
-```javascript
+```js
 const g = "cinq" * 2;
 console.log(g); // Affiche NaN
 ```
 
 Il arrive parfois que l'on souhaite forcer la conversion d'une valeur dans un autre type. On parle alors de conversion **explicite**. Pour cela, JavaScript dispose des instructions `Number()` et `String()` qui convertissent respectivement en un nombre et une chaîne la valeur placée entre parenthèses.
 
-```javascript
+```js
 const h = "5";
 console.log(h + 1); // Concaténation : affiche la chaîne "51"
 const i = Number("5");
@@ -187,7 +187,7 @@ console.log(i + 1); // Addition numérique : affiche le nombre 6
 
 Maintenant que nous savons utiliser des variables, nous pouvons écrire des programmes qui échangent des informations avec l'utilisateur.
 
-```javascript
+```js
 const prenom = prompt("Entrez votre prénom :");
 alert(`Bonjour, ${prenom}`);
 ```
@@ -214,7 +214,7 @@ On peut donc utiliser soit `console.log()`, soit `alert()` pour afficher des inf
 
 Il est possible d'utiliser `console.log()` pour afficher plusieurs valeurs simultanément, en les séparant par des virgules.
 
-```javascript
+```js
 const temp1 = 36.9;
 const temp2 = 37.6;
 const temp3 = 37.1;
@@ -225,14 +225,14 @@ console.log(temp1, temp2, temp3); // Affiche "36.9 37.6 37.1"
 
 Quel que soit le texte saisi, l'instruction `prompt()` renvoie toujours une valeur de type chaîne. Il faudra penser à convertir cette valeur avec l'instruction `Number()` si vous souhaitez ensuite la comparer à d'autres nombres ou l'utiliser dans des expressions mathématiques.
 
-```javascript
+```js
 const saisie = prompt("Entrez un nombre : "); // saisie est de type chaîne
 const nb = Number(saisie); // nb est de type nombre
 ```
 
 Il est possible de combiner les deux opérations (saisie et conversion) en une seule ligne de code, pour un résultat identique :
 
-```javascript
+```js
 const nb = Number(prompt("Entrez un nombre : ")); // nb est de type nombre
 ```
 
@@ -244,14 +244,14 @@ Pour clore ce chapitre, j'aimerais insister sur un aspect parfois négligé par 
 
 Et pourtant, la manière dont sont nommées les variables affecte grandement la facilité de compréhension d'un programme. Observez ces deux versions du même exemple.
 
-```javascript
+```js
 const nb1 = 5.5;
 const nb2 = 3.14;
 const nb3 = 2 * nb2 * nb1;
 console.log(nb3);
 ```
 
-```javascript
+```js
 const rayon = 5.5;
 const pi = 3.14;
 const perimetre = 2 * pi * rayon;
@@ -284,59 +284,3 @@ Il faut parfois plusieurs mots pour décrire le rôle de certaines variables. Da
 Par exemple, les noms `montantTravauxMaison` et `codeClientSuivant` respectent la norme *camelCase*.
 
 W> Comme de nombreux langages, JavaScript fait la distinction entre majuscules et minuscules. On dit qu'il est **sensible à la casse** (*case sensitive*). Par exemple, `mavariable` et `maVariable` seront considérées comme deux variables différentes. Attention aux étourderies !
-
-## À vous de jouer !
-
-Cherchez les exercices ci-dessous en faisant l'effort de bien nommer toutes vos variables.
-
-### Bonjour amélioré ([résultat à obtenir](http://codepen.io/bpesquet/pen/zNYRGJ?editors=1102))
-
-Modifiez le programme créé au chapitre précédent afin qu'il fasse saisir et affiche le nom de l'utilisateur en plus de son prénom de l'utilisateur. Attention à bien respecter les espaces entre les mots dans le message final.
-
-### Valeurs finales
-
-Observez le programme suivant et tentez de prévoir les valeurs finales de chaque variable.
-
-```javascript
-let a = 2;
-a = a - 1;
-a++;
-let b = 8;
-b += 2;
-const c = a + b * b;
-const d = a * b + b;
-const e = a * (b + b);
-const f = a * b / a;
-const g = b / a * a;
-console.log(a, b, c, d, e, f, g);
-```
-
-Vérifiez ensuite vos prévisions en l'exécutant.
-
-### Calcul de TVA ([résultat à obtenir](http://codepen.io/bpesquet/pen/XpWZmP?editors=1102))
-
-Ecrivez un programme qui fait saisir un prix hors taxes à l'utilisateur, puis qui affiche le prix TTC correspondant en se basant sur un taux de TVA à 20,6%.
-
-### Conversion Celsius/Fahrenheit ([résultat à obtenir](http://codepen.io/bpesquet/pen/vgYdGE?editors=1102))
-
-Ecrivez un programme qui fait saisir une température en degrés Celsius, puis affiche le résultat de sa conversion en degrés Fahrenheit. Rappel : en informatique, la virgule s'écrit avec un point.
-
-> "C'est à Daniel Gabriel Fahrenheit que l'on doit l'invention des thermomètres en graduation Fahrenheit. Au début, ses thermomètres sont à l'alcool (1709), mais il remplace rapidement l'alcool par du mercure (1715), permettant à ses outils de mesure de fournir des données comparables. En 1742, un autre scientifique, Anders Celsius, propose une nouvelle graduation au thermomètre. La conversion entre les échelles est donnée par [°F] = [°C] x 9/5 + 32."
-
-### Permutation de deux variables ([résultat à obtenir](http://codepen.io/bpesquet/pen/aBeoPB?editors=1102))
-
-Ecrivez un programme ayant initialement le contenu suivant.
-
-```javascript
-let nombre1 = 5;
-let nombre2 = 3;
-
-// Tapez votre code à cet endroit (sans rien modifier d'autre !)
-
-console.log(nombre1); // Doit afficher 3
-console.log(nombre2); // Doit afficher 5
-```
-
-A l'endroit indiqué par le commentaire, ajoutez le code nécessaire pour inverser les valeurs des deux variables.
-
-I> Il existe plusieurs solutions à cet exercice. Astuce : vous n'êtes pas limité(e) à l'utilisation de deux variables.

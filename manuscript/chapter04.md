@@ -16,7 +16,7 @@ d'exécution répétitive.
 
 Essayons de créer un programme qui affiche tous les nombres entre 1 et 5. Voici ce que nous pouvons écrire avec nos connaissances actuelles.
 
-```javascript
+```js
 console.log(1);
 console.log(2);
 console.log(3);
@@ -40,7 +40,7 @@ La boucle `while` permet de répéter des instructions **tant qu'une condition e
 
 Voici notre programme d'exemple réécrit avec une boucle while.
 
-```javascript
+```js
 let nombre = 1;
 while (nombre <= 5) {
     console.log(nombre);
@@ -82,7 +82,7 @@ On a fréquemment besoin d'écrire des boucles dont la condition est basée sur 
 
 Voici notre programme d'exemple réécrit avec une boucle `for`.
 
-```javascript
+```js
 let nombre;
 for (nombre = 1; nombre <= 5; nombre++) {
     console.log(nombre);
@@ -95,7 +95,7 @@ Cet exemple donne exactement le même résultat que les précédents.
 
 La syntaxe de l'instruction `for` est la suivante.
 
-```javascript
+```js
 for (initialisation; condition; étape) {
     // instruction executées tant que la condition est vérifiée
 }
@@ -121,7 +121,7 @@ I> Par convention, la variable compteur d'une boucle for est souvent nommée `i`
 
 Très souvent,  on n'a pas besoin d'utiliser la variable compteur en dehors du corps de la boucle. Dans ce cas, on peut la déclarer en même temps qu'on l'initialise dans la boucle. Dans ce cas, sa portée se limite à la boucle. Notre programme d'exemple peut être réécrit ainsi :
 
-```javascript
+```js
 for (let nombre = 1; nombre <= 5; nombre++) {
     console.log(nombre);
 }
@@ -136,7 +136,7 @@ Le principal risque lié à la boucle while est la "boucle infinie". Il s'agit d
 
 Voici l'exemple de boucle `while` modifié pour oublier volontairement la ligne qui incrémente la variable `nombre`.
 
-```javascript
+```js
 let nombre = 1;
 while (nombre <= 5) {
     console.log(nombre);
@@ -152,7 +152,7 @@ Pour éviter d'écrire par mégarde une boucle infinie, il faut s'assurer que la
 
 Imaginons qu'une inspiration bizarre vous conduise à modifier le compteur d'une boucle `for` dans le corps de la boucle, comme dans l'exemple suivant.
 
-```javascript
+```js
 for (let i = 1; i <= 5; i++) {
     console.log(i);
     i++; // La variable i est modifiée dans le corps de la boucle
@@ -173,7 +173,7 @@ Comment choisir le type de boucle à utiliser lorsqu'on doit répéter des instr
 
 La boucle `for` a l'avantage d'intégrer la modification du compteur dans sa syntaxe, ce qui élimine le problème des boucles infinies. En revanche, son utilisation implique que le nombre de tours de boucle soit connu à l'avance. Les scénarios où le nombre de tours ne peut pas être prévu à l'avance seront plus simples à écrire avec un `while`. C'est notamment le cas lorsque la boucle sert à contrôler une donnée saisie par l'utilisateur, comme dans cet exemple.
 
-```javascript
+```js
 let lettre = "";
 while (lettre !== "X") {
     lettre = prompt("Tapez une lettre ou X pour sortir :");
@@ -194,77 +194,3 @@ for (; lettre !== "X";) {
 On utilise uniquement la condition de sortie et pas l'initialisation ni l'étape : autant choisir la boucle `while`.
 
 En conclusion, le choix entre un `while` et un `for` dépend du contexte. Toutes les boucles peuvent s'écrire avec un `while`. Si on peut prévoir à l'avance le nombre de tours de boucles à effectuer, la boucle `for` est le meilleur choix. Sinon, il vaut mieux utiliser le `while`.
-
-## A vous de jouer !
-
-Voici venu le moment des exercices d'application. Les consignes habituelles s'appliquent : nommage des variables, indentation, test exhaustif pour trouver d'éventuelles erreurs.
-
-Je vous conseille de réaliser chaque exercice avec le `while`, puis avec le `for`. Cela vous entraînera et vous permettra de mieux juger par la suite du meilleur type de boucle à utiliser.
-
-### Tournez manège ([résultat à obtenir](http://codepen.io/bpesquet/pen/GrRwQx?editors=1102))
-
-Ecrivez un programme qui fait faire 10 tours de manège en affichant un message à chaque tour.
-
-Ensuite, améliorez votre programme pour que le nombre de tours soit saisi par l'utilisateur.
-
-### Parité ([résultat à obtenir](http://codepen.io/bpesquet/pen/xgxQJg?editors=1102))
-
-Examinez le programme ci-dessous qui affiche les nombres pairs (divisibles par 2) jusqu'à 10.
-
-```javascript
-for (let i = 1; i <= 10; i++) {
-    if (i % 2 === 0) {
-        console.log(`${i} est pair`);
-    }
-}
-```
-
-Il utilise l'opérateur modulo `%`, qui calcule le reste de la division entière d'un nombre par un autre. Si le résultat du modulo d'un nombre par 2 est 0, alors ce nombre est pair. Voici quelques exemples d'utilisation de cet opérateur.
-
-```javascript
-console.log(10 % 2); // Affiche 0 car 10 = 5 * 2 + 0
-console.log(11 % 2); // Affiche 1 car 11 = 5 * 2 + 1
-console.log(18 % 3); // Affiche 0 car 18 = 3 * 6 + 0
-console.log(19 % 3); // Affiche 1 car 19 = 3 * 6 + 1
-console.log(20 % 3); // Affiche 2 car 20 = 3 * 6 + 2
-```
-
-Modifiez le programme initial pour qu'il affiche aussi les nombres impairs.
-
-Ensuite, améliorez le programme pour que le nombre de départ soit saisi par l'utilisateur.
-
-W> Le programme ne doit afficher que 10 nombres (y compris celui saisi) et non 11.
-
-### Contrôle de saisie ([résultat à obtenir](http://codepen.io/bpesquet/pen/WRNPQp?editors=1102))
-
-Ecrivez un programme qui fait saisir un nombre à l'utilisateur jusqu'à ce que ce nombre soit inférieur ou égal à 100.
-
-Ensuite, améliorez votre programme pour que le nombre saisi soit compris entre 50 et 100.
-
-I> Réfléchissez bien à la condition de votre boucle : quel est l'inverse de "compris entre 50 et 100" ?
-
-### Table de multiplication ([résultat à obtenir](http://codepen.io/bpesquet/pen/PWoVzN?editors=1102))
-
-Ecrivez un programme qui fait saisir un nombre à l'utilisateur, puis affiche la table de multiplication de ce nombre.
-
-Ensuite, améliorez votre programme pour vérifier que le nombre saisi soit compris entre 2 et 9, en vous inspirant de l'exercice précédent.
-
-### Ni oui ni non ([résultat à obtenir](http://codepen.io/bpesquet/pen/JEjxbz?editors=1102))
-
-Ecrivez un programme qui fait jouer l'utilisateur au ni oui, ni non : il entre un texte jusqu'à saisir "oui" ou "non", ce qui déclenche la fin du jeu.
-
-### Triangle ([résultat à obtenir](http://codepen.io/bpesquet/pen/VPwgpw?editors=1102))
-
-Ecrivez un programme qui construit progressivement un triangle de 7 lignes.
-
-### FizzBuzz ([résultat à obtenir](http://codepen.io/bpesquet/pen/VPwgNj?editors=1102))
-
-Ecrivez un programme qui affiche tous les nombres entre 1 et 100 avec les exceptions suivantes :
-
-* Il affiche `"Fizz"` à la place du nombre si celui-ci est divisible par 3.
-
-* Il affiche `"Buzz"` à la place du nombre si celui-ci est divisible par 5 et non par 3.
-
-Ensuite, améliorez votre programme pour qu'il affiche `"FizzBuzz"` à la place des nombres divisibles à la fois par 3 et par 5.
-
-I> Cet exercice a de [nombreuses solutions possibles](http://www.tomdalling.com/blog/software-design/fizzbuzz-in-too-much-detail/) et constitue un [test d'entretien d'embauche classique](http://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) qui élimine un nombre *significatif* de candidats. Accrochez-vous pour le réussir !
