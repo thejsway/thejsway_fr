@@ -301,10 +301,10 @@ console.log(bonjour("Thomas")); // Affiche "Bonjour, Thomas !"
 
 La fonction créée ci-dessus est **anonyme** et directement affectée à la variable `bonjour`. La valeur de cette variable est donc une fonction.
 
-La syntaxe pour créer une fonction anonyme est la suivante.
+La syntaxe pour créer une fonction anonyme et l'affecter à une variable est la suivante.
 
 ```js
-// Affection d'une fonction anonyme à la variable maVariable
+// Affectation d'une fonction anonyme à la variable maVariable
 const maVariable = function(param1, param2, ...) {
     // Instructions pouvant utiliser param1, param2, ...
 }
@@ -328,7 +328,7 @@ console.log(bonjour("Thomas")); // Affiche "Bonjour, Thomas !"
 Cette syntaxe est appelée **fonction fléchée** (*fat arrow*).
 
 ```js
-// Affection d'une fonction anonyme à la variable maVariable
+// Affectation d'une fonction anonyme à la variable maVariable
 const maVariable = (param1, param2, ...)  => {
     // Instructions pouvant utiliser param1, param2, ...
 }
@@ -336,6 +336,19 @@ const maVariable = (param1, param2, ...)  => {
 // Appel de la fonction anonyme
 // param1 reçoit la valeur de arg1, param2 la valeur de arg2, ...
 maVariable(arg1, arg2, ...);
+```
+
+Dans certains cas particuliers, on peut simplifier la syntaxe des fonctions fléchées :
+
+* Lorsque le corps de la fonction se limite à une seule ligne, on peut écrire son résultat sans créer de blocs de code avec des accolades. Dans ce cas, l'instruction `return` est implicite.
+* Lorsque la fonction n'a qu'un seul argument, on peut omettre les parenthèses autour de celui-ci.
+
+```js
+// Dificile de faire plus concis !
+const bonjour = prenom => `Bonjour, ${prenom} !`;
+
+console.log(bonjour("Thomas")); // Affiche "Bonjour, Thomas !"
+}
 ```
 
 Nous reviendrons plus loin sur les utilisations possibles des fonctions anonymes et les nombreuses possibilités offertes par les fonctions en JavaScript.
