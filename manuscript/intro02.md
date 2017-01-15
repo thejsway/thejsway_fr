@@ -3,7 +3,7 @@
 ## TL;DR
 
 * Un **ordinateur** n'est qu'une machine qui se contente d'exécuter automatiquement, très vite et sans erreur, les opérations qu'on lui demande d'effectuer.
-* Un **programme** est une liste d'ordres indiquant à un ordinateur ce qu'il doit faire. Il se présente sous la forme d'un ensemble de commandes textuelles appelées des **instructions**.
+* Un **programme** est une liste d'ordres indiquant à un ordinateur ce qu'il doit faire. Il se présente sous la forme d'un ensemble de commandes textuelles appelées des **instructions**. L'ensemble des instructions d'un programme est appelée son **code source**.
 * Le rôle du **programmeur** est de créer ces programmes. Pour cela, il peut utiliser différents langages de programmation.
 * Avant d'écrire un programme, il faut réfléchir et décomposer le problème à résoudre en opérations élémentaires afin d'aboutir à un **algorithme**.
 
@@ -31,7 +31,7 @@ Un **langage de programmation** définit une manière de donner des ordres à un
 
 Le seul langage de programmation directement compréhensible par un ordinateur est le langage machine, également appelé [assembleur](https://fr.wikipedia.org/wiki/Assembleur). Il s'agit d'instructions élémentaires liées à un type de processeur (le "cerveau" de l'ordinateur) et qui permettent de manipuler directement la mémoire de la machine.
 
-Voici un exemple de programme écrit en assembleur, tiré de [Wikipedia](https://fr.wikipedia.org/wiki/Assembleur#Afficher_Bonjour). Son rôle est d'afficher le message "Bonjour" à l'utilisateur.
+Voici un exemple de programme écrit en assembleur, tiré de [Wikipedia](https://fr.wikipedia.org/wiki/Assembleur#Afficher_Bonjour). Son rôle est d'afficher le message `"Bonjour"` à l'utilisateur.
 
 ```assembly
 str:
@@ -89,7 +89,7 @@ public class Program {
 }
 ```
 
-Tous ces programmes affichent le message "Bonjour", mais chacun d'eux le fait à sa manière.
+Tous ces programmes affichent le message `"Bonjour"`, mais chacun d'eux le fait à sa manière.
 
 ### L'exécution d'un programme
 
@@ -140,8 +140,7 @@ Fin
 
 ![C'est prêt !](images/pates.jpg)
 
-On constate qu'on arrive à l'objectif visé en combinant un ensemble d'actions dans un ordre précis.
-On peut distinguer différents types d'actions :
+On constate qu'on arrive à l'objectif visé en combinant un ensemble d'actions dans un ordre précis. On peut distinguer différents types d'actions :
 
 * des actions simples ("Sortir une casserole") ;
 * des actions conditionnelles ("Si on préfère le beurre à l'huile...") ;
