@@ -19,7 +19,9 @@ L'idée de départ était de créer un langage simple pour rendre dynamiques et 
 
 Petit à petit, les créateurs de sites Web ont enrichi leurs pages en y ajoutant du code écrit en JavaScript. Pour que le résultat fonctionne, il fallait que le navigateur Web (le logiciel qui sert à surfer sur la Toile en affichant les pages Web) comprenne le JavaScript. Ce langage a donc été progressivement intégré à l'ensemble des navigateurs. N'importe quel navigateur Web est aujourd'hui capable d'exécuter du code écrit en JavaScript.
 
-L'explosion du Web puis l'avènement du Web 2.0, basé sur des pages riches et interactives, ont rendu JavaScript de plus en plus populaire. Les concepteurs de navigateurs Web ont optimisé la rapidité d'exécution du code JavaScript, jusqu'à en faire un langage très performant. Cela a conduit à l'apparition en 2009 de la plate-forme [Node.js](https://fr.wikipedia.org/wiki/Node.js), qui permet d'écrire en JavaScript des applications Web très performantes ([plus de détails](https://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js/node-js-mais-a-quoi-ca-sert)). Par l'intermédiaire de [MongoDB](https://fr.wikipedia.org/wiki/MongoDB), JavaScript a même pénétré le monde des bases de données (les logiciels qui ont pour rôle de stocker des informations de manière fiable et durable).
+L'explosion du Web puis l'avènement du Web 2.0, basé sur des pages riches et interactives, ont rendu JavaScript de plus en plus populaire. Les concepteurs de navigateurs Web ont optimisé la rapidité d'exécution du code JavaScript, jusqu'à en faire un langage très performant.
+
+Cela a conduit à l'apparition en 2009 de la plate-forme [Node.js](https://fr.wikipedia.org/wiki/Node.js), qui permet d'écrire en JavaScript des applications Web très performantes ([plus de détails](https://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js/node-js-mais-a-quoi-ca-sert)). Par l'intermédiaire de [MongoDB](https://fr.wikipedia.org/wiki/MongoDB), JavaScript a même pénétré le monde des bases de données (les logiciels qui ont pour rôle de stocker des informations de manière fiable et durable).
 
 Enfin, l'arrivée des smartphones et autres tablettes dotés de systèmes différents et incompatibles (iOS, Android ou Windows Phone) a conduit à l'apparition d'outils de développement dits multi-plateformes. Ils permettent d'écrire en une seule fois des applications mobiles compatibles avec l'ensemble des terminaux du marché. Ces outils sont presque toujours basés sur... JavaScript !
 
@@ -39,4 +41,4 @@ JavaScript a été standardisé en 1997 sous le nom d'[ECMAScript](https://fr.wi
 
 ![Chronologie des versions de ECMAScript/JavaScript](images/ECMAScript-releases.png)
 
-Ce livre utilise une version récente du langage appelée ES2015 (ou parfois ES6). Elle apporte des évolutions très intéressantes et est maintenant bien supportée par les principaux environnements JavaScript du marché, comme le montre cette [table de compatibilité](http://kangax.github.io/compat-table/es6/).
+Ce livre utilise une version récente du langage appelée **ES2015** (ou parfois **ES6**). Elle apporte des évolutions très intéressantes et est maintenant bien supportée par les principaux environnements JavaScript du marché, comme le montre cette [table de compatibilité](http://kangax.github.io/compat-table/es6/).

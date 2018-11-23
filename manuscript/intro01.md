@@ -1,4 +1,4 @@
-# A propos de ce livre
+# Avant-propos
 
 Avant toute chose, je vous remercie d'avoir choisi ce livre. J'espère que sa lecture vous sera profitable, et pourquoi pas agréable.
 
