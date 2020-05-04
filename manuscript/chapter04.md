@@ -6,10 +6,15 @@ d'exécution répétitive.
 ## TL;DR
 
 * On utilise une **boucle**  afin d'exécuter plusieurs fois un bloc d'instructions. Chaque exécution est appelée un **tour de boucle** ou une **itération**. Le bloc d'instructions associé à une boucle est appelé le **corps de la boucle**.
+
 * La boucle `while` permet de répéter des instructions tant qu'une condition est vérifiée. La boucle `for` ajoute la possibilité d'effectuer un traitement à l'entrée dans la boucle (initialisation) et après chaque tour de boucle (étape).
+
 * La variable utilisée dans l'initialisation, la condition et l'étape d'une boucle `for` est appelée le **compteur** de la boucle.
+
 * Il faut toujours que la condition d'une boucle `while` puisse devenir fausse afin d'éviter le risque d'une **boucle infinie**.
+
 * On s'interdit de manipuler le compteur d'une boucle `for` à l'intérieur du corps de la boucle.
+
 * Toutes les boucles peuvent s'écrire avec un `while`. La boucle `for` est à privilégier lorsque le nombre d'itérations est connu à l'avance.
 
 ## Introduction
@@ -28,7 +33,7 @@ Même s'il reste relativement court, ce programme est très répétitif. Que se 
 
 Pour cela, le langage JavaScript offre la possibilité de répéter l'exécution d'un ensemble d'instructions en plaçant ces instructions à l'intérieur d'une **boucle**. Le nombre de répétitions peut être connu à l'avance ou dépendre de l'évaluation d'une condition. A chaque répétition, les instructions contenues dans la boucle sont exécutées. C'est ce qu'on appelle un **tour de boucle** ou encore une **itération**.
 
-![Si seulement Bart connaissant les boucles...](images/chapter04-01.png)
+![Si seulement Bart connaissait les boucles...](images/chapter04-01.png)
 
 Nous allons étudier les deux grands types de boucles utilisables en JavaScript ainsi que dans la plupart des autres langages de programmation.
 
@@ -194,3 +199,33 @@ for (; lettre !== "X";) {
 On utilise uniquement la condition de sortie et pas l'initialisation ni l'étape : autant choisir la boucle `while`.
 
 En conclusion, le choix entre un `while` et un `for` dépend du contexte. Toutes les boucles peuvent s'écrire avec un `while`. Si on peut prévoir à l'avance le nombre de tours de boucles à effectuer, la boucle `for` est le meilleur choix. Sinon, il vaut mieux utiliser le `while`.
+
+## A vous de jouer !
+
+Voici venu le moment des exercices d'application. Les consignes habituelles s'appliquent : nommage des variables, indentation, test exhaustif pour trouver d'éventuelles erreurs.
+
+Je vous conseille de réaliser chaque exercice avec le `while`, puis avec le `for`. Cela vous entraînera et vous permettra de mieux juger par la suite du meilleur type de boucle à utiliser.
+
+### Tournez manège
+
+Ecrivez un programme qui fait tourner un manège pendant 10 tours, en affichant le numéro de chaque tour.
+
+Ensuite, améliorez-le pour que le nombre de tours soit choisi par l'utilisateur
+
+### Table de multiplication
+
+Ecrivez un programme qui demande un nombre à l'utilisateur, puis qui affiche la table de multiplication de ce nombre.
+
+Ensuite, améliorez-le pour qu'il accepte uniquement les chiffres (nombres entre 1 et 9).
+
+### FizzBuzz
+
+Ecrivez un programme qui affiche tous les nombres entre 1 et 100 avec les règles suivantes :
+
+* Il affiche "Fizz" à la place du nombre si celui-ci est divisible par 3.
+
+* Il affiche "Buzz" à la place du nombre si celui-ci est divisible par 5.
+
+* Il affiche "FizzBuzz" à la place du nombre si celui-ci est divisible à la fois par 3 et par 5.
+
+> Cet exercice est un [grand classique des entretiens d'embauche](https://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) qui élimine un nombre surprenant de candidats. Faites de votre mieux pour le réussir !
