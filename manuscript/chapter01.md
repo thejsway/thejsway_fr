@@ -1,5 +1,7 @@
 # 3, 2, 1... Codez !
 
+C'est le moment de faire vos premiers pas avec JavaScript !
+
 ## TL;DR
 
 * L'instruction JavaScript `console.log()` permet d'afficher une information.
@@ -18,7 +20,7 @@
 
 ## Un premier programme
 
-C'est le moment de faire vos premiers pas avec JavaScript ! Voici votre tout premier programme.
+Voici votre tout premier programme.
 
 ```javascript
 console.log("Bonjour en JavaScript !");
@@ -107,7 +109,7 @@ console.log("Au revoir !");
 
 Lors de l'exécution, les lignes commentées ne produisent plus de résultat.
 
-![Résultat de l'exécution](images/chapter01-03.png)
+![Résultat de l'exécution](images/chapter01-02.png)
 
 Les commentaires servent à donner des informations sur le programme et sont destinées au programmeur, non à la machine.
 
@@ -120,3 +122,29 @@ I>
 I>     // Un commentaire sur une seule ligne
 
 Les commentaires fournissent une aide précieuse pour comprendre le code source d'un programme. Il est important de décrire les parties importantes ou compliquées d'un programme grâce à des commentaires. Prenez cette bonne habitude dès maintenant !
+
+## A vous de jouer !
+
+Passons maintenant à quelques exercices pratiques pour vérifier que vous avez tout compris !
+
+### Présentation
+
+Ecrivez un programme qui affiche votre nom et votre âge. Voici son résultat dans mon cas.
+
+![Résultat de l'exécution](images/chapter01-03.png)
+
+### Calculatrice
+
+Ecrivez un programme qui affiche les résultats de l'addition, la soustraction, la multiplication et la division de 6 par 3.
+
+### Prédiction du résultat
+
+Essayez de prédire le résultat affiché par l'exécution du programme ci-dessous.
+
+```js
+console.log(4 + 5);
+console.log("4 + 5");
+console.log("4" + "5");
+```
+
+Vérifiez votre prédiction en l'exécutant.

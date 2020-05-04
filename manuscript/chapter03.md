@@ -6,15 +6,46 @@ Jusqu'à présent, toutes les instructions de nos programmes (à l'exception des
 
 * L'instruction `if` permet d'exprimer une **condition**. Les instructions associées au `if` n'est exécuté que si la condition est vérifiée (vraie). Une **condition** est une expression dont l'évaluation produit une valeur **booléenne** (`true` ou `false`).
 
+```js
+if (condition) {
+    // instructions exécutées quand la condition est vraie
+}
+```
+
 * Les instructions associées à une instruction `if` sont regroupées dans un **bloc de code** délimité par une paire d'accolades ouvrante et fermante. Pour plus de lisibilité, le contenu d'un bloc de code être **indenté** (décalé vers la droite) par rapport à l'instruction `if` à laquelle il est associé.
 
 * Les opérateurs `===`, `!==`, `<`, `<=`, `>` et `>=` peuvent être utilisés pour comparer des nombres au sein d'une condition. Ils renvoient tous un résultat booléen.
 
 * Associée à un `if`, l'instruction `else` permet d'exprimer une **alternative**. Selon la valeur de la condition, le bloc de code associé au `if` ou celui associé au `else` sera exécuté, mais jamais les deux. On peut imbriquer sans limite des instructions `if/else` à l'intérieur d'autres instructions `if/else`.
 
-* Les opérateurs logiques `&&` (ET), `||` (OU) et `!` (NON) permettent de créer des conditions composées.
+```js
+if (condition) {
+    // instructions exécutées quand la condition est vraie
+}
+else {
+    // instructions exécutées quand la condition est fausse
+}
+```
+
+* Les opérateurs logiques `&&` (ET) et `||` (OU) permettent de créer des conditions composées. En JavaScript, ces opérateurs peuvent être utilisés avec des valeurs non booléennes. Leur résultat dépendra du caractère *truthy* ou *falsy* de l'opérande de gauche.
+
+* L'opérateur `!` (NON) permet d'exprimer la négation logique.
 
 * L'instruction `switch` permet d'exécuter un bloc de code parmi plusieurs selon la valeur d'une expression.
+
+```js
+switch (expression) {
+case valeur1:
+    // instructions exécutées quand expression vaut valeur1
+    break;
+case valeur2:
+    // instructions exécutées quand expression vaut valeur2
+    break;
+...
+default:
+    // instructions exécutées quand aucune des valeurs ne correspond
+}
+```
 
 ## Exprimer une condition
 
@@ -43,7 +74,7 @@ Lorsque le nombre saisi est positif, un message s'affiche dans la console. Si le
 
 Vous venez de découvrir comment soumettre l'exécution d'une partie d'un programme à une condition grâce à l'instruction JavaScript `if`. La syntaxe de cette instruction est la suivante.
 
-```text
+```js
 if (condition) {
     // instructions exécutées quand la condition est vraie
 }
@@ -185,7 +216,7 @@ if (nombre > 0) {
 
 Supposons qu'on souhaite vérifier qu'un nombre est compris entre 0 et 100. Cela signifie que le nombre doit être à la fois supérieur à 0 et inférieur à 100. La condition "nombre compris entre 0 et 100" peut s'exprimer sous la forme de deux sous-conditions "nombre supérieur ou égal à 0" et "nombre inférieur ou égal à 100". Il faut que l'une ET l'autre de ces sous-conditions soient vérifiées.
 
-I> L'expression `0 <= nombre <= 100` est mathématiquement exacte mais ne peut pas s'écrire de cette manière en JavaScript (ni dans la plupart des autres langages de programmation).
+I> L'expression `0 <= nombre <= 100` est mathématiquement correcte mais ne peut pas s'écrire de cette manière en JavaScript (ni dans la plupart des autres langages de programmation).
 
 La traduction en JavaScript de cette condition donne le résultat suivant.
 
@@ -197,7 +228,7 @@ if ((nombre >= 0) && (nombre <= 100)) {
 
 I> Les parenthèses entre les sous-conditions ne sont pas obligatoires. Cependant, je vous conseille de les ajouter systématiquement dans un premier temps pour mieux visualiser la structure des conditions et éviter d'éventuelles mauvaises surprises liées aux priorités des opérateurs.
 
-L'opérateur `&&` (ET logique) s'applique à deux valeurs de type booléen. Son résultat est la valeur `true` uniquement si les deux valeurs auxquelles il s'applique valent `true`.
+L'opérateur `&&` (ET logique) peut s'appliquer à deux valeurs de type booléen. Son résultat est la valeur `true` uniquement si les deux valeurs auxquelles il s'applique valent `true`.
 
 ```js
 console.log(true && true);   // Affiche true
@@ -220,13 +251,54 @@ if ((nombre < 0) || (nombre > 100)) {
 }
 ```
 
-L'opérateur `||` (OU logique) s'applique à deux valeurs de type booléen. Son résultat est la valeur true si au moins une des deux valeurs auxquelles il s'applique vaut `true`. Voici la table de vérité de l'opérateur `||`.
+L'opérateur `||` (OU logique) peut s'appliquer à deux valeurs de type booléen. Son résultat est la valeur true si au moins une des deux valeurs auxquelles il s'applique vaut `true`. Voici la table de vérité de l'opérateur `||`.
 
 ```js
 console.log(true || true);   // Affiche true
 console.log(true || false);  // Affiche true
 console.log(false || true);  // Affiche true
 console.log(false || false); // Affiche false
+```
+
+### Court-circuit d'évaluation
+
+Comme les expressions logiques sont évaluées de gauche à droite, leur évaluation sera éventuellement "court-circuitée" à l'aide des règles suivantes :
+
+* `false && expr` renvoie `false`.
+* `true || expr` renvoie `true`.
+
+Dans les deux cas, l'expression `expr` n'est pas évaluée.
+
+### Utilisation avec des valeurs non booléennes
+
+Les opérateurs `&&` et `||` peuvent être utilisés avec des valeurs non booléennes. Dans ce cas, ils ne renvoient pas systématiquement une valeur booléenne.
+
+* `expr1 && expr2` renvoie `expr1` si cette expression peut être convertie en `false`. Sinon, elle renvoie `expr2`.
+* `expr1 || expr2` renvoie `expr1` si cette expression peut être convertie en `true`. Sinon, elle renvoie `expr2`.
+
+En JavaScript, on dit d'une valeur ou d'une expression convertible en `false` qu'elle est *falsy*. Si à l'inverse elle peut être convertie en `true`, elle est *truthy*. Toutes les valeurs sont *truthy*, sauf les suivantes :
+
+* `false` (év!demment !)
+* `undefined`
+* `null`
+* `NaN` (*Not A Number*)
+* `0`
+* `""` ou `''`
+
+Voici quelques exemples illustrant ce fonctionnement spécifique à JavaScript.
+
+```js
+console.log(true && "Hello");      // Affiche "Hello"
+console.log(false && "Hello");     // Affiche false
+console.log(undefined && "Hello"); // Affiche undefined
+console.log("" && "Hello");        // Affiche ""
+console.log("Hello" && "Goodbye")  // Affiche "Goodbye"
+
+console.log(true || "Hello");      // Affiche true
+console.log(false || "Hello");     // Affiche "Hello"
+console.log(undefined || "Hello"); // Affiche "Hello"
+console.log("" || "Hello");        // Affiche "Hello"
+console.log("Hello" || "Goodbye")  // Affiche "Hello"
 ```
 
 ### L'opérateur logique NON
@@ -320,3 +392,64 @@ E>         break;
 E>     }
 
 L'exécution de cet exemple affiche deux messages : `"x vaut abc"` (résultat attendu) mais aussi `"x vaut def"`.
+
+## A vous de jouer !
+
+C'est le moment de valider votre compréhension de ce chapitre ! Voici quelques recommandations pour réaliser ces exercices :
+
+* Pensez à bien nommer vos variables en respectant les principes posés au chapitre précédent, et indentez systématiquement les blocs de code des instructions `if`, `else` et `switch`.
+
+* Essayez de trouver et d'écrire plusieurs solutions au problème posé, par exemple une solution utilisant l'instruction `if` et une autre utilisant le `switch`.
+
+* Entraînez-vous à tester vos programmes aussi complètement que possible, sans avoir peur d'y trouver des erreurs. C'est un exercice très formateur.
+
+### Jour suivant
+
+Ecrivez un programme qui demande un nom de jour à l'utilisateur, puis qui affiche le nom du lendemain. Les saisies incorrectes doivent être gérées.
+
+### Valeurs finales
+
+Observez le programme ci-dessous.
+
+```js
+let nb1 = Number(prompt("Entrez nb1:"));
+let nb2 = Number(prompt("Entrez nb2:"));
+let nb3 = Number(prompt("Entrez nb3:"));
+
+if (nb1 > nb2) {
+  nb1 = nb3 * 2;
+} else {
+  nb1++;
+  if (nb2 > nb3) {
+    nb1 += nb3 * 3;
+  } else {
+    nb1 = 0;
+    nb3 = nb3 * 2 + nb2;
+  }
+}
+console.log(nb1, nb2, nb3);
+```
+
+Essayez de prédire les valeurs finales de chacune des variables `nb1`, `nb2` et `nb3` en complétant le tableau suivant.
+
+|Valeurs initiales       |Valeur finale de `nb1`|Valeur finale de `nb2` |Valeur finale de `nb3`|
+|---------------------|------------------|-----------------|-----------------|
+|`nb1=nb2=nb3=4`      |                  |                 |                 |
+|`nb1=4,nb2=3,nb3=2`  |                  |                 |                 |
+|`nb1=2,nb2=4,nb3=0`  |                  |                 |                 |
+
+Vérifiez vos prédictions en exécutant ce programme.
+
+### Nombre de jours dans le mois
+
+Ecrivez un programme qui sait saisir un numéro de mois (nombre entre 1 et 12), puis affiche le nombre de jours de ce mois. Vous ne tiendrez pas compte des années bissextiles. En revanche, les saisies incorrectes doivent être gérées.
+
+### Heure suivante
+
+Ecrivez un programme qui demande à l'utilisateur de saisir une heure sous la forme de trois nombres (heures, minutes et secondes). Le programme calcule et affiche ensuite l'heure qu'il sera une seconde plus tard. Les saisies incorrectes doivent être gérées.
+
+> Cet exercice est moins facile qu'il en a l'air... Observez les résultats attendus suivants pour vous en convaincre.
+>
+> * 14h17m59s => 14h18m0s
+> * 6h59m59s => 7h0m0s
+> * 23h59m59s => 0h0m0s (minuit)

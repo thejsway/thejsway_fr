@@ -51,7 +51,7 @@ console.log(a);
 
 En JavaScript, on déclare une variable à l'aide du mot-clé `let` suivi du nom de la variable. Dans cet exemple, la variable créée se nomme `a`.
 
-I> Dans les versions précédentes du langage, on déclarait une variable avec le mot-clé `var`. `let` et `const`le remplacent avantageusement.
+I> Dans les versions précédentes du langage, on déclarait une variable avec le mot-clé `var`. C'st toujours possible, mais sans rentrer dans des détails complexes, `let` et `const` le remplacent avantageusement.
 
 Voici le résultat produit par l'exécution de ce programme.
 
@@ -210,7 +210,7 @@ Nous avons vu dans le précédent chapitre que l'instruction JavaScript `console
 
 I> On désigne par "console" une zone d'informations textuelles. L'instruction `console.log()` ne fait pas à proprement parler partie de la spécification du langage JavaScript. Cependant, la très grande majorité des environnements JavaScript, et notamment les navigateurs web, disposent d'une console dans laquelle il est possible d'afficher des informations.
 
-On peut donc utiliser soit `console.log()`, soit `alert()` pour afficher des informations à l'utilisateur. Contrairement à `alert()`, `console.log()` ne bloque pas l'exécution du programme, ce qui en fait parfois un meilleur choix.
+On peut donc utiliser soit `console.log()`, soit `alert()` pour afficher des informations à l'utilisateur. Contrairement à `alert()`, `console.log()` ne bloque pas l'exécution du programme, ce qui en fait souvent un meilleur choix.
 
 Il est possible d'utiliser `console.log()` pour afficher plusieurs valeurs simultanément, en les séparant par des virgules.
 
@@ -260,27 +260,56 @@ console.log(perimetre);
 
 Leur fonctionnement est strictement identique, et pourtant la compréhension du second est beaucoup plus rapide grâce aux noms choisis pour ses variables.
 
-Comment faire pour bien nommer les variables de ses programmes ?
+Bien nommer les éléments d'un programme est une compétence importante pour un développeur. Référez-vous à l'annexe pour plus de détails à ce sujet.
 
-### Choisir des noms significatifs
+## A vous de jouer !
 
-La règle la plus importante est de donner à toute variable un nom qui reflète son rôle. C'est bien le cas dans le second exemple ci-dessus : les variables `rayon`, `pi` et `perimetre` stockent respectivement le rayon d'un cercle, la valeur du nombre PI et le périmètre calculé.‌
+Pour réaliser ces exercices et tous les suivants, prenez l'habitude de choisir des noms significatifs pour vos variables.
 
-### Bannir les caractères accentués
+### Présentation améliorée
 
-Les caractères accentués comme `é` ou `à` sont mal supportés dans certains environnements et sont inconnus du monde anglophone. Mieux vaut les éviter : on nommera une variable `perimetre` plutôt que `périmètre`.
+Write a program that asks the user for his first name and his last name. The program then displays them in one sentence.
 
-### Ne pas utiliser les noms réservés du langage
+Ecrivez un programme qui demande à l'utilisateur son prénom puis son nom. Le programme les affiche ensuite en une seule phrase.
 
-Les mots-clés du langage JavaScript sont des noms réservés. Ils ne doivent pas être utilisés comme noms de variables. Vous trouverez sur [cette page](https://developer.mozilla.org/fr/docs/Web/JavaScript/Reference/Mots_r%C3%A9serv%C3%A9s) la liste des noms réservés de JavaScript.
+### Valeurs finales
 
-### Adopter une convention de nommage
+Essayez de prédire les valeurs finales de chacune des variables du programme ci-dessous.
 
-Il faut parfois plusieurs mots pour décrire le rôle de certaines variables. Dans ce cas, on a intérêt à adopter une **convention de nommage**, c'est-à-dire une manière uniforme d'écrire les noms de toutes les variables. Il en existe plusieurs. Dans ce cours, nous allons adopter la plus fréquemment utilisée : la norme [camelCase](https://fr.wikipedia.org/wiki/CamelCase) (appelée parfois *lowerCamelCase*). Elle repose sur deux grands principes :
+```js
+let a = 2;
+a -= 1;
+a++;
+let b = 8;
+b += 2;
+const c = a + b * b;
+const d = a * b + b;
+const e = a * (b + b);
+const f = a * b / a;
+const g = b / a * a;
+console.log(a, b, c, d, e, f, g);
+```
 
-* Tout nom de variable commence par une **lettre minuscule**.
-* Si le nom d'une variable se compose de plusieurs mots, la première lettre de chaque mot (sauf le premier) s'écrit en **majuscule**.
+Vérifiez votre prédiction en exécutant ce programme.
 
-Par exemple, les noms `montantTravauxMaison` et `codeClientSuivant` respectent la norme *camelCase*.
+### Conversion Celsius/Fahrenheit
 
-W> Comme de nombreux langages, JavaScript fait la distinction entre majuscules et minuscules. On dit qu'il est **sensible à la casse** (*case sensitive*). Par exemple, `mavariable` et `maVariable` seront considérées comme deux variables différentes. Attention aux étourderies !
+Ecrivez un programme qui fait saisir une température en degrés Celsius, puis la convertit et l'affiche en degrés Fahrenheit.
+
+> La formule de conversion est la suivante : [°F] = [°C] x 9/5 + 32.
+
+### Permutation de deux variables
+
+Complétez le programme ci-dessous pour permuter les valeurs des variables `number1` et `number2`.
+
+```js
+let number1 = 5;
+let number2 = 3;
+
+// TODO: écrivez votre code ici (et uniquement ici !)
+
+console.log(number1); // Affiche 3
+console.log(number2); // Affiche 5
+```
+
+T> Cet exercice a plusieurs solutions possibles. Vous pouvez introduire d'autres variables pour le résoudre.
