@@ -26,6 +26,7 @@ Ce dépôt contient la traduction en français du livre [The JavaScript Way](htt
   * [Modularisez votre code avec les fonctions](manuscript/chapter05.md)
   * [Créez vos premiers objets](manuscript/chapter06.md)
   * [Stockez vos données dans des tableaux](manuscript/chapter07.md)
+  * [Manipulez les chaînes de caractères](manuscript/chapter08.md)
   * ...
 * Part II: Créez des pages web interactives
   * ...
