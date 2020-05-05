@@ -27,10 +27,10 @@ Ce dépôt contient la traduction en français du livre [The JavaScript Way](htt
   * [Créez vos premiers objets](manuscript/chapter06.md)
   * [Stockez vos données dans des tableaux](manuscript/chapter07.md)
   * [Manipulez les chaînes de caractères](manuscript/chapter08.md)
+  * [Trop classe, la POO !](manuscript/chapter09.md)
+* Partie II: Créez des pages web interactives
   * ...
-* Part II: Créez des pages web interactives
-  * ...
-* Part III: Construisez des application web
+* Partie III: Construisez des application web
   * ...
 * Conclusion
   * ...
