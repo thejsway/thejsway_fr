@@ -10,6 +10,8 @@ Copyright © 2017-2020 [Baptiste Pesquet](http://www.bpesquet.fr).
 
 Ce dépôt contient la traduction en français du livre [The JavaScript Way](https://github.com/thejsway/thejsway), lui-même issu de cours en ligne initialement publiés sur la plate-forme [OpenClassrooms](https://openclassrooms.com).
 
+Les solutions des exercices sont [consultables en ligne](https://github.com/thejsway/thejsway_fr-code).
+
 > Seule une partie du livre est actuellement disponible en français. Toute aide pour faire avancer le processus de traduction serait la bienvenue !
 
 ## Sommaire

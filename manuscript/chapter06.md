@@ -313,3 +313,5 @@ Ecrivez un programme qui crée un compte bancaire ayant les caractéristiques su
 * Une méthode `decrire()` qui renvoie la description du compte.
 
 Affichez la description de cet objet, ajoutez 250 au solde, retirez 80, puis affichez la description finale.
+
+> Les solutions des exercices sont [consultables en ligne](https://github.com/thejsway/thejsway_fr-code).

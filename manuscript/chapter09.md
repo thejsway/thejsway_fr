@@ -364,3 +364,5 @@ Ecrivez un programme qui crée une classe modélisant un compte bancaire ayant l
 Ecrivez un programme qui crée trois comptes : l'un pour Alex, l'aute pour Clovis et le troisième pour Marco. Ces comptes sont enregistrés dans un tableau.
 
 Ensuite, le programme ajoute 1000 au solde de chaque compte et affiche sa description.
+
+> Les solutions des exercices sont [consultables en ligne](https://github.com/thejsway/thejsway_fr-code).

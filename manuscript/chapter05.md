@@ -481,3 +481,5 @@ console.log(calculer(4, "-", 6));  // -2
 console.log(calculer(2, "*", 0));  // 0
 console.log(calculer(12, "/", 0)); // Infinity
 ```
+
+> Les solutions des exercices sont [consultables en ligne](https://github.com/thejsway/thejsway_fr-code).

@@ -148,3 +148,5 @@ console.log("4" + "5");
 ```
 
 Vérifiez votre prédiction en l'exécutant.
+
+> Les solutions des exercices sont [consultables en ligne](https://github.com/thejsway/thejsway_fr-code).

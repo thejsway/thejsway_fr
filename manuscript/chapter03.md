@@ -420,3 +420,5 @@ Ecrivez un programme qui demande à l'utilisateur de saisir une heure sous la fo
 > * 14h17m59s => 14h18m0s
 > * 6h59m59s => 7h0m0s
 > * 23h59m59s => 0h0m0s (minuit)
+
+> Les solutions des exercices sont [consultables en ligne](https://github.com/thejsway/thejsway_fr-code).

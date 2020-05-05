@@ -272,3 +272,5 @@ console.log(estPalindrome("RadAr")); // true
 console.log(estPalindrome("KAYAk")); // true
 console.log(estPalindrome("Bora-Bora")); // false
 ```
+
+> Les solutions des exercices sont [consultables en ligne](https://github.com/thejsway/thejsway_fr-code).

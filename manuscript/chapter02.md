@@ -307,3 +307,5 @@ console.log(number2); // Affiche 5
 ```
 
 T> Cet exercice a plusieurs solutions possibles. Vous pouvez introduire d'autres variables pour le résoudre.
+
+> Les solutions des exercices sont [consultables en ligne](https://github.com/thejsway/thejsway_fr-code).

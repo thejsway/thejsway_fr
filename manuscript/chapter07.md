@@ -250,3 +250,5 @@ Ecrivez un programme qui crée le tableau ci-dessous, puis qui calcule et affich
 ```js
 const valeurs = [3, 11, 7, 2, 9, 10];
 ```
+
+> Les solutions des exercices sont [consultables en ligne](https://github.com/thejsway/thejsway_fr-code).

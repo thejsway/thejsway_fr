@@ -229,3 +229,5 @@ Ecrivez un programme qui affiche tous les nombres entre 1 et 100 avec les règle
 * Il affiche "FizzBuzz" à la place du nombre si celui-ci est divisible à la fois par 3 et par 5.
 
 > Cet exercice est un [grand classique des entretiens d'embauche](https://imranontech.com/2007/01/24/using-fizzbuzz-to-find-developers-who-grok-coding/) qui élimine un nombre surprenant de candidats. Faites de votre mieux pour le réussir !
+
+> Les solutions des exercices sont [consultables en ligne](https://github.com/thejsway/thejsway_fr-code).
