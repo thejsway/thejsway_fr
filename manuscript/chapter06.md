@@ -2,7 +2,7 @@
 
 Dans ce chapitre, vous allez découvrir les objets ainsi que leur fonctionnement en JavaScript.
 
-## TL;DR
+## TL;DR : en résumé
 
 * Un **objet** est une entité qui possède des **propriétés**. Chaque propriété correspond à une paire clé/valeur. La clé est le nom de la propriété.
 

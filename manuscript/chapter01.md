@@ -2,7 +2,7 @@
 
 C'est le moment de faire vos premiers pas avec JavaScript !
 
-## TL;DR
+## TL;DR : en résumé
 
 * L'instruction JavaScript `console.log()` permet d'afficher une information.
 

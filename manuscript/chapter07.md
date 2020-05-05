@@ -1,6 +1,6 @@
 # Stockez vos données dans des tableaux
 
-## TL;DR
+## TL;DR : en résumé
 
 * Un **tableau** permet de mémoriser un ensemble d'éléments. En JavaScript, un tableau est un objet ayant plusieurs propriétés spécifiques, telles que `length` qui renvoie sa taille (nombre d'éléments).
 

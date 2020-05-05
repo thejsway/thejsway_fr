@@ -2,7 +2,7 @@
 
 Dans ce chapitre, vous allez découvrir comment décomposer un programme en sous-parties appelées des fonctions.
 
-## TL;DR
+## TL;DR : en résumé
 
 * Une **fonction** est un regroupement d'instructions qui réalise une tâche donnée. En JavaScript, une fonction est créée à l'aide du mot-clé `function`.
 

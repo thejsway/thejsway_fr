@@ -1,6 +1,6 @@
 # Introduction à la programmation
 
-## TL;DR
+## TL;DR : en résumé
 
 * Un **ordinateur** n'est qu'une machine qui se contente d'exécuter automatiquement, très vite et sans erreur, les opérations qu'on lui demande d'effectuer.
 * Un **programme** est une liste d'ordres indiquant à un ordinateur ce qu'il doit faire. Il se présente sous la forme d'un ensemble de commandes textuelles appelées des **instructions**. L'ensemble des instructions d'un programme est appelée son **code source**.

@@ -3,7 +3,7 @@
 L'objectif de ce chapitre est d'apprendre comment ajouter à nos programmes des possibilités
 d'exécution répétitive.
 
-## TL;DR
+## TL;DR : en résumé
 
 * On utilise une **boucle**  afin d'exécuter plusieurs fois un bloc d'instructions. Chaque exécution est appelée un **tour de boucle** ou une **itération**. Le bloc d'instructions associé à une boucle est appelé le **corps de la boucle**.
 

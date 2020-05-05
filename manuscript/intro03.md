@@ -1,6 +1,6 @@
 # Présentation de JavaScript
 
-## TL;DR
+## TL;DR : en résumé
 
 * Historiquement créé pour animer les pages web, le langage JavaScript peut maintenant être utilisé pour programmer dans de très nombreux environnements : serveurs, applications mobiles, objets connectés...
 * JavaScript est devenu essentiel pour de très nombreux développeurs. Il s'agit d'un excellent choix comme premier langage de programmation.

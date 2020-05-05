@@ -2,7 +2,7 @@
 
 Jusqu'à présent, toutes les instructions de nos programmes (à l'exception des lignes de commentaires) étaient systématiquement exécutées. Nous allons voir comment enrichir ces programmes en y ajoutant des possibilités d'exécution conditionnelle.
 
-## TL;DR
+## TL;DR : en résumé
 
 * L'instruction `if` permet d'exprimer une **condition**. Les instructions associées au `if` n'est exécuté que si la condition est vérifiée (vraie). Une **condition** est une expression dont l'évaluation produit une valeur **booléenne** (`true` ou `false`).
 
