@@ -407,42 +407,9 @@ C'est le moment de valider votre compréhension de ce chapitre ! Voici quelques 
 
 Ecrivez un programme qui demande un nom de jour à l'utilisateur, puis qui affiche le nom du lendemain. Les saisies incorrectes doivent être gérées.
 
-### Valeurs finales
+### Baccalauréat
 
-Observez le programme ci-dessous.
-
-```js
-let nb1 = Number(prompt("Entrez nb1:"));
-let nb2 = Number(prompt("Entrez nb2:"));
-let nb3 = Number(prompt("Entrez nb3:"));
-
-if (nb1 > nb2) {
-  nb1 = nb3 * 2;
-} else {
-  nb1++;
-  if (nb2 > nb3) {
-    nb1 += nb3 * 3;
-  } else {
-    nb1 = 0;
-    nb3 = nb3 * 2 + nb2;
-  }
-}
-console.log(nb1, nb2, nb3);
-```
-
-Essayez de prédire les valeurs finales de chacune des variables `nb1`, `nb2` et `nb3` en complétant le tableau suivant.
-
-|Valeurs initiales       |Valeur finale de `nb1`|Valeur finale de `nb2` |Valeur finale de `nb3`|
-|---------------------|------------------|-----------------|-----------------|
-|`nb1=nb2=nb3=4`      |                  |                 |                 |
-|`nb1=4,nb2=3,nb3=2`  |                  |                 |                 |
-|`nb1=2,nb2=4,nb3=0`  |                  |                 |                 |
-
-Vérifiez vos prédictions en exécutant ce programme.
-
-### Nombre de jours dans le mois
-
-Ecrivez un programme qui sait saisir un numéro de mois (nombre entre 1 et 12), puis affiche le nombre de jours de ce mois. Vous ne tiendrez pas compte des années bissextiles. En revanche, les saisies incorrectes doivent être gérées.
+Ecrivez un programme qui fait saisir la moyenne obtenue par un.e lycéen.ne au baccalauréat, puis qui affiche le résultat associé : "recalé.e", "reçu.e" ou "reçu.e avec mention".
 
 ### Heure suivante
 

@@ -266,12 +266,6 @@ Bien nommer les éléments d'un programme est une compétence importante pour un
 
 Pour réaliser ces exercices et tous les suivants, prenez l'habitude de choisir des noms significatifs pour vos variables.
 
-### Présentation améliorée
-
-Write a program that asks the user for his first name and his last name. The program then displays them in one sentence.
-
-Ecrivez un programme qui demande à l'utilisateur son prénom puis son nom. Le programme les affiche ensuite en une seule phrase.
-
 ### Valeurs finales
 
 Essayez de prédire les valeurs finales de chacune des variables du programme ci-dessous.
