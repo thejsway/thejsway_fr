@@ -1,5 +1,7 @@
 # Guide de style
 
+Voici les règles de codage utilisées dans ce livre.
+
 ## Nommage
 
 Bien nommer les choses permet de rendre les programmes plus faciles à comprendre et à modifier. Voici quelques règles générales à ce sujet.
@@ -31,8 +33,39 @@ W> Comme de nombreux langages, JavaScript fait la distinction entre majuscules e
 
 ## Formatage du code
 
-TODO
+Il s'agit d'un sujet hautement subjectif et personnel, qui fait l'objet d'infinis débats : espaces ou tabluations, guillemets simples ou doubles, etc. Une solution simple et efficace consiste à utiliser un outil qui automatise le formatage. Le standard pour l'écosystème JavaScript est [Prettier](https://prettier.io/).
 
 ## Qualité du code
 
-TODO
+JavaScript étant un langage à typage dynamique, un certain nombre d'erreurs dans le code de vos programmes ne se révèleront qu'au moment de l'exécution, comme par exemple une erreur dans le nom d'une variable ou d'une fonction.
+
+Pour limiter ces risques de défauts, vous pouvez utiliser un outil d'analyse du code (*linting*) comme [ESLint](http://eslint.org/). Il existe des configurations prédéfinies pour cet outil, comme par exemple le [guide de style JS d'AirBnb](https://github.com/airbnb/javascript) qui constitue une lecture recommandée.
+
+Les exemples de code et les exercices de ce livre sont basés sur cette configuration, avec quelques variations mineures. Voici pour information la configuration exacte utilisée (elle est définie dans le fichier .eslintrc).
+
+```json
+{
+  "extends": ["airbnb", "prettier"],
+  "env": {
+    "browser": true
+  },
+  "plugins": ["prettier"],
+  "rules": {
+    "no-console": "off",
+    "no-alert": "off",
+    "no-plusplus": "off",
+    "default-case": "off",
+    "no-param-reassign": [
+      "error",
+      {
+        "props": false
+      }
+    ],
+    "arrow-body-style": [
+      "error",
+      "as-needed",
+      { "requireReturnForObjectLiteral": true }
+    ]
+  }
+}
+```

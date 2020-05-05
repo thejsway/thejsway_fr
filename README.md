@@ -19,7 +19,7 @@ Ce dépôt contient la traduction en français du livre [The JavaScript Way](htt
   * [Introduction à la programmation](manuscript/intro02.md)
   * [Présentation de JavaScript](manuscript/intro03.md)
   * [Environnement de travail](manuscript/intro04.md)
-* Partie I: Apprenez à coder des programmes
+* Apprenez à coder des programmes
   * [3, 2, 1... Codez !](manuscript/chapter01.md)
   * [Jouez avec les variables](manuscript/chapter02.md)
   * [Ajoutez des conditions](manuscript/chapter03.md)
@@ -29,11 +29,6 @@ Ce dépôt contient la traduction en français du livre [The JavaScript Way](htt
   * [Stockez vos données dans des tableaux](manuscript/chapter07.md)
   * [Manipulez les chaînes de caractères](manuscript/chapter08.md)
   * [Trop classe, la POO !](manuscript/chapter09.md)
-* Partie II: Créez des pages web interactives
-  * ...
-* Partie III: Construisez des application web
-  * ...
-* Conclusion
-  * ...
+  * [Conclusion et perspectives](manuscript/concl01.md)
 * Annexes
-  * ...
+  * [Guide de style](manuscript/appendix01.md)
