@@ -5,10 +5,51 @@ Dans ce chapitre, vous allez découvrir comment décomposer un programme en sous
 ## TL;DR
 
 * Une **fonction** est un regroupement d'instructions qui réalise une tâche donnée. En JavaScript, une fonction est créée à l'aide du mot-clé `function`.
+
 * Ecrire un programme sous forme d'un ensemble de fonctions plutôt qu'en un seul bloc permet de gagner en **lisibilité** et en **modularité**.
+
 * Les variables déclarées dans le corps d'une fonction sont appelées des **variables locales**. Leur portée se limite au corps de la fonction.
+
 * Une fonction peut renvoyer une valeur grâce au mot-clé `return`, ou ne rien renvoyer (on parle alors de **procédure**). Elle peut également accepter ou non des **paramètres**, qui sont les données dont elle a besoin pour fonctionner.
-* En JavaScript, la valeur d'une variable peut être une fonction. On peut donc créer une **fonction anonyme** et l'affecter à une variable. Pour cela, il est possible de définir la fonction de manière classique ou d'utiliser la syntaxe dite **fonction fléchée** (*fat arrow*).
+
+* Il existe plusieurs manières de créer des fonctions en JavaScript. La première est la **déclaration de fonction** :
+
+```js
+// Déclaration d'une fonction nommée maFonction
+function maFonction(param1, param2, ...) {
+  // Code de la fonction
+}
+
+// Appel de la fonction
+// param1 reçoit la valeur de arg1, param2 la valeur de arg2, ...
+maFonction(arg1, arg2, ...);
+```
+
+* Une autre possibilité est d'utiliser une **expression de fonction**. Cette expression peut être affectée à une variable car en JavaScript, la valeur d'une variable peut être une fonction. Les expressions de fonction sont souvent utilisées pour créer des **fonctions anonymes**.
+
+```js
+// Affectation d'une fonction anonyme à la variable maVariable
+const maVariable = function(param1, param2, ...) {
+  // Code de la fonction
+}
+
+// Appel de la fonction anonyme
+// param1 reçoit la valeur de arg1, param2 la valeur de arg2, ...
+maVariable(arg1, arg2, ...);
+```
+
+* JavaScript offre depuis peu une syntaxe plus concise pour créer des fonctions anonymes : la **fonction fléchée** (*fat arrow function*).
+
+```js
+// Affectation d'une fonction anonyme à la variable maVariable
+const maVariable = (param1, param2,...) => {
+  // Code de la fonction
+}
+// Appel de la fonction anonyme
+// param1 reçoit la valeur de arg1, param2 la valeur de arg2, ...
+maVariable(arg1,arg2,...);
+```
+
 * Il est important de créer des fonctions ayant un **rôle** bien défini et de limiter leur complexité. Le **nom** de la fonction, souvent basé sur un verbe à l'infinitif exprimant une **action**, doit réfléter son rôle. JavaScript offre de nombreuses fonctions prédéfinies qui peuvent simplifier la tâche du programmeur.
 
 ## Introduction : le rôle des fonctions
@@ -391,3 +432,52 @@ Comme pour les variables, le nommage des fonctions et des paramètres joue un r�
 Le plus souvent, on choisira un nom basé sur un verbe à l'infinitif exprimant une **action** (*calculer*, *afficher*, *trouver*, etc).
 
 T> S'il est difficile de trouver un nom pertinent pour une fonction, c'est sans doute que son rôle n'est pas bien défini et que son existence doit être remise en cause.
+
+## A vous de jouer !
+
+### Carré d'un nombre
+
+Complétez le programme suivant afin que les fonctions `carre1()` et `carre2()` fonctionnent correctement.
+
+```js
+// Renvoie le carré du nombre x
+function carre1(x) {
+  // TODO: complétez le code de la fonction
+}
+
+// Renvoie le carré du nombre x
+const carre2 = x => // TODO : complétez le code de la fonction
+
+console.log(carre1(0)); // 0
+console.log(carre1(2)); // 4
+console.log(carre1(5)); // 25
+
+console.log(carre2(0)); // 0
+console.log(carre2(2)); // 4
+console.log(carre2(5)); // 25
+```
+
+### Minimum de deux nombres
+
+Imaginons que la fonction JavaScript `Math.min()` n'existe pas. Complétez le programme suivant en créant une fonction `min()` qui renvoie le plus petit des deux nombres reçus en paramètres.
+
+```js
+// TODO : codez ici la fonction min()
+
+console.log(min(4.5, 5)); // 4.5
+console.log(min(19, 9));  // 9
+console.log(min(1, 1));   // 1
+```
+
+### Calculatrice
+
+Complétez le programme ci-dessous afin qu'il supporte les 4 opérations arithmétiques de base : addition, soustraction, multiplication et division.
+
+```js
+// TODO : complétez le programme
+
+console.log(calculer(4, "+", 6));  // 10
+console.log(calculer(4, "-", 6));  // -2
+console.log(calculer(2, "*", 0));  // 0
+console.log(calculer(12, "/", 0)); // Infinity
+```
