@@ -1,6 +1,6 @@
 # Trop classe, la POO !
 
-## TL;DR : Résumons !
+## TL;DR : en résumé
 
 * La programmation orientée objet, ou POO, est un paradigme de programmation qui utilise des objets contenant à la fois des données et du comportement pour créer des programmes.
 
