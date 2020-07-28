@@ -21,7 +21,7 @@ Les solutions des exercices sont [consultables en ligne](https://github.com/thej
   * [Introduction à la programmation](manuscript/intro02.md)
   * [Présentation de JavaScript](manuscript/intro03.md)
   * [Environnement de travail](manuscript/intro04.md)
-* Apprenez à coder des programmes
+* Partie I: Apprenez à programmer
   * [3, 2, 1... Codez !](manuscript/chapter01.md)
   * [Jouez avec les variables](manuscript/chapter02.md)
   * [Ajoutez des conditions](manuscript/chapter03.md)
@@ -32,5 +32,7 @@ Les solutions des exercices sont [consultables en ligne](https://github.com/thej
   * [Manipulez les chaînes de caractères](manuscript/chapter08.md)
   * [Trop classe, la POO !](manuscript/chapter09.md)
   * [Conclusion et perspectives](manuscript/concl01.md)
+* Partie II: Créer un site web interactif
+  * [Qu'est ce qu'un site web ?](manuscript/chapter12.md)
 * Annexes
   * [Guide de style](manuscript/appendix01.md)
